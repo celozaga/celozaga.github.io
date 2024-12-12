@@ -23,6 +23,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 body {
+  color: #ffffff;
   background: #0F0F0F;
   font-weight: 400;
   text-align: center;
