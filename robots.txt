@@ -4,5 +4,6 @@ Disallow: /admin/
 Disallow: /drafts/
 Disallow: /scripts/
 Disallow: /discord/
+Disallow: /.well-known/
 Allow: /assets/*.css
 Allow: /assets/*.js
