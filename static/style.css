@@ -1,0 +1,291 @@
+/* Reset and Global Styles */
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: none;
+}
+/* Misc Styles */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #0F0F0F;
+  font-weight: 400;
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #7c7c7c45;
+  margin: 1em 0;
+}
+.section h1, .section h2 {
+  font-size: 20px;
+  margin: 20px 0;
+  display: none;
+}
+
+.header .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.header .username {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.header .description {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  background: #222;
+  padding: 10px;
+  margin: 0 auto 20px;
+  display: inline-block;
+  border-radius: 80px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.tabs ul {
+  display: flex;
+}
+
+.tabs li {
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50px;
+  width: 33.3%;
+  text-align: center;
+}
+
+.tabs li.active {
+  background-color: #666;
+}
+
+/* Content Sections */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Social Media Links */
+.links li a {
+  background: #222;
+  color: #ffffff;
+  padding: 20px;
+  line-height: 30px;
+  display: block;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.links a svg, .links a img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.links a p {
+  font-weight: 600;
+  line-height: 30px;
+}
+
+
+.links a[title="Discord"] p {
+  color: #5865f2;
+}
+
+.links a[title="YouTube"] p {
+  color: #ff0e35;
+}
+
+.links a[title="Bluesky"] p {
+  color: #0085ff;
+}
+
+.links a[title="Threads"] p {
+  color: #ffffff;
+}
+
+.links a[title="Instagram"] p {
+  color: #f500be;
+}
+
+.links a[title="Facebook"] p {
+  color: #0866ff;
+}
+.links a[title="TikTok"] p {
+  color: #ff3b5c;
+}
+.links a[title="Reddit"] p {
+  color: #ff0e35;
+}
+.links a[title="X"] p {
+  color: #ffffff;
+}
+/* Button Styles */
+.button a {
+  color: #fff;
+  line-height: 20px;
+  padding: 20px;
+  background: #222;
+  border-radius: 60px;
+  display: inline-block;
+}
+/* Footer */
+.footer {
+  margin-top: 40px;
+}
+.footer p {
+  line-height: 20px;
+  color: #999999;
+}
+.footer > p {
+  margin: 20px 0;
+}
+.footer svg {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+}
+
+.footer {
+  margin: 20px;
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.footer li {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+.footer li a {
+  color: #999;
+  line-height: 20px;
+}
+
+.footer li a img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+/* News Section */
+.news p {
+  line-height: 20px;
+}
+
+.news video {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.news ul li {
+  text-align: left;
+  display: flex;
+}
+
+.news ul li > a {
+  width: 100%;
+  background: #222;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.news ul li img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.news li .name {
+  display: block;
+  color: blue;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+.news .summary {
+  display: none;
+}
+
+.news .date {
+  color: #999;
+}
+
+/* YouTube Videos */
+.feed-youtube li a {
+  background: #222;
+  padding: 20px;
+  display: block;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.feed-youtube li img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.feed-youtube li h3 {
+  text-align: left;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.feed-youtube .image-container {
+  position: relative;
+}
+
+.feed-youtube li svg {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  fill: #fff;
+}

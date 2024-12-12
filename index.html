@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F0F0F">
+    <title>Celo Zaga</title>
+    <meta name="description" content="Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.">
+    <meta name="keywords" content="Celo Zaga, gaming, social media, Discord, YouTube, Bluesky, TikTok, Instagram, Threads, Reddit, X">
+    <meta name="author" content="Celo Zaga">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta property="fb:pages" content="104765905779407">
 
+    <meta property="og:title" content="Celo Zaga">
+    <meta property="og:description" content="Connect with Celo Zaga on Discord, YouTube, Bluesky, and more social platforms. Explore gaming content and community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://celozaga.github.io">
+    <meta property="og:image" content="static/media/og/celozaga.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Celo Zaga profile image">
+    <meta property="og:site_name" content="Celo Zaga">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Celo Zaga">
+    <meta name="twitter:description" content="Connect with Celo Zaga on Discord, YouTube, Bluesky, and more platforms. Explore gaming content and community.">
+    <meta name="twitter:image" content="static/media/og/celozaga.jpg">
+    <meta name="twitter:image:alt" content="CeloZaga profile image">
+    <meta name="twitter:site" content="@CeloZaga">
+    <meta name="twitter:creator" content="@CeloZaga">
+    <link rel="icon" href="static/media/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/media/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/media/icons/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="static/media/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/media/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/media/icons/android-chrome-192x192.png">
+    <link rel="canonical" href="https://celozaga.github.io">
+    <link rel="preload" href="static/style.css" as="style">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <header class="header">
+            <img class="avatar" src="static/media/icons/avatar.png" alt="Avatar">
+            <h1 class="username">Celo Zaga</h1>
+            <p class="description">Community Leader and UGC Map Designer for Party Stars</p>
+            <nav class="tabs">
+                <ul>
+                    <li class="tab-item active" onclick="showSection(event, 'links')">Links</li>
+                    <li class="tab-item" onclick="showSection(event, 'news')">News</li>
+                    <li class="tab-item" onclick="showSection(event, 'videos')">Vídeos</li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section links active" id="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a title="Discord" href="https://discord.com/invite/gHEHaxtwBT" target="_blank"><img src="static/media/icons/discord.svg" alt="Discord"><p>Discord</p></a></li>
+                <li><a title="YouTube" href="https://www.youtube.com/@CeloZaga?sub_confirmation=1" target="_blank"><img src="static/media/icons/youtube.svg" alt="YouTube"><p>YouTube</p></a></li>
+                <li><a title="Bluesky" href="https://bsky.app/profile/celozaga.bsky.social" target="_blank"><img src="static/media/icons/bluesky.svg" alt="Bluesky"><p>Bluesky</p></a></li>
+                <li><a title="Threads" href="https://threads.net/@CeloZaga" target="_blank"><img src="static/media/icons/threads.svg" alt="Threads"><p>Threads</p></a></li>
+                <li><a title="Instagram" href="https://instagram.com/CeloZaga" target="_blank"><img src="static/media/icons/instagram.svg" alt="Instagram"><p>Instagram</p></a></li>
+                <li><a title="Facebook" href="https://www.facebook.com/CeloZaga" target="_blank"><img src="static/media/icons/facebook.svg" alt="Facebook"><p>Facebook</p></a></li>
+                <li><a title="TikTok" href="https://www.tiktok.com/@CeloZaga" target="_blank"><img src="static/media/icons/tiktok.svg" alt="TikTok"><p>TikTok</p></a></li>
+                <li><a title="Reddit" href="https://reddit.com/u/Celo-Zaga" target="_blank"><img src="static/media/icons/reddit.svg" alt="Reddit"><p>Reddit</p></a></li>
+                <li><a title="X" href="https://x.com/CeloZaga" target="_blank"><img src="static/media/icons/x.svg" alt="X"><p>X</p></a></li>
+            </ul>
+        </section>
+
+        <section class="section news" id="news">
+            <h2>News</h2>
+            <ul id="feed-bluesky"></ul>
+            <div class="button button-link"><a href="https://bsky.app/profile/celozaga.bsky.social" target="_blank">Read more on Bluesky</a></div>
+        </section>
+
+        <section class="section videos" id="videos">
+            <h2>Videos</h2>
+            <ul class="feed-youtube"></ul>
+            <div class="button button-link"><a href="https://www.youtube.com/@CeloZaga" target="_blank">Watch more on YouTube</a></div>
+        </section>
+
+        <footer class="footer">
+                <p>Need to get in touch?</p>
+                <ul>
+                    <li><a href="mailto:celozaga@outlook.com" target="_blank"><img src="static/media/icons/email.svg" alt="Email"/><p>Email</p></a></li>
+                    <li><a href="https://www.behance.net/celozaga" target="_blank"><img src="static/media/icons/linkedin.svg" alt="Behance"/><p>Behance</p></a></li>
+                    <li><a href="https://discordapp.com/users/861014434415771678" target="_blank"><img src="static/media/icons/discorddm.svg" alt="Discord Direct Message"/><p>Discord DM</p></a></li>
+                </ul>
+        </footer>
+    <script src="static/scripts.js"></script>
+</body>
+
+</html>

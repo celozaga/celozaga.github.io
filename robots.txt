@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /scripts/
+Disallow: /discord/
+Allow: /assets/*.css
+Allow: /assets/*.js
