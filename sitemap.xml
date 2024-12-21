@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página principal -->
+    <url>
+        <loc>https://celozaga.github.io/</loc>
+        <lastmod>2024-12-21</lastmod>
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
+
+    <!-- Links principais -->
+    <url>
+        <loc>https://discord.com/invite/gHEHaxtwBT</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.youtube.com/@CeloZaga?sub_confirmation=1</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://bsky.app/profile/celozaga.bsky.social</loc>
+        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://threads.net/@CeloZaga</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://instagram.com/CeloZaga</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.facebook.com/CeloZaga</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.tiktok.com/@CeloZaga</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://reddit.com/u/Celo-Zaga</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://x.com/CeloZaga</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Feed dinâmico do YouTube -->
+    <url>
+        <loc>https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q</loc>
+        <priority>0.5</priority>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    <!-- Feed dinâmico do Bluesky -->
+    <url>
+        <loc>https://granary.io/bluesky/celozaga.bsky.social/@self/@app/?format=jsonfeed</loc>
+        <priority>0.5</priority>
+        <changefreq>hourly</changefreq>
+    </url>
+
+    <!-- Contato -->
+    <url>
+        <loc>mailto:celozaga@outlook.com</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.behance.net/celozaga</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://discordapp.com/users/861014434415771678</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+</urlset>
