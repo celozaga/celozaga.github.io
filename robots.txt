@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /discord/
 Allow: /assets/*.css
 Allow: /assets/*.js
-Sitemap: https://celozaga.github.io/sitemap.xml
+Sitemap: https://celozaga.github.io/sitemaps.xml
