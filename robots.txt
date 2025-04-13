@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /discord/
 Disallow: /make/
 Disallow: /notion/
+Disallow: /redirects/
 Allow: /assets/*.css
 Allow: /assets/*.js
 Sitemap: https://celozaga.github.io/sitemaps.xml
