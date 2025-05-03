@@ -14,10 +14,10 @@ function populateAnnouncementPosts(data) {
     var div = document.createElement("div");
     div.className = "announcement-post";
     div.innerHTML = ` 
-      <a class="announcement-link" href="${link}">
+      <li><a class="announcement-link" href="${link}">
         <img src="${thumb}" alt="${title}" />
-        <div class="announcement-title">${title}</div>
-      </a>
+        <h3>${title}</h3>
+      </a></li>
     `;
     container.appendChild(div);
   });
