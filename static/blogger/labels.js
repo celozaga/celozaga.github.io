@@ -1,18 +1,19 @@
-// ========== HIGHLIGHTS SECTION SCRIPT ==========
-function displayHighlights(posts) {
+// ========== ANNOUNCEMENTS SECTION SCRIPT ==========
+
+function displayAnnouncements(posts) {
   const container = document.querySelector('.announcements-posts-container');
   if (!container) return;
 
   posts.feed.entry.forEach(post => {
     const li = document.createElement('li');
-    li.classList.add('highlight-post');
+    li.classList.add('announcement-post');  // Classe alterada para 'announcement-post'
 
     const link = document.createElement('a');
     link.href = post.link[post.link.length - 1].href;
-    link.classList.add('highlight-post-link');
+    link.classList.add('announcement-post-link');  // Classe alterada para 'announcement-post-link'
 
     const img = document.createElement('img');
-    img.src = post.media$thumbnail.url.replace('s72-c', 'w800-h600-p-k-no-nu');
+    img.src = post.media$thumbnail.url.replace('s72-c', 'w800-h600-p-k-no-nu');  // Imagem em 800x600
 
     const title = document.createElement('h3');
     title.classList.add('post-title');
@@ -24,6 +25,7 @@ function displayHighlights(posts) {
     container.appendChild(li);
   });
 }
+
 
 // ========== LABEL POSTS SECTION SCRIPT ==========
 function displayLabelPosts(posts) {
