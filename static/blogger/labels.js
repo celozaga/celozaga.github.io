@@ -1,31 +1,42 @@
 // ========== ANNOUNCEMENTS SECTION SCRIPT ==========
 
-function displayAnnouncements(posts) {
-  const container = document.querySelector('.announcements-posts-container');
-  if (!container) return;
+function populateAnnouncementPosts(data) {
+  var container = document.querySelector(".announcement-posts-container");
+  if (!data || !data.feed || !data.feed.entry) {
+    container.innerHTML = "<p>Sem anúncios por enquanto.</p>";
+    return;
+  }
 
-  posts.feed.entry.forEach(post => {
-    const li = document.createElement('li');
-    li.classList.add('announcement-post');  // Classe alterada para 'announcement-post'
+  data.feed.entry.forEach(function(post) {
+    var link = post.link.find(l => l.rel === "alternate").href;
+    var title = post.title.$t;
+    var thumb = post.media$thumbnail ? post.media$thumbnail.url.replace("s72-c", "w800-h600-p-k-no-nu") : "";
 
-    const link = document.createElement('a');
-    link.href = post.link[post.link.length - 1].href;
-    link.classList.add('announcement-post-link');  // Classe alterada para 'announcement-post-link'
-
-    const img = document.createElement('img');
-    img.src = post.media$thumbnail.url.replace('s72-c', 'w800-h600-p-k-no-nu');  // Imagem em 800x600
-
-    const title = document.createElement('h3');
-    title.classList.add('post-title');
-    title.innerHTML = post.title.$t;
-
-    link.appendChild(img);
-    link.appendChild(title);
-    li.appendChild(link);
-    container.appendChild(li);
+    var div = document.createElement("div");
+    div.className = "announcement-post";
+    div.innerHTML = ` 
+      <a class="announcement-link" href="${link}">
+        <img src="${thumb}" alt="${title}" />
+        <div class="announcement-title">${title}</div>
+      </a>
+    `;
+    container.appendChild(div);
   });
 }
 
+function fetchAnnouncementPosts() {
+  var callbackName = "displayAnnouncementPosts";
+  window[callbackName] = function(data) {
+    populateAnnouncementPosts(data);
+    delete window[callbackName];
+  };
+
+  var script = document.createElement("script");
+  script.src = "https://celopartystars.blogspot.com/feeds/posts/summary/-/Announcements?alt=json-in-script&callback=" + callbackName + "&max-results=5";
+  document.body.appendChild(script);
+}
+
+document.addEventListener("DOMContentLoaded", fetchAnnouncementPosts);
 
 // ========== LABEL POSTS SECTION SCRIPT ==========
 function displayLabelPosts(posts) {
