@@ -11,13 +11,13 @@ function populateAnnouncementPosts(data) {
     var title = post.title.$t;
     var thumb = post.media$thumbnail ? post.media$thumbnail.url.replace("s72-c", "w800-h600-p-k-no-nu") : "";
 
-    var div = document.createElement("div");
+    var div = document.createElement("li");
     div.className = "announcement-post";
     div.innerHTML = ` 
-      <li><a class="announcement-link" href="${link}">
+      <a class="announcement-link" href="${link}">
         <img src="${thumb}" alt="${title}" />
         <h3>${title}</h3>
-      </a></li>
+      </a>
     `;
     container.appendChild(div);
   });
