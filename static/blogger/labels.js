@@ -1,29 +1,41 @@
-// ========== HIGHLIGHTS SECTION SCRIPT ==========
-function displayHighlights(posts) {
-  const container = document.querySelector('.announcements-container');
-  if (!container) return;
+// Script exclusivo para a seção de Announcements (antigo highlights)
+function loadAnnouncements(containerSelector) {
+  const highlightContainer = document.querySelector(containerSelector);
+  if (!highlightContainer) return;
 
-  posts.feed.entry.forEach(post => {
-    const li = document.createElement('li');
-    li.classList.add('announcements-post');
+  window.displayHighlights = function(posts) {
+    if (!posts.feed || !posts.feed.entry) return;
 
-    const link = document.createElement('a');
-    link.href = post.link[post.link.length - 1].href;
-    link.classList.add('announcements-post-link');
+    posts.feed.entry.forEach(post => {
+      const postEl = document.createElement('div');
+      postEl.classList.add('highlight-post');
 
-    const img = document.createElement('img');
-    img.src = post.media$thumbnail.url.replace('s72-c', 'w800-h600-p-k-no-nu');
+      const img = document.createElement('img');
+      img.src = post.media$thumbnail.url.replace('s72-c', 'w800-h600-p-k-no-nu');
+      postEl.appendChild(img);
 
-    const title = document.createElement('h3');
-    title.classList.add('post-title');
-    title.innerHTML = post.title.$t;
+      const title = document.createElement('h3');
+      title.innerHTML = post.title.$t;
+      postEl.appendChild(title);
 
-    link.appendChild(img);
-    link.appendChild(title);
-    li.appendChild(link);
-    container.appendChild(li);
-  });
+      const summary = document.createElement('p');
+      summary.innerHTML = post.summary.$t;
+      postEl.appendChild(summary);
+
+      const link = document.createElement('a');
+      link.href = post.link[post.link.length - 1].href;
+      link.textContent = 'Leia mais';
+      postEl.appendChild(link);
+
+      highlightContainer.appendChild(postEl);
+    });
+  };
+
+  const script = document.createElement('script');
+  script.src = `/feeds/posts/summary/-/Announcements?max-results=3&alt=json-in-script&callback=displayHighlights`;
+  document.body.appendChild(script);
 }
+
 
 // ========== LABEL POSTS SECTION SCRIPT ==========
 function displayLabelPosts(posts) {
