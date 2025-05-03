@@ -1,6 +1,6 @@
 // ========== HIGHLIGHTS SECTION SCRIPT ==========
 function displayHighlights(posts) {
-  const container = document.querySelector('.highlight-posts-container');
+  const container = document.querySelector('.announcements-posts-container');
   if (!container) return;
 
   posts.feed.entry.forEach(post => {
