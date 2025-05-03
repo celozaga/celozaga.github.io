@@ -32,7 +32,7 @@ function fetchAnnouncementPosts() {
   };
 
   var script = document.createElement("script");
-  script.src = "https://celopartystars.blogspot.com/feeds/posts/summary/-/Announcements?alt=json-in-script&callback=" + callbackName + "&max-results=5";
+  script.src = "/feeds/posts/summary/-/Announcements?alt=json-in-script&callback=" + callbackName + "&max-results=5";
   document.body.appendChild(script);
 }
 
