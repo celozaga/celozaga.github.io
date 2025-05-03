@@ -1,5 +1,4 @@
 // ========== ANNOUNCEMENTS SECTION SCRIPT ==========
-
 function populateAnnouncementPosts(data) {
   var container = document.querySelector(".announcement-posts-container");
   if (!data || !data.feed || !data.feed.entry) {
@@ -39,7 +38,7 @@ function fetchAnnouncementPosts() {
 document.addEventListener("DOMContentLoaded", fetchAnnouncementPosts);
 
 // ========== LABEL POSTS SECTION SCRIPT ==========
-function displayLabelPosts(posts) {
+function displayLabelPosts() {
   const containers = document.querySelectorAll('[data-label]');
   if (!containers.length) return;
 
@@ -53,6 +52,11 @@ function displayLabelPosts(posts) {
     document.body.appendChild(script);
 
     window[`populateLabelPosts_${label.replace(/\W/g, '')}`] = function(data) {
+      if (!data || !data.feed || !data.feed.entry) {
+        containerList.innerHTML = "<li>No posts found.</li>";
+        return;
+      }
+
       data.feed.entry.forEach(post => {
         const li = document.createElement('li');
         li.classList.add('label-post');
@@ -77,7 +81,7 @@ function displayLabelPosts(posts) {
         text.appendChild(title);
 
         const summary = document.createElement('p');
-        summary.innerHTML = post.summary.$t;
+        summary.innerHTML = post.summary.$t || "";
         text.appendChild(summary);
 
         link.appendChild(imgWrapper);
@@ -88,3 +92,7 @@ function displayLabelPosts(posts) {
     };
   });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  displayLabelPosts(); // Inicia a exibição dos posts para todas as labels
+});
