@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Thumbnail</title>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #121212;
+      color: #fff;
+      font-family: Segoe UI, Arial, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .form-container {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 0 20px #000;
+      margin-bottom: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background: #2b2b2b;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    button {
+      background: #03dac6;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #00c4b4;
+    }
+
+    #thumb-container {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+    }
+
+    #thumb-container img.background {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #thumb-container img.icon {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 350px;
+      height: 350px;
+      border-radius: 24px;
+      object-fit: cover;
+      box-shadow: 0 0 20px #000;
+    }
+
+    #thumb-container img.logo {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 200px;
+      height: auto;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+
+    .credits {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      #thumb-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Gerador de Thumbnail para Jogos Mobile</h1>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label>🔁 Background (URL ou upload)</label>
+      <input type="text" id="bgUrl" placeholder="Cole aqui o link do fundo">
+      <input type="file" id="bgFile" accept="image/*">
+    </div>
+
+    <div class="form-group">
+      <label>🕹 Ícone do Jogo (URL ou upload)</label>
+      <input type="text" id="iconUrl" placeholder="Cole aqui o link do ícone">
+      <input type="file" id="iconFile" accept="image/*">
+    </div>
+
+    <div class="actions">
+      <button onclick="atualizarThumbnail()">Atualizar Thumbnail</button>
+      <button onclick="baixarImagem()">📸 Baixar como JPG</button>
+    </div>
+  </div>
+
+  <div id="thumb-container">
+    <img id="bg" class="background" src="" alt="background" />
+    <img id="icon" class="icon" src="" alt="icon" />
+    <img class="logo" src="https://i.imgur.com/KGcP2K6.png" alt="logo" />
+  </div>
+
+  <div class="credits">
+    Desenvolvido por Celo Zaga — Powered by html2canvas
+  </div>
+
+  <script>
+    function atualizarThumbnail() {
+      const bgUrl = document.getElementById('bgUrl').value;
+      const iconUrl = document.getElementById('iconUrl').value;
+
+      const bg = document.getElementById('bg');
+      const icon = document.getElementById('icon');
+
+      if (bgUrl) bg.src = bgUrl;
+      if (iconUrl) icon.src = iconUrl;
+    }
+
+    document.getElementById('bgFile').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('bg').src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    document.getElementById('iconFile').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('icon').src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function baixarImagem() {
+      const container = document.getElementById('thumb-container');
+
+      html2canvas(container, {
+        allowTaint: true,
+        useCORS: true,
+        backgroundColor: null,
+        width: 1920,
+        height: 1080,
+        scale: 1
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'thumbnail.jpg';
+        link.href = canvas.toDataURL('image/jpeg', 0.95);
+        link.click();
+      });
+    }
+  </script>
+
+</body>
+</html>
+
