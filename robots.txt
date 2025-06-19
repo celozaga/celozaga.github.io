@@ -4,6 +4,7 @@ Disallow: /make/
 Disallow: /notion/
 Disallow: /redirects/
 Disallow: /tools/
+Disallow:/blogger/
 Allow: /assets/*.css
 Allow: /assets/*.js
 Sitemap: https://celozaga.github.io/sitemaps.xml
