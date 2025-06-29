@@ -2,7 +2,7 @@ name: Atualizar Posts do YouTube via RSS
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Todo domingo à meia-noite UTC
+    - cron: '0 */12 * * *' # Roda à meia-noite e ao meio-dia UTC
   workflow_dispatch:     # Permite rodar manualmente
 
 jobs:
