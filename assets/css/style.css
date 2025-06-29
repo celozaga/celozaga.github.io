@@ -118,7 +118,7 @@ main{
 }
 .social-media li a {
     padding: 20px;
-    background: #000;
+    background: var(--surface);
     display: block;
 }
 .social-media img {
