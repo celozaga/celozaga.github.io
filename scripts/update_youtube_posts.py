@@ -1,4 +1,35 @@
-- name: Rodar script Python
-  run: python scripts/update_youtube_posts.py
-  env:
-    CHANNEL_ID: 'UCvOnTTQp_7ZXtWUZYEUZO7Q'
+name: Atualizar Posts do YouTube via RSS
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Todo domingo à meia-noite UTC
+  workflow_dispatch:     # Permite rodar manualmente
+
+jobs:
+  update-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install feedparser
+
+      - name: Rodar script Python para atualizar posts
+        run: python scripts/update_youtube_posts.py
+        env:
+          CHANNEL_ID: 'UCvOnTTQp_7ZXtWUZYEUZO7Q'
+
+      - name: Commit e push dos posts novos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _posts/
+          git commit -m "Atualizar posts do YouTube via RSS (workflow automático)" || echo "Sem alterações para commitar"
+          git push
