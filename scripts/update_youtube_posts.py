@@ -2,9 +2,8 @@ import os
 import feedparser
 from datetime import datetime
 
-# O ID do canal será passado como variável de ambiente pelo GitHub Actions
 channel_id = os.environ['CHANNEL_ID']
-rss_url = f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'
+rss_url = f'http://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'
 posts_dir = '_posts'
 
 feed = feedparser.parse(rss_url)
@@ -18,17 +17,27 @@ if not os.path.exists(posts_dir):
 
 for entry in feed.entries:
     video_id = entry.yt_videoid
-    title = entry.title.replace('/', '-')
+    title = entry.title.replace('/', '-')  # Substitui barras para evitar problemas no nome do arquivo
     published = entry.published_parsed
     date_str = datetime(*published[:6]).strftime('%Y-%m-%d')
     filename = f"{date_str}-{title.lower().replace(' ', '-')}.md"
     path = os.path.join(posts_dir, filename)
 
     if not os.path.exists(path):
+        # Trata a descrição para ser usada na meta tag:
+        # 1. Escapa as aspas duplas para não quebrar o YAML do front matter
+        # 2. Limita o tamanho para ser adequado como meta descrição (aprox. 155 caracteres)
+        safe_summary = entry.summary.replace('"', '\\"')
+        meta_description = safe_summary
+        if len(meta_description) > 155:
+            meta_description = meta_description[:152] + '...' # 152 + ... = 155 caracteres
+
+
         content = f'''---
 layout: post
 title: "{entry.title}"
 date: {date_str}
+description: "{meta_description}"
 ---
 
 <h1>{entry.title}</h1>
@@ -39,6 +48,6 @@ date: {date_str}
 '''
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
-        print(f"Criado post: {filename}")
+        print(f"Post criado: {filename}")
     else:
         print(f"Post já existe: {filename}")
