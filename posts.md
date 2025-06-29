@@ -3,7 +3,7 @@ layout: default
 title: Latest Posts
 permalink: /posts/
 ---
-<div class="post-list>
+<div class="post-list">
 <ul>
 {% for post in site.posts %}
   <li>
