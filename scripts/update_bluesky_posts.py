@@ -83,7 +83,7 @@ date: {date_str}
 description: "{meta_description}"
 ---
 
-<h1>{entry.title if 'title' in entry else title}</h1>
+<h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1>
 
 <blockquote class="bluesky-embed" data-bluesky-uri="{bluesky_uri}" data-bluesky-embed-color-mode="system">
 <p lang="">{clean_content}<br><br><a href="{post_link}">[original post]</a></p>
@@ -91,7 +91,7 @@ description: "{meta_description}"
 </blockquote>
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
-<p>Descrição: {clean_content}</p>
+<p class="bluesky-post-description">{clean_content}</p>
 '''
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
