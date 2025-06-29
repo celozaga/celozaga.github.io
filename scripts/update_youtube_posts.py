@@ -1,35 +1,44 @@
-name: Atualizar Posts do YouTube via RSS
+import os
+import feedparser
+from datetime import datetime
 
-on:
-  schedule:
-    - cron: '0 0 * * 0'  # Todo domingo à meia-noite UTC
-  workflow_dispatch:     # Permite rodar manualmente
+# O ID do canal será passado como variável de ambiente pelo GitHub Actions
+channel_id = os.environ['CHANNEL_ID']
+rss_url = f'https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}'
+posts_dir = '_posts'
 
-jobs:
-  update-posts:
-    runs-on: ubuntu-latest
+feed = feedparser.parse(rss_url)
 
-    steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v3
+if not feed.entries:
+    print("Nenhum vídeo encontrado no RSS.")
+    exit(0)
 
-      - name: Configurar Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+if not os.path.exists(posts_dir):
+    os.makedirs(posts_dir)
 
-      - name: Instalar dependências
-        run: pip install feedparser
+for entry in feed.entries:
+    video_id = entry.yt_videoid
+    title = entry.title.replace('/', '-')
+    published = entry.published_parsed
+    date_str = datetime(*published[:6]).strftime('%Y-%m-%d')
+    filename = f"{date_str}-{title.lower().replace(' ', '-')}.md"
+    path = os.path.join(posts_dir, filename)
 
-      - name: Rodar script Python para atualizar posts
-        run: python scripts/update_youtube_posts.py
-        env:
-          CHANNEL_ID: 'UCvOnTTQp_7ZXtWUZYEUZO7Q'
+    if not os.path.exists(path):
+        content = f'''---
+layout: post
+title: "{entry.title}"
+date: {date_str}
+---
 
-      - name: Commit e push dos posts novos
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _posts/
-          git commit -m "Atualizar posts do YouTube via RSS (workflow automático)" || echo "Sem alterações para commitar"
-          git push
+<h1>{entry.title}</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>
+
+<p>{entry.summary}</p>
+'''
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Criado post: {filename}")
+    else:
+        print(f"Post já existe: {filename}")
