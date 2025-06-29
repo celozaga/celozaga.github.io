@@ -120,6 +120,7 @@ main{
     padding: 20px;
     background: var(--surface);
     display: block;
+    border-radius: 50%;
 }
 .social-media img {
     width: 20px;
