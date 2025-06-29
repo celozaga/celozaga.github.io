@@ -4,4 +4,4 @@ title: "Meu Primeiro Post"
 date: 2025-06-29
 ---
 
-Olá! Esse é meu primeiro post dentro do blog no subdiretório `/posts/`, usando Jekyll.
+Olá! Esse é um post de exemplo usando o layout padrão do Jekyll.
