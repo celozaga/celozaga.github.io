@@ -76,10 +76,16 @@ header {
   padding: 0;
 }
 
-.content {
-  max-width: 720px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+main{
+ max-width: 800px; 
+ margin: 0 auto;
+}
+
+.post {
+    background: var(--surface);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .social-media li {
