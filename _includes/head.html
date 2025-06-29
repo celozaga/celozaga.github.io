@@ -15,11 +15,11 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
   <meta property="og:site_name" content="{{ site.title | escape }}" />
-  <meta property="og:type" content="article" /> {# Altere para 'website' na sua homepage, se desejar #}
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
-  <meta name="twitter:card" content="summary_large_image" /> {# ou 'summary' para imagens menores #}
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
-  {% if page.image %} {# Adicione 'image: /path/to/your/image.jpg' no front matter do post para uma imagem específica #}
+  {% if page.image %}
     <meta property="og:image" content="{{ page.image | absolute_url }}">
     <meta name="twitter:image" content="{{ page.image | absolute_url }}">
   {% endif %}
