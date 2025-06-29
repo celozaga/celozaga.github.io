@@ -42,7 +42,7 @@ description: "{meta_description}"
 
 <h1>{entry.title}</h1>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" class="ytembed" frameborder="0" allowfullscreen></iframe>
 
 <p>{entry.summary}</p>
 '''
