@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Blog
+title: Latest Posts
 permalink: /posts/
 ---
-
-<h1>Blog</h1>
-
+<div class="post-list>
 <ul>
 {% for post in site.posts %}
   <li>
@@ -14,3 +12,4 @@ permalink: /posts/
   </li>
 {% endfor %}
 </ul>
+</div>
