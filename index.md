@@ -3,7 +3,7 @@ layout: default
 title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
-<section class="search-homepage-section">
+<section class="search-homepage-section searchbox">
   <form action="/search/" method="get" class="search-form">
     <input type="text" id="homepage-search-input" name="q" placeholder="Pesquisar posts...">
     <button type="submit">Buscar</button>
