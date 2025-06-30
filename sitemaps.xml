@@ -8,7 +8,7 @@ layout: null
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     {% for page in site.pages %}
-        {% unless page.sitemap == false %} {# Permite excluir páginas do sitemap com sitemap: false no front matter #}
+        {% unless page.sitemap == false %}
             <url>
                 <loc>{{ page.url | absolute_url }}</loc>
                 {% if page.lastmod %}
@@ -25,7 +25,7 @@ layout: null
     {% endfor %}
 
     {% for post in site.posts %}
-        {% unless post.sitemap == false %} {# Permite excluir posts do sitemap com sitemap: false no front matter #}
+        {% unless post.sitemap == false %}
             <url>
                 <loc>{{ post.url | absolute_url }}</loc>
                 {% if post.lastmod %}
