@@ -5,10 +5,4 @@ baseurl: ""
 url: "https://celozaga.github.io"
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-
-paginate: 10
-paginate_path: "/page:num/"
-index_pages:
-  - index.md
+  - jekyll-sitemap 
