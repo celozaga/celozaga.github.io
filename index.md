@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Celo Zaga
-description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
+title: Blog Principal
+description: Últimas postagens do blog.
 ---
 
 <h1>{{ page.title }}</h1>
