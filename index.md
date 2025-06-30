@@ -4,8 +4,6 @@ title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
 
-<h1>{{ page.title }}</h1>
-
 <section class="section social-media-tab" id="links">
     <h2>Links</h2>
     <ul>
