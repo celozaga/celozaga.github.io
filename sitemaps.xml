@@ -96,7 +96,7 @@ layout: null
         <changefreq>hourly</changefreq>
     </url>
     <url>
-        <loc>https://granary.io/bluesky/celozaga.bsky.social/@self/@app/?format=jsonfeed</loc>
+        <loc>https://bsky.app/profile/celozaga.bsky.social/rss</loc>
         <priority>0.5</priority>
         <changefreq>hourly</changefreq>
     </url>
