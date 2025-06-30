@@ -4,9 +4,9 @@ title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
 <section class="search-homepage-section">
-  <form action="/search/" method="get" class="search-form"> {# Form para a busca #}
-    <input type="text" id="homepage-search-input" name="q" placeholder="Pesquisar posts...">
-    <button type="submit">Buscar</button>
+  <form action="/search/" method="get" class="search-form">
+    <input type="text" id="homepage-search-input" name="q" placeholder="Search">
+    <button type="submit">Search</button>
   </form>
 </section>
 
