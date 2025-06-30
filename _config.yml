@@ -6,3 +6,7 @@ url: "https://celozaga.github.io"
 
 plugins:
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/posts/page:num/"
