@@ -5,7 +5,7 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 ---
 
 
-        <header class="header">
+<div class="profile">
             <img class="avatar" src="static/media/icons/avatar.png" alt="Avatar">
             <h1 class="username">Celo Zaga</h1>
             <p class="description">Community Leader and UGC Map Designer for Party Stars</p>
@@ -15,8 +15,8 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
                     <li class="tab-item" onclick="showSection(event, 'news')">News</li>
                     <li class="tab-item" onclick="showSection(event, 'videos')">Vídeos</li>
                 </ul>
-            </nav>
-        </header>
+            </nav>    
+</div>
 <section class="section links active" id="links">
     <h2>Links</h2>
     <ul>
