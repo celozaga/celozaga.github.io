@@ -5,4 +5,4 @@ baseurl: ""
 url: "https://celozaga.github.io"
 
 plugins:
-  - jekyll-sitemap 
+  - jekyll-sitemap
