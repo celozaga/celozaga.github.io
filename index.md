@@ -31,5 +31,5 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
     <div class="button button-link"><a href="https://www.youtube.com/@CeloZaga" target="_blank">Watch more on YouTube</a></div>
 </section>
 
-{% include footer.html %}
 <script src="static/scripts.js"></script>
+
