@@ -30,14 +30,12 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 </section>
 
 <section class="blog-posts-homepage">
-    <h2>Últimos Posts</h2>
+    <h2>Posts</h2>
     <div id="posts-container-home" class="post-list">
       </div>
     <div class="pagination-controls" id="pagination-controls-home">
-      <button id="prev-page-home" disabled>&laquo; Anterior</button>
-      <span id="page-info-home">Página 1 de 1</span>
-      <button id="next-page-home" disabled>Próxima &raquo;</button>
+      <button id="prev-page-home" disabled>&laquo; Prev</button>
+      <span id="page-info-home">Page 1 de 1</span>
+      <button id="next-page-home" disabled>Next &raquo;</button>
     </div>
 </section>
-
-
