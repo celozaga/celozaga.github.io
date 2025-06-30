@@ -8,7 +8,7 @@ permalink: /posts/
 
 <div class="post-list">
   <ul>
-  {% for post in site.posts %} {# Iterar sobre TODOS os posts sem paginação #}
+  {% for post in site.posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}
       <small>— {{ post.date | date: "%d %b %Y" }}</small>
