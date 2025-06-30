@@ -96,7 +96,7 @@ layout: null
         <changefreq>hourly</changefreq>
     </url>
     <url>
-        <loc>https://bsky.app/profile/celozaga.bsky.social/rss</loc>
+        <loc>https://granary.io/bluesky/celozaga.bsky.social/@self/@app/?format=jsonfeed</loc>
         <priority>0.5</priority>
         <changefreq>hourly</changefreq>
     </url>
@@ -106,9 +106,14 @@ layout: null
         <changefreq>yearly</changefreq>
     </url>
     <url>
-        <loc>https://discord.gg/gHEHaxtwBT</loc>
+        <loc>https://www.behance.net/celozaga</loc>
         <priority>0.5</priority>
-        <changefreq>monthly</changefreq>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://discordapp.com/users/861014434415771678</loc>
+        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
     </url>
 
 </urlset>
