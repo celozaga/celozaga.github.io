@@ -57,9 +57,10 @@ a:hover {
 }
 
 header {
-      color: white;
-      padding: 10px;
-    }
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
 .header-page{
     padding: 20px;
     height: 50px;  
