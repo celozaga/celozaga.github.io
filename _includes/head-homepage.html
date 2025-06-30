@@ -1,48 +1,12 @@
-<title>{{ page.title | default: site.title | escape }} | {{ site.title | escape }}</title>
-  
-  {% if page.description %}
-    <meta name="description" content="{{ page.description | escape }}">
-    <meta property="og:description" content="{{ page.description | escape }}">
-    <meta name="twitter:description" content="{{ page.description | escape }}">
-  {% else %}
-    <meta name="description" content="{{ site.description | escape }}">
-    <meta property="og:description" content="{{ site.description | escape }}">
-    <meta name="twitter:description" content="{{ site.description | escape }}">
-  {% endif %}
-
-  <meta name="keywords" content="Celo Zaga, gaming, social media, Discord, YouTube, Bluesky, TikTok, Instagram, Threads, Reddit, X">
-  <meta name="author" content="Celo Zaga">
-  <meta name="robots" content="index, follow">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta property="fb:pages" content="104765905779407">
-  <meta name="google-site-verification" content="ZRy99LLYrFFBbgGa4ijfe_s_W93p2_YNe39AyHXLDfc" />
-  
-  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
-  <meta property="og:type" content="website"> {# Para homepage, 'website' é melhor que 'article' #}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  {% if page.image %}
-    <meta property="og:image" content="{{ page.image | absolute_url }}">
-    <meta name="twitter:image" content="{{ page.image | absolute_url }}">
-  {% else %}
-    {# Use uma imagem padrão se a página não tiver uma imagem específica #}
-    <meta property="og:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
-    <meta name="twitter:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
-  {% endif %}
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Celo Zaga profile image">
-  <meta property="og:site_name" content="{{ site.title | escape }}">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
-  <meta name="twitter:site" content="@CeloZaga">
-  <meta name="twitter:creator" content="@CeloZaga">
-  
-  <link rel="icon" href="{{ '/static/media/icons/favicon.ico' | relative_url }}" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/static/media/icons/favicon-16x16.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{{ '/static/media/icons/favicon-96x96.png' | relative_url }}"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/static/media/icons/favicon-32x32.png' | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/static/media/icons/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/static/media/icons/android-chrome-192x192.png' | relative_url }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+<header class="header">
+    <img class="avatar" src="{{ '/static/media/icons/avatar.png' | relative_url }}" alt="Avatar">
+    <h1 class="username">Celo Zaga</h1>
+    <p class="description">Community Leader and UGC Map Designer for Party Stars</p>
+    <nav class="tabs">
+        <ul>
+            <li class="tab-item active" onclick="showSection(event, 'links')">Links</li>
+            <li class="tab-item" onclick="showSection(event, 'news')">News</li>
+            <li class="tab-item" onclick="showSection(event, 'videos')">Vídeos</li>
+        </ul>
+    </nav>
+</header>
