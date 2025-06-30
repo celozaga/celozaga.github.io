@@ -3,9 +3,6 @@ layout: default
 title: Latest Posts
 permalink: /posts/
 ---
-
-<h1>{{ page.title }}</h1>
-
 <div class="post-list">
   <ul>
   {% for post in site.posts %}
