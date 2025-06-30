@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   {% include head.html %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}"> {# Seu CSS principal #}
 </head>
 <body>
   {% include header.html %}
@@ -10,5 +10,6 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script src="{{ '/static/scripts.js' | relative_url }}"></script>
 </body>
 </html>
