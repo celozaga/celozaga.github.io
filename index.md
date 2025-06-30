@@ -3,7 +3,6 @@ layout: default
 title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
-{% include head-homepage.html %}
 
 <section class="section links active" id="links">
     <h2>Links</h2>
