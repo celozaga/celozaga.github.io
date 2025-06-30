@@ -4,6 +4,19 @@ title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
 
+
+        <header class="header">
+            <img class="avatar" src="static/media/icons/avatar.png" alt="Avatar">
+            <h1 class="username">Celo Zaga</h1>
+            <p class="description">Community Leader and UGC Map Designer for Party Stars</p>
+            <nav class="tabs">
+                <ul>
+                    <li class="tab-item active" onclick="showSection(event, 'links')">Links</li>
+                    <li class="tab-item" onclick="showSection(event, 'news')">News</li>
+                    <li class="tab-item" onclick="showSection(event, 'videos')">Vídeos</li>
+                </ul>
+            </nav>
+        </header>
 <section class="section links active" id="links">
     <h2>Links</h2>
     <ul>
