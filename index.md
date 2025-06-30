@@ -29,7 +29,7 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
     <ul class="feed-youtube"></ul>
 </section>
 
-<section class="section news updates blog-posts-homepage"> {# Nova classe para distinguir #}
+<section class="blog-posts-homepage">
     <h2>Últimos Posts</h2>
     <div id="posts-container-home" class="post-list">
       </div>
