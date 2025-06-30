@@ -6,7 +6,7 @@ description: Últimas postagens do blog.
 
 <h1>{{ page.title }}</h1>
 
-<section class="section social-media" id="links">
+<section class="section social-media-tab" id="links">
     <h2>Links</h2>
     <ul>
         <li><a title="Discord" href="https://discord.com/invite/gHEHaxtwBT" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/discord.svg" alt="Discord"><p>Discord</p></a></li>
