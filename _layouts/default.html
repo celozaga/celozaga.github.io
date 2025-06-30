@@ -5,12 +5,18 @@
   <link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}">
 </head>
 <body>
-  {% include header.html %}
+  {% if page.url == "/" or page.url == "/index.html" or page.url == "/index.md" %}
+    {% include header_homepage.html %}
+  {% else %}
+    {% include header.html %}
+  {% endif %}
+
   <main class="content">
-    {{ content }}
+    {{ content }} {# Aqui é onde o conteúdo da página atual é inserido #}
   </main>
-  {% include footer.html %}
+
+  {% include footer.html %} {# Seu rodapé geral #}
   <script src="{{ '/static/scripts.js' | relative_url }}"></script>
-  <script src="{{ '/static/pagination.js' | relative_url }}"></script>
+  <script src="{{ '/static/pagination.js' | relative_url }}"></script> {# Script de Paginação JS #}
 </body>
 </html>
