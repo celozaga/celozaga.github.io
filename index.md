@@ -29,15 +29,16 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
     <ul class="feed-youtube"></ul>
 </section>
 
-<section class="section news updates" id="news">
-<h2>Posts</h2>
-<div id="posts-container" class="post-list">
-</div>
-<div class="pagination-controls">
-  <button id="prev-page" disabled>&laquo; Anterior</button>
-  <span id="page-info">Página 1 de 1</span>
-  <button id="next-page" disabled>Próxima &raquo;</button>
-</div>
+<section class="section news updates blog-posts-homepage"> {# Nova classe para distinguir #}
+    <h2>Últimos Posts</h2>
+    <div id="posts-container-home" class="post-list">
+      </div>
+
+    <div class="pagination-controls" id="pagination-controls-home">
+      <button id="prev-page-home" disabled>&laquo; Anterior</button>
+      <span id="page-info-home">Página 1 de 1</span>
+      <button id="next-page-home" disabled>Próxima &raquo;</button>
+    </div>
 </section>
 
 
