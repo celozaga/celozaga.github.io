@@ -106,14 +106,9 @@ layout: null
         <changefreq>yearly</changefreq>
     </url>
     <url>
-        <loc>https://www.behance.net/celozaga</loc>
+        <loc>https://discord.gg/gHEHaxtwBT</loc>
         <priority>0.5</priority>
-        <changefreq>yearly</changefreq>
-    </url>
-    <url>
-        <loc>https://discordapp.com/users/861014434415771678</loc>
-        <priority>0.5</priority>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
     </url>
 
 </urlset>
