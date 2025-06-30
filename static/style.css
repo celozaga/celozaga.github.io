@@ -88,6 +88,142 @@ main{
  margin: 0 auto;
 }
 
+.social-media-tab {
+  width: 100%;
+}
+.social-media-tab ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  overflow-x: auto;
+}
+.social-media-tab li {
+  text-align: center;
+  justify-content: center;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+.social-media-tab li a {
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface);
+  padding: 20px 50px;
+  text-align: center;
+}
+.social-media-tab img {
+  margin: 0 auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.social-media-tab a p {
+  font-weight: 500;
+}
+.social-media-tab a[title="Discord"] p {
+  color: #5865f2;
+}
+
+.social-media-tab a[title="YouTube"] p {
+  color: #ff0e35;
+}
+
+.social-media-tab a[title="Bluesky"] p {
+  color: #0085ff;
+}
+
+.social-media-tab a[title="Threads"] p {
+  color: var(--white);
+}
+
+.social-media-tab a[title="Instagram"] p {
+  color: #f500be;
+}
+
+.social-media-tab a[title="Facebook"] p {
+  color: #0866ff;
+}
+.social-media-tab a[title="TikTok"] p {
+  color: #ff3b5c;
+}
+.social-media-tab a[title="Reddit"] p {
+  color: #ff0e35;
+}
+.social-media-tab a[title="X"] p {
+  color: var(--white);
+}
+
+/* YouTube Videos */
+
+.videos {
+  width: 100%;
+}
+
+.videos ul{
+  display: flex;
+  gap: 20px; /* Espaço entre os itens */
+  list-style-type: none;
+  padding: 0;
+  overflow-x: auto; /* Cria rolagem horizontal */
+}
+
+.videos li {
+  flex: 0 0 400px;
+}
+
+.videos li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+.videos h3 {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 400;
+  margin: 10px 0px 20px 0px;
+}
+.videos svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: white;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+}
+.videos img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.news li a{
+  display: block;
+  position: relative;
+  width: 100%;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 60px;
+  line-height: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
 .post {
     background: var(--surface);
     margin: 20px;
