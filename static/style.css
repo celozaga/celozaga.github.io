@@ -48,6 +48,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.searchbox input {
+    width: 100%;
+    border: 0;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50px;
+}
+
 header {
       color: white;
       padding: 10px;
