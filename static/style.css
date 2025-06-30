@@ -54,6 +54,7 @@ a:hover {
     text-align: center;
     line-height: 48px;
     border-radius: 50px;
+    background-color: var(--surface);
 }
 
 header {
