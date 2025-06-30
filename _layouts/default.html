@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include head.html %}
+  {% include head.html %} {# Este é o head.html que contém todas as meta tags #}
   <link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}">
 </head>
 <body>
-  {% if page.url == "/" or page.url == "/index.html" or page.url == "/index.md" %}
-    {% include header_homepage.html %}
-  {% else %}
-    {% include header.html %}
+  {% if page.url == "/" or page.url == "/index.html" %} {# Verifica se é a homepage #}
+    {% include header.html %} {# Usa o header para a página inicial #}
+  {% else %} {# Para todas as outras páginas, incluindo posts, /posts/, /page2/, etc. #}
+    {% include header-page.html %} {# Usa o header para outras páginas #}
   {% endif %}
 
   <main class="content">
-    {{ content }} {# Aqui é onde o conteúdo da página atual é inserido #}
+    {{ content }}
   </main>
 
-  {% include footer.html %} {# Seu rodapé geral #}
+  {% include footer.html %}
   <script src="{{ '/static/scripts.js' | relative_url }}"></script>
-  <script src="{{ '/static/pagination.js' | relative_url }}"></script> {# Script de Paginação JS #}
+  <script src="{{ '/static/pagination.js' | relative_url }}"></script> {# Se ainda estiver usando a paginação JS #}
 </body>
 </html>
