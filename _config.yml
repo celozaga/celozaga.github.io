@@ -10,3 +10,5 @@ plugins:
 
 paginate: 10
 paginate_path: "/page:num/"
+index_pages:
+  - index.md
