@@ -356,5 +356,8 @@ footer {
     font-size: 0.9rem;
     color: #888;
     padding: 20px;
-    border-top: 1px solid var(--surface);
+    background: var(--surface);
+}
+footer .logo, footer .social-media, footer .link-list{
+  margin-bottom: 20px;
 }
