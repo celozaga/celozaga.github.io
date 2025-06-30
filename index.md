@@ -33,7 +33,6 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
     <h2>Últimos Posts</h2>
     <div id="posts-container-home" class="post-list">
       </div>
-
     <div class="pagination-controls" id="pagination-controls-home">
       <button id="prev-page-home" disabled>&laquo; Anterior</button>
       <span id="page-info-home">Página 1 de 1</span>
