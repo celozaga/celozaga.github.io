@@ -89,6 +89,13 @@ header svg {
       fill: white;
       display: inline-block;
     }
+
+ .header-page {
+    padding: 20px;
+    width: auto;
+    height: 70px;
+}
+
 hr {
   height: 1px;
   border: 0;
