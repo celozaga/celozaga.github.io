@@ -33,3 +33,4 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 </section>
 
 {% include footer.html %}
+<script src="static/scripts.js"></script>
