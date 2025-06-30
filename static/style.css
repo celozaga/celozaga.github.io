@@ -289,11 +289,23 @@ main{
   margin-bottom: 20px;
 }
 
+/* POSTS */
 .post {
     background: var(--surface);
     margin: 20px;
     padding: 20px;
     border-radius: 20px;
+}
+.post h1 {
+    color: var(--white);
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.post p {
+    color: var(--white);
+    line-height: 25px;
 }
 .post iframe {
     width: 100%;
@@ -305,6 +317,7 @@ main{
     margin-bottom: 20px;
     border-radius: 20px;
 }
+/* POST LIST */
 .post-list a {
     line-height: 20px;
     background: var(--surface);
