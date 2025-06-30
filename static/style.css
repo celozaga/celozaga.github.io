@@ -328,12 +328,12 @@ main{
 .post-list a {
     line-height: 20px;
     background: var(--surface);
-    padding: 15px;
+    padding: 20px;
     display: block;
-    margin: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    border-radius: 60px;
 }
-
+/* SOCIAL MEDIA */
 .social-media li {
     display: inline-block;
 }
