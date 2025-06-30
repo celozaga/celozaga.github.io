@@ -81,13 +81,70 @@ header svg {
       fill: white;
       display: inline-block;
     }
-
-
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #7c7c7c45;
+  margin: 1em 0;
+}
+.section h1, .section h2 {
+  font-size: 20px;
+  margin: 20px 0;
+}
 main{
  max-width: 800px; 
  margin: 0 auto;
 }
 
+.header-profile .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.header-profile .username {
+  color: var(--white); 
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.header-profile .description {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+
+.nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 0px;
+  list-style-type: none;
+  padding: 0;
+  overflow-x: auto;
+}
+.nav ul li {
+  display: inline-block;
+  padding: 0;
+  flex: auto;
+}
+.nav li a {
+  display: block;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 3px solid transparent;
+}
+.nav li a.active {
+  color: #5865f2;
+  border-bottom: 3px solid #5865f2;
+}
 .social-media-tab {
   width: 100%;
 }
