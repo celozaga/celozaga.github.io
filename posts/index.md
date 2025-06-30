@@ -8,7 +8,7 @@ permalink: /posts/
 
 <div class="post-list">
   <ul>
-  {% for post in paginator.posts %}
+  {% for post in site.posts %} {# Iterar sobre TODOS os posts sem paginação #}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}
       <small>— {{ post.date | date: "%d %b %Y" }}</small>
@@ -16,20 +16,4 @@ permalink: /posts/
     </li>
   {% endfor %}
   </ul>
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">&laquo; Anterior</a>
-  {% else %}
-    <span class="previous-page disabled">&laquo; Anterior</span>
-  {% endif %}
-
-  <span class="page_number ">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" class="next-page">Próxima &raquo;</a>
-  {% else %}
-    <span class="next-page disabled">Próxima &raquo;</span>
-  {% endif %}
 </div>
