@@ -24,6 +24,7 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 </section>
 
 <section class="section news updates" id="news">
+<h2>Posts</h2>
 <div id="posts-container" class="post-list">
 </div>
 <div class="pagination-controls">
