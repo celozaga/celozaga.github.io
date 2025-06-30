@@ -356,9 +356,8 @@ main{
 footer {
     text-align: center;
     font-size: 0.9rem;
-    color: #888;
+    color: var(--gray);
     padding: 20px;
-    background: var(--surface);
 }
 footer .logo, footer .social-media, footer .link-list{
   margin-bottom: 20px;
