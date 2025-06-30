@@ -5,8 +5,8 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 ---
 <section class="search-homepage-section searchbox">
   <form action="/search/" method="get" class="search-form">
-    <input type="text" id="homepage-search-input" name="q" placeholder="Pesquisar posts...">
-    <button type="submit">Buscar</button>
+    <input type="text" id="homepage-search-input" name="q" placeholder="Search">
+    <button type="submit" style="display:none;">Search</button>
   </form>
 </section>
 
