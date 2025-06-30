@@ -7,7 +7,7 @@ permalink: /search/
 <h1>{{ page.title }}</h1>
 
 <section class="search-results-section">
-  <input type="text" id="search-input-page" placeholder="Pesquisar novamente..."> {# Campo de busca na página de resultados #}
+  <input type="text" id="search-input-page" placeholder="Pesquisar novamente...">
   <p id="search-results-info">Exibindo resultados para: "<span id="search-query"></span>"</p>
   <div id="posts-container" class="post-list">
     </div>
