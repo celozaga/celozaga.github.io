@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Resultados da Busca
+title: Search
 permalink: /search/
 ---
 
