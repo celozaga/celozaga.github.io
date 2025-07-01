@@ -1,6 +1,4 @@
 User-agent: *
 Disallow: /discord/
 Disallow: /redirects/
-Allow: /assets/*.css
-Allow: /assets/*.js
 Sitemap: https://celozaga.github.io/sitemap.xml
