@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Todos os Posts do Blog
+title: Posts
 permalink: /posts/
 ---
 
