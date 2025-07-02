@@ -369,12 +369,12 @@ main{
 .social-media p {
     display: none;
 }
-footer {
+.footer {
     text-align: center;
-    font-size: 0.9rem;
     color: var(--gray);
     padding: 20px;
+    border-top: 1px solid var(--surface);
 }
-footer .logo, footer .social-media, footer .link-list{
+.footer .logo, .footer .social-media, .footer .link-list{
   margin-bottom: 20px;
 }
