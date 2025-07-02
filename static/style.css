@@ -244,8 +244,7 @@ main{
 .list-link{}
 .list-link ul{}
 .link-list li { display: inline-block; }
-.link-list a { padding: 15px; display: block; }
-.link-list p { color: var(--gray); line-height: 20px; }
+.link-list a { color: var(--gray); line-height: 20px; padding: 15px; display: block; }
 .list-link i{}
 /* YouTube Videos */
 

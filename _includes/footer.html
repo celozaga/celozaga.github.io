@@ -1,24 +1,24 @@
 <footer class="footer" id="footer">
-  <div class="social-media">
+  <nav class="social-media" aria-label="Social media links">
     <ul>
-        <li><a title="Discord" href="https://discord.com/invite/gHEHaxtwBT" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/discord.svg' | relative_url }}" alt="Discord"><p>Discord</p></a></li>
-        <li><a title="TikTok" href="https://www.tiktok.com/@CeloZaga" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/tiktok.svg' | relative_url }}" alt="TikTok"><p>TikTok</p></a></li>
-        <li><a title="YouTube" href="https://www.youtube.com/@CeloZaga?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/youtube.svg' | relative_url }}" alt="YouTube"><p>YouTube</p></a></li>
-        <li><a title="X/Twitter" href="https://x.com/CeloZaga" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/x.svg' | relative_url }}" alt="X"><p>X</p></a></li>
-        <li><a title="Bluesky" href="https://bsky.app/profile/celozaga.bsky.social" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/bluesky.svg' | relative_url }}" alt="Bluesky"><p>Bluesky</p></a></li>
-        <li><a title="Threads" href="https://threads.net/@CeloZaga" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/threads.svg' | relative_url }}" alt="Threads"><p>Threads</p></a></li>
-        <li><a title="Facebook" href="https://www.facebook.com/CeloZaga" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/facebook.svg' | relative_url }}" alt="Facebook"><p>Facebook</p></a></li>
-        <li><a title="Reddit" href="https://reddit.com/u/Celo-Zaga" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/reddit.svg' | relative_url }}" alt="Reddit"><p>Reddit</p></a></li>
+      <li><a href="https://discord.com/invite/gHEHaxtwBT" title="Join us on Discord" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/discord.svg' | relative_url }}" alt="Discord icon"> <span>Discord</span></a></li>
+      <li><a href="https://www.tiktok.com/@CeloZaga" title="Follow on TikTok" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/tiktok.svg' | relative_url }}" alt="TikTok icon"> <span>TikTok</span></a></li>
+      <li><a href="https://www.youtube.com/@CeloZaga?sub_confirmation=1" title="Subscribe on YouTube" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/youtube.svg' | relative_url }}" alt="YouTube icon"> <span>YouTube</span></a></li>
+      <li><a href="https://x.com/CeloZaga" title="Follow on X (Twitter)" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/x.svg' | relative_url }}" alt="X icon"> <span>X</span></a></li>
+      <li><a href="https://bsky.app/profile/celozaga.bsky.social" title="Follow on Bluesky" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/bluesky.svg' | relative_url }}" alt="Bluesky icon"> <span>Bluesky</span></a></li>
+      <li><a href="https://threads.net/@CeloZaga" title="Follow on Threads" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/threads.svg' | relative_url }}" alt="Threads icon"> <span>Threads</span></a></li>
+      <li><a href="https://www.facebook.com/CeloZaga" title="Follow on Facebook" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/facebook.svg' | relative_url }}" alt="Facebook icon"> <span>Facebook</span></a></li>
+      <li><a href="https://reddit.com/u/Celo-Zaga" title="Join on Reddit" target="_blank" rel="noopener noreferrer"><img src="{{ '/static/media/icons/reddit.svg' | relative_url }}" alt="Reddit icon"> <span>Reddit</span></a></li>
     </ul>
-  </div>
-  <div class="link-list">
+  </nav>
+  <nav class="link-list" aria-label="Site information links">
     <ul>
-      <li><a title="Terms of Service" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" target="_blank" alt=""><p>Terms of Service</p></a></li>
-      <li><a title="Privacy Policy" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" alt=""><p>Privacy Policy</p></a></li>
-      <li><a title="Portfolio" href="/portfolio" alt="Portfolio"><p>Advertise</p></a></li>
-      <li><a title="Advertise" href="/advertise" alt="Advertise"><p>Advertise</p></a></li>
-      <li><a title="Contact" href="/contact" alt="Contact"><p>Contact</p></a></li>
+      <li><a href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" title="Terms of Service" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+      <li><a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" title="Privacy Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><a href="/portfolio" title="View portfolio">Portfolio</a></li>
+      <li><a href="/advertise" title="Advertise with us">Advertise</a></li>
+      <li><a href="/contact" title="Contact us">Contact</a></li>
     </ul>
-  </div>
-  <p>© {{ site.time | date: "%Y" }} Celo Zaga. All rights reserved.</p>
+  </nav>
+  <p>&copy; {{ site.time | date: "%Y" }} Celo Zaga. All rights reserved.</p>
 </footer>
