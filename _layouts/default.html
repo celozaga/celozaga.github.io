@@ -10,11 +10,9 @@
   {% else %}
     {% include header-page.html %} 
   {% endif %}
-
-  <main class="content">
+  <main class="main content">
     {{ content }}
   </main>
-
   {% include footer.html %}
   <script src="{{ '/static/scripts.js' | relative_url }}"></script>
   <script src="{{ '/static/pagination.js' | relative_url }}"></script>
