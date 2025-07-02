@@ -56,6 +56,18 @@ a:hover {
     border-radius: 50px;
     background-color: var(--surface);
 }
+.searchbox button{
+    display: none;
+    font-size: 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
 
 header {
     color: var(--white);
