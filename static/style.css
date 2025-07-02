@@ -365,7 +365,7 @@ main{
     height: 20px;
     display: block;
 }
-.social-media p {
+.social-media span {
     display: none;
 }
 .footer {
