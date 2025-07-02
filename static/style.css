@@ -62,7 +62,7 @@ header {
     padding: 20px;
     text-align: center;
 }
-.header-page {padding: 15px; width: auto; height: 80px;}
+.header-page {padding: 15px; width: auto; height: 80px; text-align: left;}
 
 header h3 {
       margin: 0;
