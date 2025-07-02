@@ -3,6 +3,11 @@ layout: default
 title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
+<section class="section profile">
+    <img class="avatar" width="150px" height="150px" src="{{ '/static/media/avatar.webp' | relative_url }}" alt="Avatar">
+    <h1 class="username">Celo Zaga</h1>
+    <p class="description">Stay updated with the latest mobile games news and the gaming industry, game releases, betas, leaks and more!</p>
+</section>
 <section class="search-homepage-section searchbox">
   <form action="/search/" method="get" class="search-form">
     <input type="text" id="homepage-search-input" name="q" placeholder="Search">
