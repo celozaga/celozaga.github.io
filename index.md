@@ -1,6 +1,6 @@
 ---
 layout: default
-title: @celozaga
+title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
 <section class="search-homepage-section searchbox">
