@@ -230,7 +230,13 @@ main{
 .social-media-tab a[title="X"] p {
   color: var(--white);
 }
-
+/* LIST LINK */
+.list-link{}
+.list-link ul{}
+.link-list li { display: inline-block; }
+.link-list a { padding: 15px; display: block; }
+.link-list p { color: var(--gray); line-height: 20px; }
+.list-link i{}
 /* YouTube Videos */
 
 .videos {
