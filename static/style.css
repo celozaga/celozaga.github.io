@@ -390,8 +390,7 @@ main{
 
 
 details {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: var(--surface);
       border-radius: 5px;
       margin-bottom: 0.8rem;
       overflow: hidden;
