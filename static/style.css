@@ -388,28 +388,7 @@ main{
   margin-bottom: 20px;
 }
 
-
-details {
-      background: var(--surface);
-      border-radius: 5px;
-      margin-bottom: 0.8rem;
-      overflow: hidden;
-    }
-
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.6rem 1rem;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details[open] summary svg {
-      transform: rotate(180deg);
-    }
+.faq details { background: var(--surface); margin-top: 20px; border-radius: 20px; padding: 20px; }
+.faq summary { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq details[open] summary svg { transform: rotate(180deg); }
