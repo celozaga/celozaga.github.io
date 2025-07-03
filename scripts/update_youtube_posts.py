@@ -3,8 +3,8 @@ import feedparser
 from datetime import datetime
 import json
 
-API_KEY = 'SUA_API_KEY_AQUI'
-CHANNEL_ID = os.environ['CHANNEL_ID']
+CHANNEL_ID = os.environ.get('CHANNEL_ID', 'UCvOnTTQp_7ZXtWUZYEUZO7Q')
+
 RSS_URL = f'http://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}'
 POSTS_DIR = '_posts'
 
