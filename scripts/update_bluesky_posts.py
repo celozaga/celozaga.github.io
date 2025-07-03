@@ -81,6 +81,7 @@ layout: post
 title: "{entry.title.replace('"', '\\"') if 'title' in entry else title.replace('"', '\\"')}"
 date: {date_str}
 description: "{meta_description}"
+bluesky_post_uri: "{post_link}"
 ---
 
 <h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1>
