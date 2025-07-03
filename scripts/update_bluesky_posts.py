@@ -52,7 +52,7 @@ for entry in feed.entries:
     date_str = date_obj.strftime('%Y-%m-%d')
     date_iso = date_obj.strftime('%Y-%m-%dT%H:%M:%S%z')
 
-    filename_title = title.lower().replace(' ', '-')
+    filename_title = title.lower().replace(' ', '-').replace('.', '')
     filename = f"{date_str}-{filename_title}-{post_record_id[:8]}.md"
     path = os.path.join(POSTS_DIR, filename)
 
@@ -95,16 +95,20 @@ date: {date_str}
 description: "{meta_description}"
 tags: [bluesky, social]
 ---
+
 <script type="application/ld+json">
 {blog_posting_schema_json}
 </script>
-<h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1>
+
+<h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1> {# Adicionada classe customizada #}
+
 <blockquote class="bluesky-embed" data-bluesky-uri="{bluesky_uri}" data-bluesky-embed-color-mode="system">
 <p lang="">{clean_content}<br><br><a href="{post_link}">[original post]</a></p>
 — Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">@{BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
 </blockquote>
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-<p class="bluesky-post-description">{clean_content}</p>
+
+<p class="bluesky-post-description">{clean_content}</p> {# Adicionada classe customizada #}
 '''
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
