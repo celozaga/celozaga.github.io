@@ -387,3 +387,30 @@ main{
 .footer .logo, .footer .social-media, .footer .link-list{
   margin-bottom: 20px;
 }
+
+
+details {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary svg {
+      transform: rotate(180deg);
+    }
