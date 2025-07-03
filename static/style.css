@@ -365,14 +365,13 @@ main{
     display: inline-block;
 }
 .social-media li a {
-    padding: 20px;
-    background: var(--surface);
+    padding: 15px;
     display: block;
     border-radius: 50%;
 }
 .social-media img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     display: block;
 }
 .social-media span {
@@ -388,7 +387,7 @@ main{
   margin-bottom: 20px;
 }
 
-.faq details { background: var(--surface); margin-top: 20px; border-radius: 20px; padding: 20px; }
-.faq summary { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; list-style: none; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq details[open] summary svg { transform: rotate(180deg); }
+details { background: var(--surface); margin-top: 20px; border-radius: 20px; padding: 20px; }
+summary { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+details[open] summary svg { transform: rotate(180deg);}
