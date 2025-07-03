@@ -47,6 +47,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.hidden, .visually-hidden{
+display: none;
+}
 
 .searchbox input {
     width: 100%;
@@ -377,7 +380,6 @@ main{
     width: 25px;
     height: 25px;
     display: block;
-    background: #fff;
 }
 /* POST LIST */
 .post-list a {
