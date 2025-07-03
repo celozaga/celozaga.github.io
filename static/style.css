@@ -351,6 +351,8 @@ main{
     margin-bottom: 20px;
     border-radius: 20px;
 }
+/* POST SHARE */
+
 /* POST LIST */
 .post-list a {
     line-height: 20px;
@@ -377,6 +379,7 @@ main{
 .social-media span {
     display: none;
 }
+/* FOOTER */
 .footer {
     text-align: center;
     color: var(--gray);

@@ -7,3 +7,37 @@ layout: default
     {{ content }}
   </div>
 </article>
+ <div class="post-share">
+    <ul class="share-buttons">
+      <li>
+        <a href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%0A{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no Bluesky">
+          <svg class="share-icon bluesky-icon"></svg>
+          <span class="visually-hidden">Share on Bluesky</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.threads.net/intent/post?text={{ page.title | url_encode }}%0A{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no Threads">
+          <svg class="share-icon threads-icon"></svg>
+          <span class="visually-hidden">Share on Threads</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no X/Twitter">
+          <svg class="share-icon twitter-icon"></svg>
+          <span class="visually-hidden">Share on X/Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}&quote={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no Facebook">
+          <svg class="share-icon facebook-icon"></svg>
+          <span class="visually-hidden">Share on Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no WhatsApp">
+          <svg class="share-icon whatsapp-icon"></svg>
+          <span class="visually-hidden">Share on WhatsApp</span>
+        </a>
+      </li>
+    </ul>
+  </div>
