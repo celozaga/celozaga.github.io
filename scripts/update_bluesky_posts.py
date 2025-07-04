@@ -100,15 +100,15 @@ tags: [bluesky, social]
 {blog_posting_schema_json}
 </script>
 
-<h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1> {# Adicionada classe customizada #}
+<h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1>
 
 <blockquote class="bluesky-embed" data-bluesky-uri="{bluesky_uri}" data-bluesky-embed-color-mode="system">
-<p lang="">{clean_content}<br><br><a href="{post_link}">[original post]</a></p>
-— Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">@{BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
+<p lang="">{clean_content}<br><br><a href="{post_link}">{{{{ original post }}}}</a></p> {# CORREÇÃO: Chaves duplas para caracteres literais #}
+&mdash; Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">@{BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
 </blockquote>
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
-<p class="bluesky-post-description">{clean_content}</p> {# Adicionada classe customizada #}
+<p class="bluesky-post-description">{clean_content}</p>
 '''
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
