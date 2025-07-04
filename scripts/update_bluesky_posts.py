@@ -103,8 +103,8 @@ tags: [bluesky, social]
 <h1 class="bluesky-post-title">{entry.title if 'title' in entry else title}</h1>
 
 <blockquote class="bluesky-embed" data-bluesky-uri="{bluesky_uri}" data-bluesky-embed-color-mode="system">
-<p lang="">{clean_content}<br><br><a href="{post_link}">{{{{ original post }}}}</a></p> {# CORREÇÃO: Chaves duplas para caracteres literais #}
-&mdash; Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">@{BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
+<p lang="">{clean_content}<br><br><a href="{post_link}">{{{{'original post'}}}}</a></p> {# CORRIGIDO AQUI: Escapado como string literal #}
+&mdash; Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">{{{{'@'}}}} {BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
 </blockquote>
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
