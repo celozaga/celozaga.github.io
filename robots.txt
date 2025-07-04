@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /discord/
 Disallow: /redirects/
+Disallow: /tiktok-rss-flat/
 Sitemap: https://celozaga.github.io/sitemap.xml
