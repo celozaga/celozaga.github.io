@@ -399,7 +399,7 @@ main{
     display: block;
     border-radius: 50%;
 }
-.social-media img {
+.social-media img, .social-media svg{
     width: 25px;
     height: 25px;
     display: block;
