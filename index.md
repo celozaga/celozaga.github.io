@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Celo Zaga
+title: Celo Zaga - Official Website
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 ---
 <section class="section profile">
