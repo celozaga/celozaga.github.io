@@ -3,9 +3,6 @@ description: Stay updated with the latest mobile games news and the gaming indus
 theme: null
 baseurl: ""
 url: "https://celozaga.github.io"
-disqus:
-  shortname: celozaga
-
 plugins:
   - jekyll-sitemap
   - jekyll-feed
