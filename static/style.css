@@ -399,23 +399,12 @@ main{
     border-radius: 60px;
 }
 /* SOCIAL MEDIA */
-.social-media li {
-    display: inline-block;
-}
-.social-media li a {
-    padding: 15px;
-    display: block;
-    border-radius: 50%;
-}
+.social-media li {display: inline-block;}
+.social-media li a {padding: 15px;display: block;border-radius: 50%;}
 .social-media img, .social-media svg{width: 25px;height: 25px;display: block;}
 .social-media span {display: none;}
 /* FOOTER */
-.footer {
-    background: var(--surface);
-    text-align: center;
-    color: var(--gray);
-    padding: 20px;
-}
+.footer {border-top: 1px solid var(--surface);text-align: center;color: var(--gray);padding: 20px;}
 .footer .logo, .footer .social-media, .footer .link-list{
   margin-bottom: 20px;
 }

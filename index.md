@@ -16,7 +16,7 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
         <li><a title="YouTube" href="https://www.youtube.com/@CeloZaga?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/youtube.svg" alt="YouTube"><p>YouTube</p></a></li>
         <li><a title="TikTok" href="https://www.tiktok.com/@CeloZaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/tiktok.svg" alt="TikTok"><p>TikTok</p></a></li>
         <li><a title="Bluesky" href="https://bsky.app/profile/celozaga.bsky.social" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/bluesky.svg" alt="Bluesky"><p>Bluesky</p></a></li>
-        <li><a title="X/Twitter" href="https://x.com/CeloZaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/x.svg" alt="X"><p>X</p></a></li>
+        <li><a title="X/.githubTwitter" href="https://x.com/CeloZaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/x.svg" alt="X"><p>X</p></a></li>
         <li><a title="Threads" href="https://threads.net/@CeloZaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/threads.svg" alt="Threads"><p>Threads</p></a></li>
         <li><a title="Facebook" href="https://www.facebook.com/CeloZaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/facebook.svg" alt="Facebook"><p>Facebook</p></a></li>
         <li><a title="Reddit" href="https://reddit.com/u/Celo-Zaga" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/reddit.svg" alt="Reddit"><p>Reddit</p></a></li>  
