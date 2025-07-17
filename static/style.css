@@ -383,6 +383,12 @@ main{
     height: 25px;
     display: block;
 }
+.post-comments{
+    background: var(--surface);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
 /* POST LIST */
 .post-list a {
     line-height: 20px;
