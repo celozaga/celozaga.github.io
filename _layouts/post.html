@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <article class="post" id="post">
   <!-- <h1>{{ page.title }}</h1> -->
@@ -45,7 +46,7 @@ layout: default
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-    this.page.url = {{ page.url | absolute_url }};
+    this.page.url = {{ page.url }};
     };
 
     (function() {
