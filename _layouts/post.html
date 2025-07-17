@@ -45,10 +45,10 @@ comments: true
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-    this.page.url = {{ page.url | absolute_url | url_encode }};  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = {{ page.url | absolute_url }};
     };
 
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function() {
     var d = document, s = d.createElement('script');
     s.src = 'https://celozaga.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
