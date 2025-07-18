@@ -16,9 +16,20 @@
 </div>
 
     <section class="search-homepage-section searchbox">
-  <form action="/search/" method="get" class="search-form">
-    <input type="text" id="homepage-search-input" name="q" placeholder="Search">
+  <form action="/search/" method="get" class="search-form" role="search">
+    <label for="search" class="sr-only">Search</label>
+    <input type="text" id="homepage-search-input" name="q" placeholder="Search"aria-label="Search">
     <button type="submit" style="display:none;">Search</button>
   </form>
+
+   <nav class="navigation" aria-label="Navigation">
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/posts/">Latest News</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+
 </section>
 </header>
