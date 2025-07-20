@@ -5,7 +5,17 @@ permalink: /games/eggy-party/top-up
 ---
 <section class="section topup">
 <div class="topup-game"></div>
-<div class="topup-shop"></div>
+<div class="topup-shop">
+<ul>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+<li><a href="https://www.ldshop.gg/top-up/" target="_blank"><img src=""/><b class="topup-item"></b><p class="topup-price"></p></a></li>
+</ul>
+</div>
+<div class="topup-description"></div>
 </section>
 <section itemscope itemtype="https://schema.org/FAQPage">
 <h2>FAQ</h2>
