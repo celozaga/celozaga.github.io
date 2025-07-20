@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Eggy Party TopUp
-permalink: /topup/eggy-party/
+title: Top up at Eggy Party with a Discount!
+permalink: /games/eggy-party/top-up
 ---
 <section class="section topup">
 <div class="topup-game"></div>
