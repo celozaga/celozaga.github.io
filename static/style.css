@@ -41,6 +41,13 @@ max-width: 800px;
 margin: 0 auto;
 }
 
+.module {
+    background: var(--surface);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 a {
   color: #61dafb;
   text-decoration: none;
