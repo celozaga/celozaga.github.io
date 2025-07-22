@@ -37,8 +37,6 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, A
 background: var(--background);
 color: var(--white);
 padding: 0;
-max-width: 800px;
-margin: 0 auto;
 }
 
 .module {
@@ -389,12 +387,6 @@ main{
     width: 25px;
     height: 25px;
     display: block;
-}
-.post-comments{
-    background: var(--surface);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
 }
 /* POST LIST */
 .post-list a {
