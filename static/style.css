@@ -122,7 +122,6 @@ main{
     color: var(--white);
     padding: 20px;
     text-align: center;
-    background: #0000ff26;
     border-radius: 20px;
     max-width: 800px;
     margin: 20px auto;
@@ -143,7 +142,7 @@ main{
     max-width: 70%;
     margin: 0 auto;
     line-height: 20px;
-    color: var(--white);
+    color: var(--gray);
 }
 
 
