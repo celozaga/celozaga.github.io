@@ -382,6 +382,11 @@ main{
     margin-bottom: 20px;
     border-radius: 60px;
 }
+/* GAMES PAGE */
+.game-detail {text-align: center;}
+.game-detail img {width: 150px;height: 150px;border-radius: 50%;}
+.game-detail p{color: var(--gray);}
+
 /* SOCIAL MEDIA */
 .social-media li {display: inline-block;}
 .social-media li a {padding: 15px;display: block;border-radius: 50%;}
