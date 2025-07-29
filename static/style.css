@@ -384,7 +384,7 @@ main{
 }
 /* GAMES PAGE */
 .game-detail {text-align: center;}
-.game-detail img {width: 150px;height: 150px;border-radius: 50%;}
+.game-detail img {width: 150px;height: 150px;border-radius: 20px;}
 .game-detail p{color: var(--gray);}
 
 /* SOCIAL MEDIA */
