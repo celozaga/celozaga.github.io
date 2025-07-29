@@ -3,17 +3,17 @@ layout: default
 title: Download Spirit Crossing
 permalink: /games/spirit-crossing
 ---
-<section class="section game">
+<section class="section games">
 <div class="game-detail module">
 <img src="https://play-lh.googleusercontent.com/mOuiDuIgrbLKZD6dfKW2kjL9gyDN24LoJKyehnPOPG06keHi8-05VpxbRvrW14IeMYw=s200-rw"/>
 <h2>Spirit Crossing NETFLIX</h2>
-<p>Spirit Crossing is a beautiful cooperative life-sim about building friendships and community. </p>
+<p>Spirit Crossing is a beautiful cooperative life-sim about building friendships and community.</p>
 </div>
 <div class="game-download">
 <ul>
-<li><a href="" target="_blank"><svg></svg><p>Google Play</p></a></li>
-<li><a href="" target="_blank"><svg></svg><p>App Store</p></a></li>
-<li><a href="" target="_blank"><svg></svg><p>Windows</p></a></li>
+<li><a class="button" href="" target="_blank"><svg></svg><p>Google Play</p></a></li>
+<li><a class="button" href="" target="_blank"><svg></svg><p>App Store</p></a></li>
+<li><a class="button" href="" target="_blank"><svg></svg><p>Windows</p></a></li>
 </ul>
 </div>
 <div class="game-topup module"></div>
