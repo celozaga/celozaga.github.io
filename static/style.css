@@ -341,7 +341,7 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 }
 /* POST SHARE */
 .post-share {
-    margin: 20px;
+    margin: 20px 0;
 }
 .post-share ul {
     display: flex
