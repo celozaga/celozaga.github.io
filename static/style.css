@@ -39,7 +39,7 @@ background: var(--background);
 color: var(--white);
 padding: 0;
 }
-.module {background: var(--surface);margin: 20px;padding: 20px;border-radius: 20px;}
+.module {background: var(--surface);margin: 20px 0;padding: 20px;border-radius: 20px;}
 a {color: #61dafb;text-decoration: none;}
 a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
