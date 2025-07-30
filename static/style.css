@@ -65,12 +65,8 @@ a:hover {text-decoration: underline;}
     width: 40px;
 }
 
-header {
-    color: var(--white);
-    padding: 20px;
-    text-align: center;
-}
-.header-page {padding: 15px; width: auto; height: 80px; text-align: left;}
+header { color: var(--white); padding: 20px; text-align: center; margin: 0 auto; max-width: 840px; }
+.header-page {padding: 15px; width: auto; height: 80px; text-align: left;max-width: auto;}
 
 header h3 {
       margin: 0;
@@ -114,10 +110,7 @@ hr {
   font-size: 20px;
   margin: 20px 0;
 }
-main{
- max-width: 800px; 
- margin: 0 auto;
-}
+main {max-width: 840px; margin: 0 auto; padding: 20px;}
 /* PROFILE */
 .profile{
     color: var(--white);
