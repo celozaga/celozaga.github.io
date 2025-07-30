@@ -316,9 +316,6 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 
 /* POSTS */
 .post {
-    background: var(--surface);
-    margin: 20px;
-    padding: 20px;
     border-radius: 20px;
 }
 .post h1 {
