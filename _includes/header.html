@@ -1,13 +1,13 @@
 <header class="header" role="banner">
 
  <section class="section profile" itemscope itemtype="https://schema.org/Person">
-    <img class="avatar" width="150" height="150" src="{{ '/static/media/avatar.webp' | relative_url }}"  alt="{{ site.title }} avatar" itemprop="image">
+    <img class="avatar" width="150" height="150" src="{{ '{{ site.url }}/static/media/avatar.webp' | relative_url }}"  alt="{{ site.title }} avatar" itemprop="image">
     <h1 class="username" itemprop="name">{{ site.title }}</h1>
     <p class="description" itemprop="description">{{ site.description }}</p>
 </section>
 
 <section class="search-homepage-section searchbox">
-  <form action="/search/" method="get" class="search-form" role="search">
+  <form action="{{ site.url }}/search/" method="get" class="search-form" role="search">
     <label for="homepage-search-input" class="visually-hidden">Search site</label>
     <input type="text" id="homepage-search-input" name="q" placeholder="Search" aria-label="Search site">
     <button type="submit" style="display:none;" aria-label="Submit search">Search</button>
@@ -17,10 +17,10 @@
 <section class="navigation">
    <nav class="nav" aria-label="Main navigation">
       <ul>
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/posts/">Latest News</a></li>
-        <li><a href="/video/">Video</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="{{ site.url }}" aria-current="page">Home</a></li>
+        <li><a href="{{ site.url }}/posts/">Latest News</a></li>
+        <li><a href="{{ site.url }}/video/">Video</a></li>
+        <li><a href="{{ site.url }}/about/">About</a></li>
       </ul>
     </nav>
 </section>
