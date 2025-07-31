@@ -10,6 +10,7 @@ permalink: /games/spirit-crossing
 <p>Spirit Crossing is a beautiful cooperative life-sim about building friendships and community.</p>
 </div>
 <div class="game-download">
+<h2>Download</h2>
 <ul>
 <li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>Google Play</p></a></li>
 <li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>App Store</p></a></li>
@@ -17,7 +18,7 @@ permalink: /games/spirit-crossing
 </ul>
 </div>
 <section class="game-faq" itemscope itemtype="https://schema.org/FAQPage">
-<h2>FAQ</h2>
+<h2>Frequently Asked Questions</h2>
     
     <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <summary itemprop="name">
