@@ -44,7 +44,7 @@ a {color: #61dafb;text-decoration: none;}
 a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
 
-.button { background: var(--surface); line-height: 20px; text-align: center; display: block; }
+.button { background: var(--surface); line-height: 20px; padding: 15px; text-align: center; display: block; }
 .button svg{}
 
 .searchbox input {
