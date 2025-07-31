@@ -392,6 +392,6 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 }
 
 details { background: var(--surface); margin-top: 20px; border-radius: 20px; padding: 20px; }
-summary { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; list-style: none; }
+summary { cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
 summary::-webkit-details-marker { display: none; }
 details[open] summary svg { transform: rotate(180deg);}
