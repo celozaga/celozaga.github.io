@@ -74,3 +74,40 @@
     location.replace(location.origin + '/');
   }
 </script>
+
+<!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/static/media/avatar.webp",
+    "sameAs": [
+      "https://discord.com/invite/{{ site.social.discord }}",
+      "https://youtube.com/@{{ site.social.youtube }}",
+      "https://tiktok.com/@{{ site.social.tiktok }}",
+      "https://bsky.app/profile/{{ site.social.bluesky }}.bsky.social",
+      "https://x.com/{{ site.social.x }}",
+      "https://threads.net/@{{ site.social.threads }}",
+      "https://facebook.com/{{ site.social.facebook }}",
+      "https://t.me/{{ site.social.telegram }}",
+      "https://reddit.com/u/{{ site.social.reddit }}"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "publisher": {
+      "@type": "Person",
+      "name": "{{ site.title }}"
+    }
+  }
+  </script>

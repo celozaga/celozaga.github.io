@@ -14,7 +14,7 @@ permalink: /games/spirit-crossing
 <ul>
 <li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>Google Play</p></a></li>
 <li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>App Store</p></a></li>
-<li><a class="button" href="https://en.ldplayer.net/?n=33827564&utm_source=lnk.bio&utm_medium=aff&utm_campaign=aff33827564" target="_blank"><svg></svg><p>PC Windows</p></a></li>
+<li><a class="button" href="https://ldplayer.net/?n=33827564&utm_source=lnk.bio&utm_medium=aff&utm_campaign=aff33827564" target="_blank"><svg></svg><p>PC Windows</p></a></li>
 </ul>
 </div>
 <section class="game-faq" itemscope itemtype="https://schema.org/FAQPage">
