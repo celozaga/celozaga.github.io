@@ -16,7 +16,6 @@ permalink: /games/party-stars
 <li><a class="button" href="https://gamer.qq.com/v2/short/ISgQMb" target="_blank"><p><svg></svg>PC Windows</p></a></li>
 </ul>
 </div>
-<div class="game-topup module"></div>
 <section class="game-faq" itemscope itemtype="https://schema.org/FAQPage">
 <h2>FAQ</h2>
     

@@ -11,15 +11,21 @@ permalink: /games/spirit-crossing
 </div>
 <div class="game-download">
 <ul>
-<li><a class="button" href="" target="_blank"><svg></svg><p>Google Play</p></a></li>
-<li><a class="button" href="" target="_blank"><svg></svg><p>App Store</p></a></li>
-<li><a class="button" href="" target="_blank"><svg></svg><p>Windows</p></a></li>
+<li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>Google Play</p></a></li>
+<li><a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.NGP.SpiritCrossing" target="_blank"><svg></svg><p>App Store</p></a></li>
+<li><a class="button" href="https://en.ldplayer.net/?n=33827564&utm_source=lnk.bio&utm_medium=aff&utm_campaign=aff33827564" target="_blank"><svg></svg><p>PC Windows</p></a></li>
 </ul>
 </div>
-<div class="game-topup module"></div>
-<div class="game-description module">
-<h3>About this game</h3>
-<p>
+<section class="game-faq" itemscope itemtype="https://schema.org/FAQPage">
+<h2>FAQ</h2>
+    
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">
+        About this game
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
+      </summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">
 Venture into the storm-swept Crosslands that lie between the human world and the spirit realm to discover a kind and creative community where you are always welcome. In this epic multiplayer simulation game from the creators of "Cozy Grove," you can find friendship and new possibilities each day in a vast, beautiful shared world.
 <br>
 TURN STRANGERS INTO FRIENDS
@@ -44,5 +50,27 @@ Each day here brings new surprises, activities and events. Between crafting proj
 <br>
 Created by Spry Fox, a Netflix Game Studio.
 </p>
-</div>
+      </div>
+    </details>
+
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">
+        How to install the game?
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
+      </summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">SAMPLE SAMPLE SAMPLE</p>
+      </div>
+    </details>
+
+
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">
+        How to create a Netflix Account?
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
+      </summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">SAMPLE SAMPLE SAMPLE</p>
+      </div>
+    </details>
 </section>
