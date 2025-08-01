@@ -4,7 +4,6 @@ theme: null
 baseurl: ""
 url: "https://celozaga.github.io"
 plugins:
-  - jekyll-sitemap
   - jekyll-feed
 
 social:
