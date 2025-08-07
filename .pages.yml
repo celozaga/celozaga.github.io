@@ -1,11 +1,20 @@
-collections:
-  posts:
-    output: true
-    path: "_posts"
-    label: "Posts"
-    format: "markdown"
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: '_posts'
+    view:
+      fields: [title, date]
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "text" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Content", widget: "markdown" }
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: date
+        label: Date
+        type: datetime
+      - name: body
+        label: Content
+        type: rich-text
