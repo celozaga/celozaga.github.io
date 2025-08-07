@@ -1,16 +1,11 @@
 collections:
   posts:
-    label: Posts
-    folder: _posts
-    create: true
-    slug: "{{slug}}"
+    output: true
+    path: "_posts"
+    label: "Posts"
+    format: "markdown"
     fields:
-      - label: Título
-        name: title
-        widget: string
-      - label: Data
-        name: date
-        widget: datetime
-      - label: Conteúdo
-        name: body
-        widget: markdown
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Content", widget: "markdown" }
