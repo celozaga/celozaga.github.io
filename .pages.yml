@@ -2,7 +2,7 @@ content:
   - name: posts
     label: Posts
     type: collection
-    path: '_posts'
+    path: '_posts/blog'
     view:
       fields: [title, date]
     fields:
@@ -22,9 +22,6 @@ content:
         label: Tags
         type: array
         item_type: string
-      - name: og_type
-        label: og:type
-        type: string
       - name: body
         label: Content
-        type: markdown
+        type: yaml-frontmatter
