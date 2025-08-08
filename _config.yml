@@ -17,3 +17,5 @@ social:
   facebook: "celozaga"
   telegram: "celozaga"
   reddit: "celozaga"
+
+  include: [admin]
