@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: celozaga/celozaga.github.io
+  branch: main # ou "master" dependendo do seu repositório
+media_folder: "static/uploads" # Pasta onde as imagens vão no repo
+public_folder: "/static/uploads" # Caminho usado no site
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Imagem de capa", name: "image", widget: "image"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}

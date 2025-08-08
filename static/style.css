@@ -342,33 +342,6 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
     margin-bottom: 20px;
     border-radius: 20px;
 }
-/* POST SHARE */
-.post-share {
-    margin: 20px 0;
-}
-.post-share ul {
-    display: flex
-;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.post-share li {
-    justify-content: center;
-    flex: 1;
-}
-.post-share a {
-    background: var(--surface);
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.post-share svg {
-    width: 25px;
-    height: 25px;
-    display: block;
-}
 /* POST LIST */
 .post-list a {
     line-height: 20px;
