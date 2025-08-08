@@ -1,0 +1,30 @@
+window.CMS_MANUAL_INIT = true;
+CMS.init({
+  config: {
+    backend: {
+      name: "github",
+      repo: "celozaga/celozaga.github.io",
+      branch: "main",
+      base_url: "https://api.github.com",
+      auth_type: "implicit",
+      app_id: "Ov23liGFAXxDU33P1eKE"
+    },
+    media_folder: "static/uploads",
+    public_folder: "/static/uploads",
+    collections: [
+      {
+        name: "posts",
+        label: "Postagens",
+        folder: "_posts",
+        create: true,
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+        fields: [
+          { label: "Título", name: "title", widget: "string" },
+          { label: "Data", name: "date", widget: "datetime" },
+          { label: "Imagem de capa", name: "image", widget: "image" },
+          { label: "Corpo", name: "body", widget: "markdown" }
+        ]
+      }
+    ]
+  }
+});
