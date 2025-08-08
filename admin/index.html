@@ -8,41 +8,9 @@ layout: null
     <meta charset="utf-8" />
     <title>Static CMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline';">
+    <meta name="cms-config-path" content="/admin/config.yml">
     <script src="https://unpkg.com/@staticcms/app@latest/dist/static-cms-app.js"></script>
   </head>
   <body>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-      StaticCMS.init({
-        config: {
-          backend: {
-            name: 'github',
-            repo: 'celozaga/celozaga.github.io',
-            branch: 'main',
-            base_url: 'https://api.github.com',
-            auth_type: 'implicit',
-            app_id: 'Ov23liGFAXxDU33P1eKE'
-          },
-          media_folder: 'static/uploads',
-          public_folder: '/static/uploads',
-          collections: [
-            {
-              name: 'posts',
-              label: 'Postagens',
-              folder: '_posts',
-              create: true,
-              slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-              fields: [
-                { label: 'Título', name: 'title', widget: 'string' },
-                { label: 'Data', name: 'date', widget: 'datetime' },
-                { label: 'Imagem de capa', name: 'image', widget: 'image' },
-                { label: 'Corpo', name: 'body', widget: 'markdown' }
-              ]
-            }
-          ]
-        }
-      });
-    </script>
   </body>
 </html>
