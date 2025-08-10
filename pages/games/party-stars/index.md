@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Download Party Stars
-permalink: /games/party-stars
+layout: apps
+title: Party Stars Download
+permalink: /apps/party-stars
 ---
 <section class="section games">
 <div class="game-detail module">

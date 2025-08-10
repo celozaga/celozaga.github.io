@@ -1,7 +1,5 @@
 ---
-layout: default
+layout: apps
 title: Download Eggy Party
-permalink: /games/eggy-party
+permalink: /apps/eggy-party
 ---
-<section class="section game">
-</section>
