@@ -2,6 +2,7 @@
 layout: default
 title: Celo Zaga - Official Website
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
+permalink: /
 ---
 
 <section class="section social-media-tab" id="links">
