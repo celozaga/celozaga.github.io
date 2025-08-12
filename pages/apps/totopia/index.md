@@ -39,18 +39,23 @@ Join Atomons now, save polluted Data Isles, and put Bitrot threat to an end!
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
       </summary>
       <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">SAMPLE SAMPLE SAMPLE</p>
+        <p itemprop="text">Open the Google Play Store, search for the game you want, tap Install, and wait for the download to finish. Once installed, tap Open to start playing.</p>
       </div>
     </details>
 
 
     <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <summary itemprop="name">
-        How to create a Netflix Account?
+        What are the system requirements?
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
       </summary>
       <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">SAMPLE SAMPLE SAMPLE</p>
+        <p itemprop="text">OS *: Windows 7<br />
+Processor: Intel i5-3570/AMD Ryzen3 1200<br />
+Memory: 8 GB RAM<br />
+Graphics: GTX 750Ti<br />
+Storage: 15 GB available space<br />
+Starting January 1st, 2024, the Steam Client will only support Windows 10 and later versions.</p>
       </div>
     </details>
 </section>
