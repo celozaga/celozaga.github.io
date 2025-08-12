@@ -1,7 +1,7 @@
 ---
 layout: apps
 title: Download Spirit Crossing
-permalink: /apps/spirit-crossing
+permalink: /store/apps/spirit-crossing
 ---
 <section class="section games">
 <div class="game-detail module">

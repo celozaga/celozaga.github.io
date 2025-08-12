@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Top up at Eggy Party with a Discount!
-permalink: /apps/eggy-party/top-up
+title: Top up at Totopia with a Discount!
+permalink: /store/apps/totopia/top-up
 ---
 <section class="section topup">
 <div class="topup-game"></div>

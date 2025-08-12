@@ -1,7 +1,7 @@
 ---
-layout: apps
+layout: store/apps
 title: Download and Install Totopia
-permalink: /apps/totopia
+permalink: /store/apps/totopia
 ---
 <section class="section apps games">
 <div class="game-detail module">
