@@ -19,7 +19,7 @@ permalink: /videos/
 fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q')
   .then(response => response.json())
   .then(data => {
-    const videos = data.items.slice(0, 15); // Limita para os 5 primeiros vídeos
+    const videos = data.items.slice(0, 9); // Limita para os 5 primeiros vídeos
     const videoList = document.querySelector('.feed-youtube');
 
     videos.forEach(video => {
