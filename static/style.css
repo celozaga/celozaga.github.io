@@ -257,15 +257,15 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 }
 
 .videos ul{
-  display: flex;
-  gap: 20px; /* Espaço entre os itens */
-  list-style-type: none;
-  padding: 0;
-  overflow-x: auto; /* Cria rolagem horizontal */
+  display: grid;
+  gap: 20px; /* espaço entre os vídeos */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .videos li {
-  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .videos li a {
