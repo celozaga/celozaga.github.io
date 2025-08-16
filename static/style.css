@@ -365,57 +365,48 @@ details[open] summary svg { transform: rotate(180deg);}
 
 
 /* BUTTONS */
-.btn {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   padding: 20px;
   line-height: 20px;
   height: auto;
   max-height: 60px;
   width: 100%;
   text-align: center;
-  font-size: 16px;
-  font-weight: 500;
   border: none;
   outline: none;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px;
   background: var(--surface);
   color: var(--white);
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-.btn:hover {
-  background: linear-gradient(135deg, #2a2a2a, #333);
-  transform: translateY(-2px);
+.button:hover {
+  background: var(--gray);
 }
-
-.btn:active {
-  transform: translateY(0);
-}
-
 /* ===== VARIAÇÕES DE RADIUS ===== */
-.btn-radius-10 { border-radius: 10px; }
-.btn-radius-20 { border-radius: 20px; }
+.button-radius-10 { border-radius: 10px; }
+.button-radius-20 { border-radius: 20px; }
 
 /* ===== BOTÃO REDONDO ===== */
-.btn-round {
+.button-round {
   border-radius: 50%;
   width: 60px;
   height: 60px;
   padding: 0;
 }
 
-.btn-round svg {
+.button-round svg {
   width: 20px;
   height: 20px;
 }
 
 /* ===== ÍCONES NOS BOTÕES ===== */
-.btn svg {
+.button svg {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
