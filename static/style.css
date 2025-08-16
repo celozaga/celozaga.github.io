@@ -374,3 +374,93 @@ details { background: var(--surface); margin-top: 20px; border-radius: 20px; pad
 summary { cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; }
 summary::-webkit-details-marker { display: none; }
 details[open] summary svg { transform: rotate(180deg);}
+
+
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  line-height: 20px;
+  height: auto;
+  max-height: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--white);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2a2a2a, #333);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* ===== VARIAÇÕES DE RADIUS ===== */
+.btn-radius-10 { border-radius: 10px; }
+.btn-radius-20 { border-radius: 20px; }
+
+/* ===== BOTÃO REDONDO ===== */
+.btn-round {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+
+.btn-round svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== ÍCONES NOS BOTÕES ===== */
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ===== VARIAÇÕES DE COR ===== */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056d2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #198bff, #0061e0);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #565e64);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #7d868d, #656d73);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #34c759, #1d923e);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+
+}
+
