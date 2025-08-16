@@ -403,6 +403,8 @@ details[open] summary svg { transform: rotate(180deg);}
 .button-round svg {
   width: 20px;
   height: 20px;
+  float: none;
+  margin: 0;
 }
 
 /* ===== ÍCONES NOS BOTÕES ===== */
@@ -410,8 +412,10 @@ details[open] summary svg { transform: rotate(180deg);}
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  float: left;
+  margin-right: 15px;
 }
-
+}
 /* ===== VARIAÇÕES DE COR ===== */
 .btn-primary {
   background: linear-gradient(135deg, #007bff, #0056d2);
