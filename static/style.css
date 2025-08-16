@@ -403,8 +403,6 @@ details[open] summary svg { transform: rotate(180deg);}
 .button-round svg {
   width: 20px;
   height: 20px;
-  float: none;
-  margin: 0;
 }
 
 /* ===== ÍCONES NOS BOTÕES ===== */
@@ -412,6 +410,8 @@ details[open] summary svg { transform: rotate(180deg);}
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+}
+.button-rectangle svg{
   float: left;
   margin-right: 10px;
 }
