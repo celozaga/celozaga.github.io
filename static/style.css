@@ -78,6 +78,7 @@ color: var(--white); padding: 20px; text-align: center; margin: 0 auto; max-widt
 }
 
 header h3 {
+      flex: 1;
       margin: 0;
       font-size: 20px;
       line-height: 50px;
