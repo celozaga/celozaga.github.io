@@ -22,7 +22,7 @@ permalink: /store/apps/totopia
     
     <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <summary itemprop="name">
-        About this game
+        <b>About this game</b>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
       </summary>
       <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -35,7 +35,7 @@ Join Atomons now, save polluted Data Isles, and put Bitrot threat to an end!
 
     <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <summary itemprop="name">
-        How to install the game?
+        <b>How to install the game?</b>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
       </summary>
       <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -46,7 +46,7 @@ Join Atomons now, save polluted Data Isles, and put Bitrot threat to an end!
 
     <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
       <summary itemprop="name">
-        What are the system requirements?
+        <b>What are the system requirements?</b>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.9 5.25 6.95 10.2 2 5.25"/></svg>
       </summary>
       <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
