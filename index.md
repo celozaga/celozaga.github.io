@@ -9,7 +9,7 @@ permalink: /
     <h2>Links</h2>
     <ul>
         <li><a title="Discord" href="https://discord.com/invite/{{ site.social.discord }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/discord.svg" alt="Discord"><p>Discord</p></a></li>
-        <li><a title="YouTube" href="https://www.youtube.com/@{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/youtube.svg" alt="YouTube"><p>YouTube</p>a></li>
+        <li><a title="YouTube" href="https://www.youtube.com/@{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/youtube.svg" alt="YouTube"><p>YouTube</p></a></li>
         <li><a title="TikTok" href="https://www.tiktok.com/@{{ site.social.tiktok }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/tiktok.svg" alt="TikTok"><p>TikTok</p></a></li>
         <li><a title="Bluesky" href="https://bsky.app/profile/{{ site.social.bluesky }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/bluesky.svg" alt="Bluesky"><p>Bluesky</p></a></li>
         <li><a title="X/.githubTwitter" href="https://x.com/{{ site.social.x }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/x.svg" alt="X"><p>X</p></a></li>
@@ -26,28 +26,30 @@ permalink: /
 
 <section class="section posts blog-posts-homepage" id="posts">
     <h2>Posts</h2>
-    <ul class="post-list">
-        {% for post in site.posts limit:10 %}
-        <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}
-            <small>— {{ post.date | date: "%d %b %Y" }}</small>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="/pages/all" class="view-all-posts-link">Ver todas as postagens</a>
+    <div id="posts-container-home" class="post-list"></div>
+    <div class="pagination-controls" id="pagination-controls-home">
+      <button id="prev-page-home" disabled>&laquo; Prev</button>
+      <span id="page-info-home">Page 1 de 1</span>
+      <button id="next-page-home" disabled>Next &raquo;</button>
+    </div>
 </section>
-
 <script>
 fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q')
   .then(response => response.json())
   .then(data => {
-    const videos = data.items.slice(0, 5);
+    const videos = data.items.slice(0, 5); // Limita para os 5 primeiros vídeos
     const videoList = document.querySelector('.feed-youtube');
+
     videos.forEach(video => {
       const { link, thumbnail, title } = video;
+
+      // Obtém o ID do vídeo
       const videoId = link.split('=')[1];
+
+      // Substitui 'hqdefault' por 'maxresdefault' na URL da thumbnail
       const updatedThumbnail = thumbnail.replace('hqdefault', 'maxresdefault');
+
+      // Cria o item da lista
       const li = `
         <li>
           <a href="${link}" title="${title}" target="_blank">
@@ -61,6 +63,8 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
           </a>
         </li>
       `;
+
+      // Adiciona o item da lista à página
       videoList.innerHTML += li;
     });
   });
