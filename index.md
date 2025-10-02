@@ -26,30 +26,30 @@ permalink: /
 
 <section class="section posts blog-posts-homepage" id="posts">
     <h2>Posts</h2>
-    <div id="posts-container-home" class="post-list"></div>
-    <div class="pagination-controls" id="pagination-controls-home">
-      <button id="prev-page-home" disabled>&laquo; Prev</button>
-      <span id="page-info-home">Page 1 de 1</span>
-      <button id="next-page-home" disabled>Next &raquo;</button>
+    <div id="posts-container-home" class="post-list">
+        <ul>
+            {% for post in site.posts limit:10 %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}
+                <small>— {{ post.date | date: "%d %b %Y" }}</small>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
+    <a href="/pages/all" class="view-all-posts-link">Ver todas as postagens</a>
 </section>
+
 <script>
 fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q')
   .then(response => response.json())
   .then(data => {
-    const videos = data.items.slice(0, 5); // Limita para os 5 primeiros vídeos
+    const videos = data.items.slice(0, 5);
     const videoList = document.querySelector('.feed-youtube');
-
     videos.forEach(video => {
       const { link, thumbnail, title } = video;
-
-      // Obtém o ID do vídeo
       const videoId = link.split('=')[1];
-
-      // Substitui 'hqdefault' por 'maxresdefault' na URL da thumbnail
       const updatedThumbnail = thumbnail.replace('hqdefault', 'maxresdefault');
-
-      // Cria o item da lista
       const li = `
         <li>
           <a href="${link}" title="${title}" target="_blank">
@@ -63,8 +63,6 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
           </a>
         </li>
       `;
-
-      // Adiciona o item da lista à página
       videoList.innerHTML += li;
     });
   });

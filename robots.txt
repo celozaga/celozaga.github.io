@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /discord/
-Disallow: /apps/redirect/
-Disallow: /youtube-posts-rss/
-Sitemap: https://celozaga.github.io/sitemap.xml
+Allow: /
+Disallow: /admin/
 
+Sitemap: https://celozaga.github.io/sitemap.xml

@@ -6,6 +6,10 @@ url: "https://celozaga.github.io"
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/pages/all/page:num/"
 
 social:
   discord: "gHEHaxtwBT"
