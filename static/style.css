@@ -150,13 +150,14 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
     background: var(--background);
 }
 .nav ul {
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 0px;
-  list-style-type: none;
-  padding: 0;
-  overflow-x: auto;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    list-style-type: none;
+    padding: 0;
+    overflow-x: auto;
+    max-width: 600px;
 }
 .nav ul li {
   display: inline-block;
