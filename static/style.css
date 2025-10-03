@@ -164,6 +164,12 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
   padding: 0;
   flex: auto;
 }
+.nav li p {
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+}
 .nav li i {
     background: #99999940;
     align-items: center;
