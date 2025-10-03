@@ -162,6 +162,15 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
   padding: 0;
   flex: auto;
 }
+.nav li i {
+    background: #99999940;
+    align-items: center;
+    justify-items: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+}
 .nav li a {
   display: block;
   line-height: 20px;
