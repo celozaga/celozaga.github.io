@@ -175,15 +175,11 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
   display: block;
   line-height: 20px;
   padding: 20px;
-  border-radius: 15px;
   color: #fff;
   text-align: center;
-  font-weight: 700;
-  border-bottom: 3px solid transparent;
 }
 .nav li a.active {
   color: #5865f2;
-  border-bottom: 3px solid #5865f2;
 }
 .social-media-tab {
   width: 100%;
