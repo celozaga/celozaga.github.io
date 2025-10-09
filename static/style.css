@@ -138,13 +138,14 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
     color: var(--gray);
 }
 
+/* NAVIGATION */
 .nav {
-  background: var(--md-surface);
+  background: #fdfcff;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--nav-height);
+  height:  80px;
   display: flex;
   justify-content: center;
   z-index: 1000;
@@ -167,7 +168,7 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 
 .nav a {
   text-decoration: none;
-  color: var(--md-on-surface);
+  color: #49454F;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,7 +191,7 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 .nav svg {
   width: 24px;
   height: 24px;
-  fill: var(--md-on-surface);
+  fill: #ffffff;
 }
 
 .nav a .icon {
@@ -200,17 +201,17 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
   }
 
 .nav a[aria-current="page"] .icon {
-  background: var(--md-primary-container);
+  background: #EADDFF;
   border-radius: 50px;
   padding: 8px; /* cria o "pill" ao redor do ícone */
 }
 
 .nav a[aria-current="page"] svg {
-  fill: var(--md-on-primary-container);
+  fill: #21005D;
 }
 
 .nav a[aria-current="page"] .label {
-  color: var(--md-on-surface);
+  color: #49454F;
 }
 /* SOCIAL MEDIA TAB */
 
