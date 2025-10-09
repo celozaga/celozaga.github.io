@@ -140,7 +140,7 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 
 /* NAVIGATION */
 .nav {
-  background: #fdfcff;
+  background: #000000;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -199,19 +199,20 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
   border-radius: 50px;
   padding: 8px; 
   }
-
+.nav a .label {
+  color: #999999;
+}
 .nav a[aria-current="page"] .icon {
   background: #EADDFF;
   border-radius: 50px;
   padding: 8px; /* cria o "pill" ao redor do ícone */
 }
-
 .nav a[aria-current="page"] svg {
   fill: #21005D;
 }
 
 .nav a[aria-current="page"] .label {
-  color: #49454F;
+  color: #FFFFFF;
 }
 /* SOCIAL MEDIA TAB */
 
