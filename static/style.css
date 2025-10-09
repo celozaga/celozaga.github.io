@@ -168,7 +168,7 @@ main {max-width: 840px; margin: 0 auto; padding: 20px;}
 
 .nav a {
   text-decoration: none;
-  color: #49454F;
+  color: #999999;
   display: flex;
   flex-direction: column;
   align-items: center;
