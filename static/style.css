@@ -513,6 +513,7 @@ details[open] summary svg { transform: rotate(180deg);}
     align-items: center;
     height: 100%;
     max-width: none;
+    max-height: 400px;
   }
 
   .nav li {
