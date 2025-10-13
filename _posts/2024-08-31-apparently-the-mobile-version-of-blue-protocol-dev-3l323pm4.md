@@ -18,3 +18,4 @@ author: "Celo Zaga"
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 
+<p class="bluesky-post-description">Apparently the mobile version of BLUE PROTOCOL, developed by Tencent, is still alive, and is receiving a closed test in China.</p>
