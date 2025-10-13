@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough"
+date: 2025-08-07
+description: "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough  About Race: In Eggy Party: Race game mode 32 players compete through the first three roun..."
+image: "https://img.youtube.com/vi/m9cVeI_wQn0/maxresdefault.jpg"
+tags: [youtube, video]
+og_type: "video.other"
+---
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough",
+  "description": "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough  About Race: In Eggy Party: Race game mode 32 players compete through the first three rounds, facing race, score, and survival challenges. In the fourth round, they'll unlock an ultimate skill to decide the final victor!  About Eggy Party: Eggy Party is a popular party game developed by NetEase Games. Welcome to the Eggyverse! A world full of party and play! Create your own maps to enjoy with your friends! Team up with other cute Eggies! Dive into this Egg-citing Eggyverse!  Like and subscribe for more Eggy Party videos! https://youtube.com/channel/UCvOnTTQp_7ZXtWUZYEUZO7Q  #EggyParty",
+  "thumbnailUrl": "https://img.youtube.com/vi/m9cVeI_wQn0/maxresdefault.jpg",
+  "uploadDate": "2025-08-07T04:25:02Z",
+  "embedUrl": "https://www.youtube.com/embed/m9cVeI_wQn0",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2025/08/07/eggy-party-race-museum-fantasy-season-gameplay-walkthrough-m9cVeI_wQn0.html"
+  },
+  "duration": "PT0M0S"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough",
+  "image": "https://img.youtube.com/vi/m9cVeI_wQn0/maxresdefault.jpg",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "url": "https://celozaga.github.io/2025/08/07/eggy-party-race-museum-fantasy-season-gameplay-walkthrough-m9cVeI_wQn0.html",
+  "datePublished": "2025-08-07T04:25:02Z",
+  "dateCreated": "2025-08-07T04:25:02Z",
+  "dateModified": "2025-08-07T04:25:02Z",
+  "description": "Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough  About Race: In Eggy Party: Race game mode 32 players compete through the first three roun...",
+  "author": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2025/08/07/eggy-party-race-museum-fantasy-season-gameplay-walkthrough-m9cVeI_wQn0.html"
+  }
+}
+</script>
+
+<h1 class="youtube-post-title">Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough</h1>
+
+<iframe class="BLOG_video_class" width="100%" height="100%" 
+        src="https://www.youtube.com/embed/m9cVeI_wQn0"
+        youtube-src-id="m9cVeI_wQn0"
+        title="YouTube Video Player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+
+<p class="youtube-post-description">Eggy Party: Race - Museum Fantasy Season Gameplay Walkthrough
+
+About Race: In Eggy Party: Race game mode 32 players compete through the first three rounds, facing race, score, and survival challenges. In the fourth round, they'll unlock an ultimate skill to decide the final victor!
+
+About Eggy Party: Eggy Party is a popular party game developed by NetEase Games. Welcome to the Eggyverse! A world full of party and play! Create your own maps to enjoy with your friends! Team up with other cute Eggies! Dive into this Egg-citing Eggyverse!
+
+Like and subscribe for more Eggy Party videos! https://youtube.com/channel/UCvOnTTQp_7ZXtWUZYEUZO7Q
+
+#EggyParty</p>

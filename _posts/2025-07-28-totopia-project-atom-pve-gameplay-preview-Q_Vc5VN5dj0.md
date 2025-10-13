@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Totopia (Project ATOM) - PvE Gameplay Preview"
+date: 2025-07-28
+description: "Totopia (Project ATOM) - PvE Gameplay Preview  Build powerful bonds with your companions in Project: Atom! Fight side by side, upgrade your abilities, a..."
+image: "https://img.youtube.com/vi/Q_Vc5VN5dj0/maxresdefault.jpg"
+tags: [youtube, video]
+og_type: "video.other"
+---
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "Totopia (Project ATOM) - PvE Gameplay Preview",
+  "description": "Totopia (Project ATOM) - PvE Gameplay Preview  Build powerful bonds with your companions in Project: Atom! Fight side by side, upgrade your abilities, and explore exciting party adventures.  About Totopia: Totopia is a dynamic multiplayer party game from the creators of TikTok, designed for endless fun, creativity, and social interaction! Jump into fast-paced obstacle courses, action-packed mini-games, team battles, survival challenges, and more exciting modes with players worldwide. The game puts a strong focus on social play\u2014team up, compete, and share your best moments with friends. With a powerful UGC system, players can create and customize their own maps, challenges, and party experiences to share with the community.  Like and subscribe for more Totopia videos! https://youtube.com/@CeloTotopia  #Totopia",
+  "thumbnailUrl": "https://img.youtube.com/vi/Q_Vc5VN5dj0/maxresdefault.jpg",
+  "uploadDate": "2025-07-28T22:57:06Z",
+  "embedUrl": "https://www.youtube.com/embed/Q_Vc5VN5dj0",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2025/07/28/totopia-project-atom-pve-gameplay-preview-Q_Vc5VN5dj0.html"
+  },
+  "duration": "PT0M0S"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Totopia (Project ATOM) - PvE Gameplay Preview",
+  "image": "https://img.youtube.com/vi/Q_Vc5VN5dj0/maxresdefault.jpg",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "url": "https://celozaga.github.io/2025/07/28/totopia-project-atom-pve-gameplay-preview-Q_Vc5VN5dj0.html",
+  "datePublished": "2025-07-28T22:57:06Z",
+  "dateCreated": "2025-07-28T22:57:06Z",
+  "dateModified": "2025-07-28T22:57:06Z",
+  "description": "Totopia (Project ATOM) - PvE Gameplay Preview  Build powerful bonds with your companions in Project: Atom! Fight side by side, upgrade your abilities, a...",
+  "author": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2025/07/28/totopia-project-atom-pve-gameplay-preview-Q_Vc5VN5dj0.html"
+  }
+}
+</script>
+
+<h1 class="youtube-post-title">Totopia (Project ATOM) - PvE Gameplay Preview</h1>
+
+<iframe class="BLOG_video_class" width="100%" height="100%" 
+        src="https://www.youtube.com/embed/Q_Vc5VN5dj0"
+        youtube-src-id="Q_Vc5VN5dj0"
+        title="YouTube Video Player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+
+<p class="youtube-post-description">Totopia (Project ATOM) - PvE Gameplay Preview
+
+Build powerful bonds with your companions in Project: Atom! Fight side by side, upgrade your abilities, and explore exciting party adventures.
+
+About Totopia: Totopia is a dynamic multiplayer party game from the creators of TikTok, designed for endless fun, creativity, and social interaction! Jump into fast-paced obstacle courses, action-packed mini-games, team battles, survival challenges, and more exciting modes with players worldwide. The game puts a strong focus on social play—team up, compete, and share your best moments with friends. With a powerful UGC system, players can create and customize their own maps, challenges, and party experiences to share with the community.
+
+Like and subscribe for more Totopia videos! https://youtube.com/@CeloTotopia
+
+#Totopia</p>

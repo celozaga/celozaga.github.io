@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough"
+date: 2024-11-07
+description: "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough  About Hyper Brawl: A mysterious force known as the Destruction Legion has invaded, plungi..."
+image: "https://img.youtube.com/vi/tFuQS7uh5-8/maxresdefault.jpg"
+tags: [youtube, video]
+og_type: "video.other"
+---
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "name": "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough",
+  "description": "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough  About Hyper Brawl: A mysterious force known as the Destruction Legion has invaded, plunging Egg Island into chaos. Hyper heroes unite to fight back against the invaders. Join the Eggy Party's Hyper Brawl!  About Eggy Party: Eggy Party is a popular party game developed by NetEase Games. Welcome to the Eggyverse! A world full of party and play! Create your own maps to enjoy with your friends! Team up with other cute Eggies! Dive into this Egg-citing Eggyverse!  Eggy Party Creator Program: #EggyTrendCreatorIncentiveProgram #EchoesofTimeSeason  #EggyParty",
+  "thumbnailUrl": "https://img.youtube.com/vi/tFuQS7uh5-8/maxresdefault.jpg",
+  "uploadDate": "2024-11-07T04:43:56Z",
+  "embedUrl": "https://www.youtube.com/embed/tFuQS7uh5-8",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2024/11/07/eggy-party-hyper-brawl-aurora-goddess-gameplay-walkthrough-tFuQS7uh5-8.html"
+  },
+  "duration": "PT0M0S"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough",
+  "image": "https://img.youtube.com/vi/tFuQS7uh5-8/maxresdefault.jpg",
+  "publisher": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "url": "https://celozaga.github.io/2024/11/07/eggy-party-hyper-brawl-aurora-goddess-gameplay-walkthrough-tFuQS7uh5-8.html",
+  "datePublished": "2024-11-07T04:43:56Z",
+  "dateCreated": "2024-11-07T04:43:56Z",
+  "dateModified": "2024-11-07T04:43:56Z",
+  "description": "Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough  About Hyper Brawl: A mysterious force known as the Destruction Legion has invaded, plungi...",
+  "author": {
+    "@type": "Person",
+    "name": "Celo Zaga"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://celozaga.github.io/2024/11/07/eggy-party-hyper-brawl-aurora-goddess-gameplay-walkthrough-tFuQS7uh5-8.html"
+  }
+}
+</script>
+
+<h1 class="youtube-post-title">Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough</h1>
+
+<iframe class="BLOG_video_class" width="100%" height="100%" 
+        src="https://www.youtube.com/embed/tFuQS7uh5-8"
+        youtube-src-id="tFuQS7uh5-8"
+        title="YouTube Video Player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+
+<p class="youtube-post-description">Eggy Party: Hyper Brawl - Aurora Goddess Gameplay Walkthrough
+
+About Hyper Brawl: A mysterious force known as the Destruction Legion has invaded, plunging Egg Island into chaos. Hyper heroes unite to fight back against the invaders. Join the Eggy Party's Hyper Brawl!
+
+About Eggy Party: Eggy Party is a popular party game developed by NetEase Games. Welcome to the Eggyverse! A world full of party and play! Create your own maps to enjoy with your friends! Team up with other cute Eggies! Dive into this Egg-citing Eggyverse!
+
+Eggy Party Creator Program: #EggyTrendCreatorIncentiveProgram #EchoesofTimeSeason
+
+#EggyParty</p>
