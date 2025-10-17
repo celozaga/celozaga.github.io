@@ -70,8 +70,8 @@ for entry in feed.entries:
         # Trata a descrição (resumo) para a meta tag e o conteúdo do post
         safe_summary = entry.summary.replace('"', '\\"').strip()
         meta_description = safe_summary
-        if len(meta_description) > 155:
-            meta_description = meta_description[:152] + '...'
+        if len(meta_description) > 300:
+            meta_description = meta_description[:299] + '.'
 
         clean_content = strip_tags(entry.summary).strip() # Conteúdo principal do post
 
