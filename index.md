@@ -19,7 +19,8 @@ permalink: /
     </ul>
 </section>
 
-<section class="section videos" id="videos">
+<section class="section carousel-list videos" id="videos">
+<h2>Videos</h2>
 <ul class="feed-youtube"></ul>
 <script>
 fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q')

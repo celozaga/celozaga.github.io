@@ -44,6 +44,16 @@ a {color: #61dafb;text-decoration: none;}
 a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
 
+
+.carousel-list{}
+.carousel-list ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    overflow-x: auto; 
+}
+.carousel-list li a{width: 250px;}
 /*SEARCH BOX */ 
 .search-box form{
   position: relative;
