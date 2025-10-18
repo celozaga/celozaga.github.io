@@ -19,7 +19,7 @@ permalink: /
     </ul>
 </section>
 
-<section class="section carousel-list videos" id="videos">
+<section class="section videos carousel-list" id="videos">
 <h2>Videos</h2>
 <ul class="feed-youtube"></ul>
 <script>
