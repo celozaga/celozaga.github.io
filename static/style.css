@@ -45,6 +45,10 @@ a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
 
 /*SEARCH BOX */ 
+.search-box form{
+  position: relative;
+}
+
 .search-box input {
     width: 100%;
     border: 0;
