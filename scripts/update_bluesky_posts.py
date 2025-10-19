@@ -55,7 +55,7 @@ for entry in feed.entries:
 
     # Garante que o título não seja muito longo para o nome do arquivo
     if len(title) > 300:
-        title = title[:300] + ''
+        title = title[:299] + '.'
 
     published = entry.published_parsed
     date_obj = datetime(*published[:6])
