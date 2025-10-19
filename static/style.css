@@ -526,7 +526,7 @@ details[open] summary svg { transform: rotate(180deg);}
 @media (max-width: 480px) {
 
 }
-@media (min-width: 768px) {
+@media (min-width: 968px) {
   .nav {
     top: 0;
     bottom: auto;
