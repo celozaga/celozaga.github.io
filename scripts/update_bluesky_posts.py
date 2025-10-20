@@ -54,8 +54,8 @@ for entry in feed.entries:
     title = title.replace('/', '-').replace('\\', '-').strip() # Limpa caracteres para filename
 
     # Garante que o título não seja muito longo para o nome do arquivo
-    if len(title) > 300:
-        title = title[:299] + '.'
+    if len(title) > 155:
+        title = title[:300] + ''
 
     published = entry.published_parsed
     date_obj = datetime(*published[:6])
