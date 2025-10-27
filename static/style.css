@@ -528,42 +528,7 @@ details[open] summary svg { transform: rotate(180deg);}
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 480px) {
-
-}
 @media (min-width: 968px) {
-  .nav {
-    top: 0;
-    bottom: auto;
-    width: var(--rail-width);
-    height: 100vh;
-    border-top: none;
-    justify-content: flex-start;
-    align-items: center;
-  }
 
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    max-width: none;
-    max-height: 400px;
-  }
-
-  .nav li {
-    margin: 12px 0;
-  }
-
-  .nav a {
-    flex-direction: column;
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .nav a[aria-current="page"] {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
-  }
 }
 
