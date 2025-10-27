@@ -44,7 +44,7 @@ a {color: #61dafb;text-decoration: none;}
 a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
 
-.section, .footer{max-width: 600px;}
+.header, .main, .footer{max-width: 600px;}
 
 .carousel-list{width: 100%;}
 .carousel-list ul{
