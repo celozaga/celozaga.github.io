@@ -72,7 +72,7 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
 </section>
 
 <section class="section apps carousel-list" id="apps">
-<h2>Apps and Games</h2>
+<h2>Apps</h2>
 <ul>
 <li><a title="Sample" href="store/apps/totopia"><img src=""/><p>Totopia</p></a></li>
 <li><a title="Sample" href="store/apps/eggy-party"><img src=""/><p>Eggy Party</p></a></li>
