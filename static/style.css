@@ -46,16 +46,13 @@ a {color: #61dafb;text-decoration: none;}
 a:hover {text-decoration: underline;}
 .hidden, .visually-hidden{display:none;}
 
+
+
 .carousel-list{width: 100%;}
-.carousel-list ul{
-display: flex;
-gap: 20px;
-list-style-type: none;
-padding: 0;
-overflow-x: auto; 
-}
+.carousel-list ul{display: flex;gap: 20px;list-style-type: none;padding: 0;overflow-x: auto;}
 .carousel-list li a{width: 250px;}
 .carousel-list li img{max-width: 250px;max-height: 250px; background-color: #333;}
+
 /*SEARCH BOX */ 
 .search-box form{
   position: relative;
