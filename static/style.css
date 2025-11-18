@@ -53,6 +53,11 @@ a:hover {text-decoration: underline;}
 .carousel-list li a{width: 250px;}
 .carousel-list li img{width: 250px;height: 250px; background-color: #333;}
 
+.apps .carousel-list img{
+    border-radius: 30px;
+    width: 150px !important;
+    height: 150px !important;
+}
 /*SEARCH BOX */ 
 .search-box form{
   position: relative;
