@@ -55,7 +55,7 @@ padding: 0;
 overflow-x: auto; 
 }
 .carousel-list li a{width: 250px;}
-.carousel-list li img{min-width: 250px;min-height: 250px; background-color: #333;}
+.carousel-list li img{max-width: 250px;max-height: 250px; background-color: #333;}
 /*SEARCH BOX */ 
 .search-box form{
   position: relative;
