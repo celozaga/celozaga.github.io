@@ -74,13 +74,13 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
 <section class="section apps carousel-list" id="apps">
 <h2>Apps and Games</h2>
 <ul>
-<li><a title="Sample" href=""><img src=""/><p>Totopia</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>Eggy Party</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>Party Stars</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>Supernatural Squad</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>LDPlayer</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>MuMu Player</p></a></li>
-<li><a title="Sample" href=""><img src=""/><p>GearUP Booster</p></a></li>
+<li><a title="Sample" href="store/apps/totopia"><img src=""/><p>Totopia</p></a></li>
+<li><a title="Sample" href="store/apps/eggy-party"><img src=""/><p>Eggy Party</p></a></li>
+<li><a title="Sample" href="store/apps/party-stars"><img src=""/><p>Party Stars</p></a></li>
+<li><a title="Sample" href="store/apps/supernatural-squad"><img src=""/><p>Supernatural Squad</p></a></li>
+<li><a title="Sample" href="store/apps/ldplayer"><img src=""/><p>LDPlayer</p></a></li>
+<li><a title="Sample" href="store/apps/mumu-player"><img src=""/><p>MuMu Player</p></a></li>
+<li><a title="Sample" href="store/apps/gearup-booster"><img src=""/><p>GearUP Booster</p></a></li>
 </ul>
 </section>
 
