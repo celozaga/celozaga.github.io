@@ -79,7 +79,6 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
 <li><a title="Sample" href="store/apps/spirit-crossing"><img src="https://i.imgur.com/jogDRHu.png"/><p>Spirit Crossing</p></a></li>
 <li><a title="Sample" href="store/apps/supernatural-squad"><img src="https://i.imgur.com/QCtDyPR.png"/><p>Supernatural Squad</p></a></li>
 <li><a title="Sample" href="store/apps/ldplayer"><img src="https://i.imgur.com/pHAVUFK.png"/><p>LDPlayer</p></a></li>
-<li><a title="Sample" href="store/apps/mumu-player"><img src="https://i.imgur.com/lCaetRx.png"/><p>MuMu Player</p></a></li>
 <li><a title="Sample" href="store/apps/gearup-booster"><img src="https://i.imgur.com/2Ur3sgr.jpeg"/><p>GearUP Booster</p></a></li>
 </ul>
 </section>
