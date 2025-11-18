@@ -71,6 +71,19 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
     </div>
 </section>
 
+<section class="section apps carousel-list" id="apps">
+<h2>Apps and Games</h2>
+<ul>
+<li><a title="Sample" href=""><img src=""/><p>Totopia</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Eggy Party</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Party Stars</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Supernatural Squad</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>LDPlayer</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>MuMu Player</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>GearUP Booster</p></a></li>
+</ul>
+</section>
+
 <section class="section shop carousel-list" id="shop">
 <h2>Shop</h2>
 <ul>
