@@ -70,3 +70,14 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
       <button id="next-page-home" disabled>Next &raquo;</button>
     </div>
 </section>
+
+<section class="section shop carousel-list" id="shop">
+<h2>Shop</h2>
+<ul>
+<li><a title="Sample" href=""><img src=""/><p>Sample</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Sample</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Sample</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Sample</p></a></li>
+<li><a title="Sample" href=""><img src=""/><p>Sample</p></a></li>
+</ul>
+</section>
