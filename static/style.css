@@ -118,18 +118,8 @@ header h3 {
   align-items: center;
   justify-content: space-between; 
 }
-.header-page h3{
-      flex: 1;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-
-}
-
-header svg {
-      width: 20px;
-      height: 20px;
-      fill: white;
-      display: inline-block;
-    }
+header h3{flex: 1;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+header svg { width: 24px; height: 24px; fill: white; display: inline-block;}
 
 hr {
   height: 1px;
