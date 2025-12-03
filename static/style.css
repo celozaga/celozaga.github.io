@@ -101,15 +101,7 @@ ease;
 .radius-medium{ border-radius: 20px;}
 .radius-low{ border-radius: 10px;}
 
-header {color: var(--white); padding: 20px; text-align: center; margin: 0 auto;}
-
-.header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-}
-
-
+header {color: var(--white); padding: 20px; text-align: center; margin: 0 auto;display: flex; align-items: center; justify-content: space-between;}
 .header-page {width: auto; text-align: left;
 }
 
