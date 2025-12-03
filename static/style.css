@@ -276,9 +276,10 @@ main {margin: 0 auto; padding: 20px;}
 /* LIST LINK */
 .link-list{}
 .link-list ul{}
-.link-list li { display: inline-block; }
+.link-list li {}
 .link-list a { color: var(--gray); line-height: 20px; padding: 15px; display: block; }
-.link-list i{}
+.links li img { width: 20px; height: 20px;}
+.links li p { line-height: 20px; text-align: center; }
 /* YouTube Videos */
 
 .videos {
