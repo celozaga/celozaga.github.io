@@ -5,7 +5,7 @@ description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other plat
 permalink: /
 ---
 
-<section class="section social-media-tab button-links" id="links">
+<section class="section links link-list" id="links">
     <h2>Links</h2>
     <ul>
         <li><a title="Discord" href="https://discord.com/invite/{{ site.social.discord }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/discord.svg" alt="Discord"><p>Discord</p></a></li>
