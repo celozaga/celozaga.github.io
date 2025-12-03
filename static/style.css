@@ -103,7 +103,12 @@ ease;
 
 header {color: var(--white); padding: 20px; text-align: center; margin: 0 auto;display: flex; align-items: center; justify-content: space-between;}
 header h3{margin: 0; font-size: 20px; font-weight: 700; line-height: 24px;flex: 1;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+header a {
+    width: 24px;
+    height: 24px;
+}
 header svg { width: 24px; height: 24px; fill: white; display: inline-block;}
+
 
 hr {
   height: 1px;
