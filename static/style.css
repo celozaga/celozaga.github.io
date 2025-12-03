@@ -277,10 +277,10 @@ main {margin: 0 auto; padding: 20px;}
 .link-list{}
 .link-list ul{}
 .link-list li {}
-.link-list a { color: var(--gray); line-height: 20px; padding: 15px; display: block; }
+.link-list a { color: var(--gray); line-height: 20px; display: block; }
 .links li img { width: 20px; height: 20px;}
 .links li p { line-height: 20px; text-align: center; }
-.links li a{background: var(--surface); margin-bottom: 20px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;}
+.links li a{background: var(--surface); padding: 20px; margin-bottom: 20px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;}
 /* YouTube Videos */
 
 .videos {
