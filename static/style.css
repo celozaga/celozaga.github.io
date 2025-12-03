@@ -102,23 +102,7 @@ ease;
 .radius-low{ border-radius: 10px;}
 
 header {color: var(--white); padding: 20px; text-align: center; margin: 0 auto;display: flex; align-items: center; justify-content: space-between;}
-.header-page {width: auto; text-align: left;
-}
-
-header h3 {
-      margin: 0;
-      font-size: 20px;
-      line-height: 50px;
-      font-weight: 700;
-      display: inline-block;
-      margin-left: 20px;
-    }
-.header-page{
-   display: flex;
-  align-items: center;
-  justify-content: space-between; 
-}
-header h3{flex: 1;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+header h3{margin: 0; font-size: 20px; font-weight: 700; line-height: 24px;flex: 1;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 header svg { width: 24px; height: 24px; fill: white; display: inline-block;}
 
 hr {
