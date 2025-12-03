@@ -280,6 +280,7 @@ main {margin: 0 auto; padding: 20px;}
 .link-list a { color: var(--gray); line-height: 20px; padding: 15px; display: block; }
 .links li img { width: 20px; height: 20px;}
 .links li p { line-height: 20px; text-align: center; }
+.links li a{padding: 20px; display: block; background: var(--surface); margin-bottom: 20px; border-radius: 50px;}
 /* YouTube Videos */
 
 .videos {
