@@ -1,11 +1,11 @@
 <header class="header" role="header">
-    <a href="/menu" aria-label="Open menu">
+    <a href="{{ site.url }}/menu" aria-label="Open menu">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
     </a>
 
     <div class="logo">
-      <a href="/">
-        <img src="logo.png" alt="Logo" />
+      <a href="{{ site.url }}">
+        <img src="{{ '/static/media/logo.png' | absolute_url }}" alt="Logo" />
       </a>
     </div>
 
@@ -25,22 +25,17 @@
     <ul>
       <li>
         <a href="{{ site.url }}" aria-current="page">
-          <p class="label">Home</p>
-        </a>
-      </li>
-       <li>
-        <a href="{{ site.url }}/videos/">
-          <p class="label">Videos</p>
+          <p class="label">Links</p>
         </a>
       </li>
       <li>
-        <a href="{{ site.url }}/search/">
-          <p class="label">Blog</p>
+        <a href="{{ site.url }}/posts/">
+          <p class="label">Posts</p>
         </a>
       </li>
       <li>
         <a href="{{ site.url }}/apps/">
-          <p class="label">Apps</p>
+          <p class="label">Store</p>
         </a>
       </li>
     </ul>
