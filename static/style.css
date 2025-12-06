@@ -1,10 +1,10 @@
 :root {
 --white: #FFFFFF;
---gray: #333333;
+--gray: #7F7F7F;
 --frame: #C8CAC9;
 --blue: #A8C7FA;
 --red: #F15550;
---surface: #202020;
+--surface: #333333;
 --background: #191919;
 }
 * {
@@ -375,7 +375,7 @@ main {margin: 0 auto; padding: 20px;}
 /* SOCIAL MEDIA */
 .social-media li {display: inline-block;}
 .social-media li a {padding: 15px;display: block;border-radius: 50%;}
-.social-media img, .social-media svg{width: 25px;height: 25px;display: block;}
+.social-media img, .social-media svg{display: block;}
 .social-media span {display: none;}
 /* FOOTER */
 .footer {text-align: center;color: var(--gray);padding: 20px;}
