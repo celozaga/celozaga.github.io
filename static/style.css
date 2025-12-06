@@ -21,11 +21,11 @@ body{line-height:1}
 li,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before,mark{font-style:italic;font-weight:700}
-svg{width:20px;height:20px}
+svg{width:24px;height:24px;fill:var(--gray);}
 del{text-decoration:line-through}
 abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
-hr{height:1px;border:0;border-top:1px solid #7F7F7F;margin:1em 0}
+hr{height:1px;border:0;border-top:1px solid var(--gray);margin:1em 0}
 input,select{vertical-align:middle}
 .widget ul{padding:0;margin:0;line-height:0}
 .widget{border:0;margin:0;padding:0;line-height:0}
