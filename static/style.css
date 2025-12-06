@@ -1,11 +1,11 @@
 :root {
 --white: #FFFFFF;
---gray: #C8CAC9;
+--gray: #7F7F7F;
 --frame: #C8CAC9;
 --blue: #A8C7FA;
 --red: #F15550;
---surface: #333333;
---background: #1A1A1A;
+--surface: #202020;
+--background: #191919;
 }
 * {
 box-sizing: border-box;
@@ -25,7 +25,7 @@ svg{width:20px;height:20px}
 del{text-decoration:line-through}
 abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
-hr{height:1px;border:0;border-top:1px solid #7c7c7c45;margin:1em 0}
+hr{height:1px;border:0;border-top:1px solid #7F7F7F;margin:1em 0}
 input,select{vertical-align:middle}
 .widget ul{padding:0;margin:0;line-height:0}
 .widget{border:0;margin:0;padding:0;line-height:0}
