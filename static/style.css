@@ -146,12 +146,11 @@ main {margin: 0 auto; padding: 20px;}
 }
 
 /* NAVIGATION */
-  .nav {
-    background: #1c1c1c;
-    border-bottom: 2px solid #333;
+.navigation {
+
   }
 
-.nav ul {
+.navigation ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -159,19 +158,19 @@ main {margin: 0 auto; padding: 20px;}
     padding: 0;
   }
 
-.nav li {
+.navigation li {
     flex: 1;
     text-align: center;
   }
 
-.nav label {
+.navigation label {
     display: block;
     padding: 14px 0;
     cursor: pointer;
     transition: background 0.3s;
   }
 
-.nav label:hover {
+.navigation label:hover {
     background: #222;
   }
  input[type="radio"] {
