@@ -144,52 +144,6 @@ main {margin: 0 auto; padding: 20px;}
     line-height: 20px;
     color: var(--gray);
 }
-
-/* NAVIGATION */
-.navigation {
-
-  }
-
-.navigation ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-.navigation li {
-    flex: 1;
-    text-align: center;
-  }
-
-.navigation label {
-    display: block;
-    padding: 14px 0;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-.navigation label:hover {
-    background: #222;
-  }
- input[type="radio"] {
-    display: none;
-  }
-  input[type="radio"]:checked + label {
-    background: #333;
-  }
-
-.section {
-    display: none;
- }
-
-  #tab-links:checked ~ .links,
-  #tab-posts:checked ~ .posts,
-  #tab-shop:checked ~ .shop {
-    display: block;
-  }
-
 /* SOCIAL MEDIA TAB */
 
 .social-media-tab {
