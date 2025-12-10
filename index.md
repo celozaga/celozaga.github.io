@@ -29,7 +29,7 @@ permalink: /
     </div>
 </section>
 
-<section class="section apps carousel-list" id="apps">
+<section class="section shop apps carousel-list" id="shop">
 <h2>Apps</h2>
 <ul>
 <li><a title="Sample" href="store/apps/totopia"><img src="https://i.imgur.com/D5fNE8Y.png"/><p>Totopia</p></a></li>
@@ -39,9 +39,6 @@ permalink: /
 <li><a title="Sample" href="store/apps/ldplayer"><img src="https://i.imgur.com/pHAVUFK.png"/><p>LDPlayer</p></a></li>
 <li><a title="Sample" href="store/apps/gearup-booster"><img src="https://i.imgur.com/2Ur3sgr.jpeg"/><p>GearUP Booster</p></a></li>
 </ul>
-</section>
-
-<section class="section shop carousel-list" id="shop">
 <h2>Shop</h2>
 <ul>
 <li><a title="Sample" href="https://aliexpress.com/item/1005009651257943.html" target="_blank"><img src="https://ae-pic-a1.aliexpress-media.com/kf/S4853e6884dba47d998c497121b5feb83H.jpg_960x960q75.jpg_.avif"/><p>Eggy Party Unisex Cotton T-Shirt</p></a></li>
