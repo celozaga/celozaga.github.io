@@ -25,8 +25,8 @@ permalink: /
     </ul>
 </section>
 
-<section class="section updates" id="updates">
-<h2>Updates</h2>
+<section class="section bluesky" id="bluesky">
+<h2>Bluesky</h2>
 <ul>
 </ul>
 </section>
