@@ -19,9 +19,28 @@
   </a>
 </header>
 
-<section class="section profile" itemscope itemtype="https://schema.org/Person">
-  <img class="avatar" width="150" height="150" src="{{ '/static/media/image/avatar.webp' | absolute_url }}"
-    alt="{{ site.title }} avatar" itemprop="image">
-  <h1 class="username" itemprop="name">{{ site.title }}</h1>
-  <p class="description" itemprop="description">{{ site.description }}</p>
-</section>
+<!-- Menu Overlay -->
+<div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
+<!-- Side Menu -->
+<div id="side-menu" class="side-menu">
+  <div class="menu-header">
+    <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg>
+    </button>
+  </div>
+  <nav class="menu-nav">
+    <ul>
+      <li><a href="/" onclick="toggleMenu()">Home</a></li>
+      <li><a href="/search/" onclick="toggleMenu()">Search</a></li>
+      <li><a href="/store" onclick="toggleMenu()">Store</a></li>
+      <li><a href="/posts/" onclick="toggleMenu()">Posts</a></li>
+      <li><a href="/video/" onclick="toggleMenu()">Video</a></li>
+      <li><a href="/portfolio" onclick="toggleMenu()">Portfolio</a></li>
+      <li><a href="/advertise/" onclick="toggleMenu()">Advertise</a></li>
+      <li><a href="/contact/" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</div>

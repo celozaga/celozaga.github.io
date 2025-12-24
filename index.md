@@ -4,6 +4,12 @@ title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 permalink: /
 ---
+<section class="section profile" itemscope itemtype="https://schema.org/Person">
+  <img class="avatar" width="150" height="150" src="{{ '/static/media/image/avatar.webp' | absolute_url }}"
+    alt="{{ site.title }} avatar" itemprop="image">
+  <h1 class="username" itemprop="name">{{ site.title }}</h1>
+  <p class="description" itemprop="description">{{ site.description }}</p>
+</section>
 
 <section class="section links link-list" id="links">
     <h2 style="display:none;">Links</h2>
@@ -19,3 +25,26 @@ permalink: /
     </ul>
 </section>
 
+<section class="section updates" id="updates">
+<h2>Updates</h2>
+<ul>
+</ul>
+</section>
+
+<section class="section videos" id="videos">
+<h2>Videos</h2>
+<ul>
+</ul>
+</section>
+
+<section class="section store" id="store">
+<h2>Store</h2>
+<ul>
+</ul>
+</section>
+
+<section class="section portfolio" id="portfolio">
+<h2>Portfolio</h2>
+<ul>
+</ul>
+</section>
