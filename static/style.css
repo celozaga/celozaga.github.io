@@ -853,18 +853,36 @@ details[open] summary svg {
   padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-md) var(--spacing-xs);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  /* Enable Scrollbar */
+  scrollbar-width: thin;
   /* Firefox */
-  cursor: grab;
+  scrollbar-color: var(--surface-hover) transparent;
 }
 
 .carousel-track:active {
   cursor: grabbing;
 }
 
+/* Custom Scrollbar for Webkit (Chrome, Safari/Edge) */
 .carousel-track::-webkit-scrollbar {
-  display: none;
-  /* Chrome/Safari */
+  height: 8px;
+  /* Horizontal scrollbar height */
+}
+
+.carousel-track::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: var(--radius-sm);
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background-color: var(--surface-hover);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--bg-color);
+  /* Creates padding effect */
+}
+
+.carousel-track::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
 }
 
 .carousel-item {

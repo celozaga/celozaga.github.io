@@ -19,7 +19,6 @@ class CarouselManager {
   async init() {
     if (!this.container) return;
 
-    this.enableDragScroll(); // Enable drag capability
     this.renderLoading();
 
     try {
@@ -36,42 +35,6 @@ class CarouselManager {
       console.error(`Carousel Error (${this.type}):`, error);
       this.renderError();
     }
-  }
-
-  enableDragScroll() {
-    const slider = this.container;
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.style.cursor = 'grabbing';
-      // Disable snap during drag for smoother experience
-      slider.style.scrollSnapType = 'none';
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.style.cursor = 'grab';
-      slider.style.scrollSnapType = 'x mandatory'; // Re-enable snap
-    });
-
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.style.cursor = 'grab';
-      slider.style.scrollSnapType = 'x mandatory'; // Re-enable snap
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // Scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
-    });
   }
 
   renderLoading() {
