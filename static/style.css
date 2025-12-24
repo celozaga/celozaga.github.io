@@ -259,6 +259,35 @@ header button,
   font-size: var(--font-size-sm);
 }
 
+.footer .link-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer .link-list a {
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 10px 15px;
+  /* Touch target */
+  width: auto;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer .link-list a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  /* Subtle hover */
+  color: var(--text-main);
+  transform: none;
+  /* Disable lift effect */
+}
+
 .section h1,
 .section h2 {
   font-size: var(--font-size-lg);
