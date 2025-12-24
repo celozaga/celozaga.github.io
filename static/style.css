@@ -3,19 +3,19 @@
    ========================================= */
 :root {
   /* Colors */
-  --bg-color: #191919;
+  --bg-color: #000000;
   --surface-color: #333333;
   --surface-hover: #444444;
   --text-main: #FFFFFF;
-  --text-muted: #7F7F7F;
-  --border-color: rgba(255, 255, 255, 0.1);
+  --text-muted: #999999;
+  --border-color: #333333;
 
   /* Accent Colors */
-  --primary-color: #A8C7FA;
+  --primary-color: #005df1;
   /* Blue */
-  --secondary-color: #F15550;
+  --secondary-color: #ff0800;
   /* Red */
-  --accent-color: #61dafb;
+  --accent-color: #00c2f8;
   /* Cyan */
 
   /* Brand Colors */
@@ -72,7 +72,6 @@ body {
   color: var(--text-main);
   line-height: var(--line-height-base);
   font-size: var(--font-size-base);
-  max-width: 640px;
   margin: 0 auto;
   padding: 0;
 }
