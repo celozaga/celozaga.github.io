@@ -12,7 +12,7 @@ permalink: /
 </section>
 
 <section class="section posts" id="posts">
-<h2>Posts</h2>
+<h2>Bluesky</h2>
 <ul class="posts-list">
   {% for post in site.posts limit:5 %}
   <li class="post-list-item">
