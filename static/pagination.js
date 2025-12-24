@@ -1,25 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Elementos da Homepage
+document.addEventListener('DOMContentLoaded', function () {
+    // Elements
     const postsContainerHome = document.getElementById('posts-container-home');
-    const prevButtonHome = document.getElementById('prev-page-home');
-    const nextPageButtonHome = document.getElementById('next-page-home');
-    const pageInfoHome = document.getElementById('page-info-home');
-    const searchInputHomepage = document.getElementById('homepage-search-input');
-
-    // Elementos da Página de Busca (/search/)
     const postsContainerSearch = document.getElementById('posts-container');
-    const prevButtonSearch = document.getElementById('prev-page');
-    const nextPageButtonSearch = document.getElementById('next-page');
-    const pageInfoSearch = document.getElementById('page-info');
+    const searchInputHomepage = document.getElementById('homepage-search-input');
     const searchInputPage = document.getElementById('search-input-page');
     const searchResultsInfo = document.getElementById('search-results-info');
     const searchQuerySpan = document.getElementById('search-query');
 
-    let allPosts = []; // Todos os posts brutos do JSON
-    const postsPerPage = 10; // Número de posts por página, ajustável
+    // Legacy pagination controls (to hide)
+    const legacyControls = document.querySelectorAll('.pagination-controls');
+
+    let allPosts = [];
+    const postsPerPage = 10;
 
     // =============================================================
-    // Funções Comuns
+    // Helpers
     // =============================================================
 
     function getQueryParam(param) {
@@ -39,41 +34,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function fetchAllPostsAndInitialize(initialQuery = '') {
-        fetch('/posts_data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                allPosts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-                if (window.location.pathname === '/') {
-                    // Inicializa paginação da HOME
-                    initPagination(postsContainerHome, prevButtonHome, nextPageButtonHome, pageInfoHome, allPosts, false);
-                } else if (window.location.pathname === '/search/') {
-                    // Inicializa paginação da BUSCA
-                    initPagination(postsContainerSearch, prevButtonSearch, nextPageButtonSearch, pageInfoSearch, allPosts, true, initialQuery);
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao carregar posts:', error);
-                if (postsContainerHome) postsContainerHome.innerHTML = '<p>Erro ao carregar posts da homepage.</p>';
-                if (postsContainerSearch) postsContainerSearch.innerHTML = '<p>Erro ao carregar posts para busca.</p>';
-            });
+    function createLoadingSpinner() {
+        const spinner = document.createElement('div');
+        spinner.className = 'loading-spinner hidden';
+        spinner.innerHTML = '<div class="spinner"></div>';
+        return spinner;
     }
 
     // =============================================================
-    // Lógica de Paginação Reutilizável
+    // Infinite Scroll Logic
     // =============================================================
 
-    function initPagination(container, prevBtn, nextBtn, infoSpan, initialPosts, isSearchPage = false, initialQuery = '') {
-        let currentPosts = [...initialPosts]; // Posts para a instância atual (todos ou filtrados)
+    function initInfiniteScroll(container, initialPosts, isSearchPage = false, initialQuery = '') {
+        let currentPosts = [...initialPosts];
         let currentPage = 1;
+        let isLoading = false;
 
-        // Para página de busca, aplique a query inicial
+        // Hide legacy controls
+        legacyControls.forEach(control => control.style.display = 'none');
+
+        // Create Load More / Spinner element
+        const spinner = createLoadingSpinner();
+        container.after(spinner);
+
+        // Filter for Search Page
         if (isSearchPage && initialQuery) {
             currentPosts = initialPosts.filter(post =>
                 (post.title && post.title.toLowerCase().includes(initialQuery)) ||
@@ -82,35 +66,63 @@ document.addEventListener('DOMContentLoaded', function() {
             if (searchQuerySpan) searchQuerySpan.textContent = initialQuery;
             if (searchResultsInfo) searchResultsInfo.style.display = 'block';
         } else if (isSearchPage && !initialQuery) {
-            // Se é página de busca e não tem query, limpa resultados da busca.
-            // Mas queremos mostrar todos os posts na home se não houver busca.
             if (searchResultsInfo) searchResultsInfo.style.display = 'none';
         }
 
+        // Observer for Infinite Scroll
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !isLoading) {
+                loadMorePosts();
+            }
+        }, { rootMargin: '100px' });
 
-        function renderPage() {
-            container.innerHTML = '';
+        function loadMorePosts() {
             const startIndex = (currentPage - 1) * postsPerPage;
             const endIndex = startIndex + postsPerPage;
-            const postsToRender = currentPosts.slice(startIndex, endIndex);
 
-            const ul = document.createElement('ul');
-            if (postsToRender.length === 0 && currentPosts.length === 0) {
-                ul.innerHTML = '<p>Nenhum post encontrado.</p>';
-            } else if (postsToRender.length === 0 && currentPosts.length > 0) {
-                // Se não há posts para renderizar na página atual, mas há posts no total,
-                // significa que a página atual está além da última página de posts.
-                // Isso pode acontecer se a última página tinha 1 post e ele foi deletado, por exemplo.
-                // Redefine para a última página válida.
-                currentPage = Math.max(1, Math.ceil(currentPosts.length / postsPerPage));
-                renderPage(); // Tenta renderizar novamente a página válida
+            // Checks if we have reached the end
+            if (startIndex >= currentPosts.length) {
+                spinner.classList.add('hidden');
+                observer.disconnect();
                 return;
             }
 
+            isLoading = true;
+            spinner.classList.remove('hidden');
 
-            postsToRender.forEach(post => {
+            const postsToRender = currentPosts.slice(startIndex, endIndex);
+
+            // Simulate network delay for UX (optional, can be removed)
+            setTimeout(() => {
+                renderPosts(postsToRender);
+                currentPage++;
+                isLoading = false;
+
+                // If there are more posts, observe the spinner/last element again
+                if (currentPage * postsPerPage < currentPosts.length) {
+                    // Keep observing
+                } else {
+                    spinner.classList.add('hidden');
+                    observer.disconnect();
+                }
+            }, 300);
+        }
+
+        function renderPosts(posts) {
+            const ul = container.querySelector('ul') || document.createElement('ul');
+            if (!container.contains(ul)) container.appendChild(ul);
+
+            if (posts.length === 0 && currentPage === 1) {
+                ul.innerHTML = '<p style="text-align:center; padding: 20px;">Nenhum post encontrado.</p>';
+                return;
+            }
+
+            posts.forEach(post => {
                 const li = document.createElement('li');
                 const postUrl = post.url.startsWith('/') ? post.url : `/${post.url}`;
+
+                // Use .card style for list items in search/home if in list view, 
+                // or just standard list item style. Using specific style for post list.
                 li.innerHTML = `
                     <a href="${postUrl}">${post.title}
                     <small>— ${new Date(post.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })}</small>
@@ -118,84 +130,63 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 ul.appendChild(li);
             });
-            container.appendChild(ul);
-            updateControls();
         }
 
-        function updateControls() {
-            const totalPages = Math.ceil(currentPosts.length / postsPerPage);
-            infoSpan.textContent = `Página ${currentPage} de ${totalPages}`;
+        // Initial Render
+        container.innerHTML = ''; // Clear container
+        loadMorePosts(); // Load first page
+        observer.observe(spinner); // Start observing trigger
 
-            prevBtn.disabled = currentPage === 1;
-            nextBtn.disabled = currentPage === totalPages || currentPosts.length === 0;
-
-            if (currentPosts.length <= postsPerPage) {
-                prevBtn.style.display = 'none';
-                nextBtn.style.display = 'none';
-                infoSpan.style.display = 'none';
-            } else {
-                prevBtn.style.display = '';
-                nextBtn.style.display = '';
-                infoSpan.style.display = '';
-            }
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                renderPage();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            const totalPages = Math.ceil(currentPosts.length / postsPerPage);
-            if (currentPage < totalPages) {
-                currentPage++;
-                renderPage();
-            }
-        });
-
-        // Lógica de busca para a página de busca (/search/)
+        // Search Input Logic (Re-init on search)
         if (isSearchPage && searchInputPage) {
-             searchInputPage.addEventListener('keyup', function() {
+            searchInputPage.addEventListener('keyup', function () {
                 const query = searchInputPage.value.toLowerCase().trim();
-                updateSearchUrl(query); // Atualiza a URL com a nova busca
+                updateSearchUrl(query);
+
+                // Reset state
+                currentPage = 1;
+                container.innerHTML = '';
+
                 currentPosts = initialPosts.filter(post =>
                     (post.title && post.title.toLowerCase().includes(query)) ||
                     (post.excerpt && post.excerpt.toLowerCase().includes(query))
                 );
+
                 if (searchQuerySpan) searchQuerySpan.textContent = query;
                 if (searchResultsInfo) searchResultsInfo.style.display = 'block';
-                currentPage = 1;
-                renderPage();
+
+                observer.disconnect();
+                observer.observe(spinner); // Re-attach observer
+                loadMorePosts();
             });
         }
-
-        renderPage(); // Renderiza a página inicial na primeira carga
     }
 
     // =============================================================
-    // Inicialização Principal
+    // Fetch & Init
     // =============================================================
+    fetch('/posts_data.json')
+        .then(res => res.json())
+        .then(data => {
+            allPosts = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+            const initialQuery = getQueryParam('q');
 
-    // Listener para o campo de busca na homepage (redireciona para /search)
+            if (window.location.pathname === '/' && postsContainerHome) {
+                initInfiniteScroll(postsContainerHome, allPosts, false);
+            } else if (window.location.pathname === '/search/' && postsContainerSearch) {
+                if (searchInputPage && initialQuery) searchInputPage.value = initialQuery;
+                initInfiniteScroll(postsContainerSearch, allPosts, true, initialQuery);
+            }
+        })
+        .catch(err => console.error('Error loading posts:', err));
+
+    // Homepage Search Redirect
     if (searchInputHomepage) {
-        searchInputHomepage.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                const query = searchInputHomepage.value.trim();
-                window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+        searchInputHomepage.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                window.location.href = `/search/?q=${encodeURIComponent(this.value.trim())}`;
             }
         });
     }
-
-    // Preencher o campo de busca da página de resultados se houver query na URL
-    const initialQueryFromUrl = getQueryParam('q');
-    if (searchInputPage && initialQueryFromUrl) {
-        searchInputPage.value = initialQueryFromUrl;
-    }
-
-
-    // Inicia o processo de buscar todos os posts e inicializar a paginação apropriada
-    fetchAllPostsAndInitialize(initialQueryFromUrl);
 });
