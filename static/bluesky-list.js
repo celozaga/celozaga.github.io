@@ -24,9 +24,17 @@ async function loadBlueskyList(containerId, handle) {
                 const text = post.record.text;
                 if (!text) return; // Skip posts without text? Or show generic?
 
-                const handle = post.author.handle;
                 const rkey = post.uri.split('/').pop();
-                const link = `https://bsky.app/profile/${handle}/post/${rkey}`;
+
+                // Construct Internal Link
+                // Format: /YYYY/MM/DD/slug-rkey.html
+                const createdDate = new Date(post.record.createdAt);
+                const year = createdDate.getFullYear();
+                const month = String(createdDate.getMonth() + 1).padStart(2, '0');
+                const day = String(createdDate.getDate()).padStart(2, '0');
+
+                const slug = slugify(text);
+                const link = `https://celozaga.github.io/${year}/${month}/${day}/${slug}-${rkey}.html`;
 
                 const li = document.createElement('li');
                 li.className = 'post-list-item';
@@ -46,6 +54,16 @@ async function loadBlueskyList(containerId, handle) {
         console.error('Bluesky List Error:', error);
         container.innerHTML = '<li style="color:var(--text-muted)">Failed to load posts.</li>';
     }
+}
+
+function slugify(text) {
+    return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9\s-]/g, '') // Remove non-alphanumeric chars
+        .replace(/\s+/g, '-')         // Replace spaces with -
+        .replace(/-+/g, '-');         // Replace multiple - with single -
 }
 
 // Auto-run if configured
