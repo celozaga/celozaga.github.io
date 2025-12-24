@@ -2,59 +2,61 @@
    1. VARIABLES & THEME SETTINGS
    ========================================= */
 :root {
-  /* Colors */
+  /* Colors - Minimalist Palette */
   --bg-color: #000000;
-  --surface-color: #333333;
-  --surface-hover: #444444;
+  --surface-color: #000000;
+  /* Transparent/Black - No distinct surface */
+  --surface-hover: #1a1a1a;
   --text-main: #FFFFFF;
   --text-muted: #999999;
   --border-color: #333333;
 
   /* Accent Colors */
   --primary-color: #005df1;
-  /* Blue */
-  --secondary-color: #ff0800;
-  /* Red */
-  --accent-color: #00c2f8;
-  /* Cyan */
+  /* Deep Blue ascendant */
+  --secondary-color: #FFF;
+  /* Minimalist secondary is just white */
+  --accent-color: #005df1;
 
-  /* Brand Colors */
+  /* Brand Colors (Muted or Monochrome preferred, but keeping for identity) */
   --discord-color: #5865f2;
-  --youtube-color: #ff0e35;
+  --youtube-color: #ff0000;
   --bluesky-color: #0085ff;
-  --instagram-color: #f500be;
-  --facebook-color: #0866ff;
-  --tiktok-color: #ff3b5c;
-  --reddit-color: #ff0e35;
+  --instagram-color: #e1306c;
+  --facebook-color: #1877f2;
+  --tiktok-color: #ff0050;
+  --reddit-color: #ff4500;
 
-  /* Spacing */
-  --spacing-xs: 5px;
-  --spacing-sm: 10px;
-  --spacing-md: 20px;
-  --spacing-lg: 30px;
-  --spacing-xl: 40px;
+  /* Spacing - Generous for clarity */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 96px;
 
   /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-size-base: 16px;
+  --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-base: 18px;
+  /* Larger for readability */
   --font-size-sm: 14px;
-  --font-size-lg: 20px;
-  --font-size-xl: 25px;
-  --line-height-base: 2.0;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --line-height-base: 1.6;
 
-  /* Borders & Radius */
-  --radius-sm: 10px;
-  --radius-md: 20px;
-  --radius-lg: 30px;
-  --radius-xl: 50px;
-  --radius-full: 50%;
+  /* Borders & Radius - REMOVED */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-full: 0;
 
-  /* Effects */
-  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
+  /* Effects - REMOVED */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --transition-fast: 0.1s ease;
+  /* Snappy */
+  --transition-normal: 0.2s ease;
 }
 
 /* =========================================
@@ -74,12 +76,18 @@ body {
   font-size: var(--font-size-base);
   margin: 0 auto;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  /* Crisp text */
 }
 
 a {
   text-decoration: none;
   color: inherit;
   transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-color);
 }
 
 ul,
@@ -91,12 +99,15 @@ img,
 svg {
   display: block;
   max-width: 100%;
+  border-radius: 0 !important;
+  /* Force square */
 }
 
 button,
 input,
 textarea {
   font-family: inherit;
+  border-radius: 0 !important;
 }
 
 /* =========================================
@@ -116,35 +127,32 @@ textarea {
 }
 
 .container {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  max-width: 1200px;
+  /* Limit width on large screens */
+  margin: 0 auto;
 }
 
-.radius-full {
-  border-radius: var(--radius-full);
-}
-
-.radius-md {
-  border-radius: var(--radius-md);
-}
-
+.radius-full,
+.radius-md,
 .radius-sm {
-  border-radius: var(--radius-sm);
+  border-radius: 0 !important;
 }
 
 /* =========================================
    4. GLOBAL COMPONENTS
    ========================================= */
 
-/* Cards/Modules */
+/* Cards - Minimal: No background, just content */
 .card,
 .module,
 .contact-container,
 .post,
 .game-detail {
-  background: var(--surface-color);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-md);
-  margin: var(--spacing-md) 0;
+  background: transparent;
+  padding: 0;
+  margin: var(--spacing-lg) 0;
+  border: none;
 }
 
 /* Buttons */
@@ -153,28 +161,26 @@ textarea {
 .search-btn,
 .button {
   display: inline-block;
-  padding: 15px 40px;
-  border-radius: var(--radius-xl);
+  padding: 12px 30px;
   background: var(--text-main);
   color: var(--bg-color);
-  border: none;
-  font-weight: bold;
+  border: 1px solid var(--text-main);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
   text-align: center;
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
 }
 
 .btn:hover,
 .form-btn:hover {
-  transform: translateY(-2px);
   background: var(--primary-color);
-}
-
-.btn:disabled,
-.form-btn:disabled {
-  background: var(--text-muted);
-  cursor: not-allowed;
+  border-color: var(--primary-color);
+  color: var(--text-main);
   transform: none;
+  /* No movement */
 }
 
 /* Inputs */
@@ -182,15 +188,14 @@ textarea {
 .form-input,
 .form-textarea,
 .search-box input {
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
   padding: 15px;
   color: var(--text-main);
   font-size: var(--font-size-base);
   width: 100%;
   outline: none;
-  transition: all var(--transition-normal);
+  transition: border-color var(--transition-fast);
 }
 
 .input:focus,
@@ -198,8 +203,8 @@ textarea {
 .form-textarea:focus,
 .search-box input:focus {
   border-color: var(--primary-color);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(168, 199, 250, 0.1);
+  background: transparent;
+  box-shadow: none;
 }
 
 /* =========================================
@@ -840,45 +845,36 @@ details[open] summary svg {
    ========================================= */
 
 .carousel-container {
-  position: relative;
   width: 100%;
-  margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
 }
 
 .carousel-track {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: var(--spacing-md);
-  padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-md) var(--spacing-xs);
+  gap: var(--spacing-sm);
+  /* Tighter gap */
+  padding-bottom: var(--spacing-sm);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  /* Enable Scrollbar */
+
+  /* Minimal Scrollbar */
   scrollbar-width: thin;
-  /* Firefox */
-  scrollbar-color: var(--surface-hover) transparent;
+  scrollbar-color: var(--border-color) transparent;
 }
 
-.carousel-track:active {
-  cursor: grabbing;
-}
-
-/* Custom Scrollbar for Webkit (Chrome, Safari/Edge) */
 .carousel-track::-webkit-scrollbar {
-  height: 8px;
-  /* Horizontal scrollbar height */
+  height: 4px;
+  /* Ultra thin */
 }
 
 .carousel-track::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: var(--radius-sm);
 }
 
 .carousel-track::-webkit-scrollbar-thumb {
-  background-color: var(--surface-hover);
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--bg-color);
-  /* Creates padding effect */
+  background-color: var(--border-color);
 }
 
 .carousel-track::-webkit-scrollbar-thumb:hover {
@@ -886,97 +882,69 @@ details[open] summary svg {
 }
 
 .carousel-item {
-  flex: 0 0 280px;
-  /* Desktop default */
+  flex: 0 0 300px;
+  /* Slightly wider */
   scroll-snap-align: start;
-  background: var(--surface-color);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  background: transparent;
+  border: none;
   text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  position: relative;
   display: flex;
   flex-direction: column;
-  /* Vertical card layout */
 }
 
-.carousel-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  z-index: 2;
+.carousel-item:hover .image-wrapper img {
+  opacity: 0.8;
 }
 
 .carousel-item .image-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #000;
-  overflow: hidden;
-  position: relative;
+  background: #111;
+  margin-bottom: var(--spacing-xs);
 }
 
 .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal);
-}
-
-.carousel-item:hover img {
-  transform: scale(1.05);
+  transition: opacity var(--transition-normal);
 }
 
 .carousel-item .item-info {
-  padding: var(--spacing-md);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0;
+  /* Remove padding */
 }
 
 .carousel-item h3 {
   font-size: var(--font-size-base);
+  font-weight: 500;
   margin: 0;
   color: var(--text-main);
-  white-space: normal;
-  /* Allow text wrap */
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Loading/Error States */
-.carousel-loading {
-  display: flex;
-  justify-content: center;
-  padding: var(--spacing-md);
-  width: 100%;
-}
-
+/* Loading/Error */
+.carousel-loading,
 .carousel-error {
+  padding: var(--spacing-lg);
   text-align: center;
   color: var(--text-muted);
-  width: 100%;
-  padding: var(--spacing-md);
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .carousel-item {
-    flex: 0 0 240px;
-    /* Smaller cards on tablets */
+    flex: 0 0 250px;
   }
 }
 
 @media (max-width: 480px) {
   .carousel-item {
-    flex: 0 0 75%;
-    /* Peek effect on mobile */
-  }
-
-  .carousel-track {
-    padding-left: var(--spacing-md);
-    /* Start with padding */
-    padding-right: var(--spacing-md);
+    flex: 0 0 85%;
+    /* Wider on mobile for better view */
   }
 }
