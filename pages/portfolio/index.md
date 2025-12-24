@@ -21,6 +21,12 @@ permalink: /portfolio/
         <div id="portfolio-error" class="hidden" style="text-align: center; color: var(--text-muted); margin-top: 2rem;">
             <p>Failed to load portfolio. <a href="https://www.artstation.com/celozaga" target="_blank">Visit ArtStation</a></p>
         </div>
+
+        <div class="portfolio-actions" style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="https://www.artstation.com/celozaga" target="_blank" rel="noopener noreferrer" class="btn">
+                Ver mais no ArtStation
+            </a>
+        </div>
     </section>
 </div>
 
