@@ -714,10 +714,8 @@ details[open] summary svg {
 }
 
 .search-results-section input {
-  max-width: 500px;
   margin: 0 auto var(--spacing-md) auto;
-  text-align: left;
-  padding-left: 20px;
+  text-align: center;
 }
 
 .search-results-section #search-results-info {
