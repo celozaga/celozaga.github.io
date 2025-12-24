@@ -22,3 +22,15 @@ function showSection(event, sectionId) {
     // Marca a tab clicada como ativa
     event.currentTarget.classList.add('active');
 }
+
+/**
+ * Alterna a visibilidade do menu lateral e do overlay.
+ */
+function toggleMenu() {
+    const sideMenu = document.getElementById('side-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    sideMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+}
+
