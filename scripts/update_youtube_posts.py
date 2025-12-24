@@ -2,12 +2,44 @@ import os
 import feedparser
 from datetime import datetime
 import json
+import unicodedata
+import re
 
+# =========================
+# CONFIGURAÇÃO
+# =========================
 CHANNEL_ID = os.environ.get('CHANNEL_ID', 'UCvOnTTQp_7ZXtWUZYEUZO7Q')
-
-RSS_URL = f'http://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}'
+RSS_URL = f'https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}'
 POSTS_DIR = '_posts'
 
+
+# =========================
+# UTILITÁRIOS
+# =========================
+def clean_filename(text, max_length=50):
+    """
+    Gera um nome de arquivo 100% seguro para Windows, Linux e macOS.
+    """
+    text = unicodedata.normalize('NFKD', text)
+    text = text.encode('ascii', 'ignore').decode('ascii')
+    text = text.lower()
+
+    # Remove caracteres proibidos no Windows
+    text = re.sub(r'[\\/:*?"<>|]', '', text)
+
+    # Remove qualquer coisa que não seja letra, número, espaço ou hífen
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+
+    # Normaliza espaços e hífens
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'-+', '-', text)
+
+    return text.strip('-')[:max_length]
+
+
+# =========================
+# PROCESSAMENTO DO FEED
+# =========================
 feed = feedparser.parse(RSS_URL)
 
 if not feed.entries:
@@ -19,104 +51,98 @@ if not os.path.exists(POSTS_DIR):
 
 for entry in feed.entries:
     video_id = entry.yt_videoid
-    title = entry.title.replace('/', '-').replace('\\', '-').strip()
+    full_title = entry.title.strip()
 
+    # Filename seguro
+    filename_title = clean_filename(full_title)
+
+    # Thumbnail
     thumbnail_url = ''
     if hasattr(entry, 'media_thumbnail') and entry.media_thumbnail:
         thumbnail_url = entry.media_thumbnail[0]['url']
-    elif hasattr(entry, 'media_content') and entry.media_content:
-        for media_item in entry.media_content:
-            if 'url' in media_item and 'type' in media_item and media_item['type'].startswith('image/'):
-                thumbnail_url = media_item['url']
-                break
 
-    published_parsed = entry.published_parsed
-    date_obj = datetime(*published_parsed[:6])
+    # Datas
+    published = entry.published_parsed
+    date_obj = datetime(*published[:6])
     date_str = date_obj.strftime('%Y-%m-%d')
     date_iso = date_obj.strftime('%Y-%m-%dT%H:%M:%S%z')
 
-    filename_title = title.lower().replace(' ', '-')
+    # Nome do arquivo FINAL
     filename = f"{date_str}-{filename_title}-{video_id}.md"
     path = os.path.join(POSTS_DIR, filename)
 
-    if not os.path.exists(path):
-        safe_summary = entry.summary.replace('"', '\\"').strip()
-        meta_description = safe_summary
-        if len(meta_description) > 155:
-            meta_description = meta_description[:152] + '...'
+    if os.path.exists(path):
+        print(f"Post já existe: {filename}")
+        continue
 
-        video_schema = {
-            "@context": "http://schema.org",
-            "@type": "VideoObject",
-            "name": entry.title.replace('"', '\\"'),
-            "description": safe_summary,
-            "thumbnailUrl": thumbnail_url,
-            "uploadDate": date_iso,
-            "embedUrl": f"https://www.youtube.com/embed/{video_id}",
-            "publisher": {
-                "@type": "Person",
-                "name": "Celo Zaga"
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": f"https://celozaga.github.io/{date_obj.strftime('%Y/%m/%d')}/{filename_title}-{video_id}.html"
-            },
-            "duration": "PT0M0S",
+    # Conteúdo seguro
+    summary = entry.summary.strip()
+    yaml_title = full_title.replace('"', '\\"')
+    yaml_description = summary.replace('"', '\\"')
+
+    if len(yaml_description) > 155:
+        yaml_description = yaml_description[:152] + '...'
+
+    # Schema.org
+    video_schema = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": full_title,
+        "description": summary,
+        "thumbnailUrl": thumbnail_url,
+        "uploadDate": date_iso,
+        "embedUrl": f"https://www.youtube.com/embed/{video_id}",
+        "publisher": {
+            "@type": "Person",
+            "name": "Celo Zaga"
         }
+    }
 
-        blog_posting_schema = {
-            "@context": "http://schema.org",
-            "@type": "BlogPosting",
-            "headline": entry.title.replace('"', '\\"'),
-            "image": thumbnail_url if thumbnail_url else f"https://celozaga.github.io/static/media/og/celozaga.jpg",
-            "publisher": {
-                "@type": "Person",
-                "name": "Celo Zaga"
-            },
-            "url": f"https://celozaga.github.io/{date_obj.strftime('%Y/%m/%d')}/{filename_title}-{video_id}.html",
-            "datePublished": date_iso,
-            "dateCreated": date_iso,
-            "dateModified": date_iso,
-            "description": meta_description,
-            "author": {
-                "@type": "Person",
-                "name": "Celo Zaga"
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": f"https://celozaga.github.io/{date_obj.strftime('%Y/%m/%d')}/{filename_title}-{video_id}.html"
-            }
-        }
+    blog_schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": full_title,
+        "image": thumbnail_url,
+        "datePublished": date_iso,
+        "dateModified": date_iso,
+        "author": {
+            "@type": "Person",
+            "name": "Celo Zaga"
+        },
+        "description": yaml_description
+    }
 
-        video_schema_json = json.dumps(video_schema, indent=2)
-        blog_posting_schema_json = json.dumps(blog_posting_schema, indent=2)
-
-        content = f'''---
+    content = f'''---
 layout: post
-title: "{entry.title.replace('"', '\\"')}"
+title: "{yaml_title}"
 date: {date_str}
-description: "{meta_description}"
+description: "{yaml_description}"
 image: "{thumbnail_url}"
 tags: [youtube, video]
 og_type: "video.other"
 ---
 
 <script type="application/ld+json">
-{video_schema_json}
+{json.dumps(video_schema, indent=2)}
 </script>
 
 <script type="application/ld+json">
-{blog_posting_schema_json}
+{json.dumps(blog_schema, indent=2)}
 </script>
 
-<h1 class="youtube-post-title">{entry.title}</h1>
+<h1 class="youtube-post-title">{full_title}</h1>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" class="youtube-post-embed" frameborder="0" allowfullscreen></iframe>
+<iframe
+  class="youtube-post-embed"
+  src="https://www.youtube.com/embed/{video_id}"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
 
-<p class="youtube-post-description">{entry.summary}</p>
+<p class="youtube-post-description">{summary}</p>
 '''
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Post criado: {filename}")
-    else:
-        print(f"Post já existe: {filename}")
+
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+    print(f"Post criado: {filename}")

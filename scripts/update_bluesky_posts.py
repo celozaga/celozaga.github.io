@@ -5,37 +5,60 @@ from html.parser import HTMLParser
 import unicodedata
 import re
 
-# Seu handle do Bluesky
+# =========================
+# CONFIGURAÇÃO
+# =========================
 BLUESKY_HANDLE = 'celozaga.bsky.social'
 RSS_URL = f'https://bsky.app/profile/{BLUESKY_HANDLE}/rss'
 POSTS_DIR = '_posts'
 
+
+# =========================
+# UTILITÁRIOS
+# =========================
 class MLStripper(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.reset()
-        self.strict = False
-        self.convert_charrefs = True
         self.text = []
+
     def handle_data(self, d):
         self.text.append(d)
+
     def get_data(self):
         return ''.join(self.text)
+
 
 def strip_tags(html):
     s = MLStripper()
     s.feed(html)
     return s.get_data()
 
-def clean_filename(text):
-    """
-    Remove acentos, caracteres especiais e espaços extras.
-    """
-    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
-    text = re.sub(r'[^\w\s-]', '', text)  # Remove tudo que não é letra, número, espaço ou -
-    text = text.strip().replace(' ', '-')
-    return text.lower()
 
+def clean_filename(text, max_length=50):
+    """
+    Gera um nome de arquivo 100% seguro para Windows, Linux e macOS.
+    """
+    # Normaliza unicode → ASCII
+    text = unicodedata.normalize('NFKD', text)
+    text = text.encode('ascii', 'ignore').decode('ascii')
+    text = text.lower()
+
+    # Remove caracteres proibidos no Windows
+    text = re.sub(r'[\\/:*?"<>|]', '', text)
+
+    # Remove qualquer coisa que não seja letra, número, espaço ou hífen
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
+
+    # Normaliza espaços e hífens
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'-+', '-', text)
+
+    return text.strip('-')[:max_length]
+
+
+# =========================
+# PROCESSAMENTO DO FEED
+# =========================
 feed = feedparser.parse(RSS_URL)
 
 if not feed.entries:
@@ -52,48 +75,62 @@ for entry in feed.entries:
     post_record_id = parts[-1]
     post_link = entry.link
 
-    # Título completo para exibição e meta tags
+    # Título completo (para exibição)
     full_title = entry.title if 'title' in entry and entry.title else entry.summary
-    safe_title = full_title.replace('/', '-').replace('\\', '-').strip()
+    full_title = full_title.strip()
 
-    # Versão truncada e limpa APENAS para o nome do arquivo
-    filename_title = clean_filename(safe_title[:50])
+    # Título seguro SOMENTE para filename
+    filename_title = clean_filename(full_title)
 
+    # Data
     published = entry.published_parsed
     date_obj = datetime(*published[:6])
     date_str = date_obj.strftime('%Y-%m-%d')
 
-    # Gera o filename final
+    # Nome final do arquivo
     filename = f"{date_str}-{filename_title}-{post_record_id[:8]}.md"
     path = os.path.join(POSTS_DIR, filename)
 
-    if not os.path.exists(path):
-        # Meta description completo, escapando aspas
-        meta_description = entry.summary.replace('"', '\\"').strip()
+    if os.path.exists(path):
+        print(f"Post já existe: {filename}")
+        continue
 
-        clean_content = strip_tags(entry.summary).strip()
+    # Conteúdo limpo
+    clean_content = strip_tags(entry.summary).strip()
 
-        content = f'''---
+    # Escapar aspas para YAML
+    yaml_title = full_title.replace('"', '\\"')
+    yaml_description = clean_content.replace('"', '\\"')
+
+    content = f'''---
 layout: post
-title: "{full_title.replace('"', '\\"')}"
+title: "{yaml_title}"
 date: {date_str}
-description: "{meta_description}"
+description: "{yaml_description}"
 bluesky_post_uri: "{post_link}"
 ---
 
 <h1 class="bluesky-post-title">{full_title}</h1>
 
-<blockquote class="bluesky-embed" data-bluesky-uri="{bluesky_uri}" data-bluesky-embed-color-mode="system">
-<p lang="">{clean_content}<br><br><a href="{post_link}">[original post]</a></p>
-&mdash; Celo Zaga (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">@{BLUESKY_HANDLE}</a>) <a href="{post_link}?ref_src=embed">{date_obj.strftime('%b %d, %Y at %H:%M')}</a>
+<blockquote class="bluesky-embed"
+  data-bluesky-uri="{bluesky_uri}"
+  data-bluesky-embed-color-mode="system">
+  <p>{clean_content}<br><br>
+  <a href="{post_link}">[original post]</a></p>
+  &mdash; Celo Zaga
+  (<a href="https://bsky.app/profile/{did_part}?ref_src=embed">
+  @{BLUESKY_HANDLE}</a>)
+  <a href="{post_link}?ref_src=embed">
+  {date_obj.strftime('%b %d, %Y at %H:%M')}
+  </a>
 </blockquote>
+
 <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 <p class="bluesky-post-description">{clean_content}</p>
 '''
 
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Post de Bluesky criado: {filename}")
-    else:
-        print(f"Post de Bluesky já existe: {filename}")
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+    print(f"Post criado: {filename}")
