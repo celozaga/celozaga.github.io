@@ -1,0 +1,31 @@
+name: Fix invalid filenames in _posts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-filenames:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rename files removing invalid characters
+        run: |
+          cd _posts
+          for file in *; do
+            new_file=$(echo "$file" | sed 's/[:]/-/g')
+            if [ "$file" != "$new_file" ]; then
+              echo "Renaming: $file -> $new_file"
+              mv "$file" "$new_file"
+            fi
+          done
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _posts
+          git commit -m "Fix invalid characters in _posts filenames" || echo "No changes"
+          git push
