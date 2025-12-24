@@ -658,6 +658,7 @@ details[open] summary svg {
 
 /* BOTTOM APP BAR (Material 3) */
 .app-bar {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
