@@ -3,14 +3,6 @@ layout: default
 title: Posts
 permalink: /posts/
 ---
-<div class="post-list">
-  <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}
-      <small>— {{ post.date | date: "%d %b %Y" }}</small>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
+<div class="post-list" id="posts-container-page">
+  <!-- Content loaded via static/pagination.js -->
 </div>

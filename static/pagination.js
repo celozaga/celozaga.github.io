@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Elements
     const postsContainerHome = document.getElementById('posts-container-home');
     const postsContainerSearch = document.getElementById('posts-container');
+    const postsContainerPage = document.getElementById('posts-container-page');
     const searchInputHomepage = document.getElementById('homepage-search-input');
     const searchInputPage = document.getElementById('search-input-page');
     const searchResultsInfo = document.getElementById('search-results-info');
@@ -176,6 +177,8 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (window.location.pathname === '/search/' && postsContainerSearch) {
                 if (searchInputPage && initialQuery) searchInputPage.value = initialQuery;
                 initInfiniteScroll(postsContainerSearch, allPosts, true, initialQuery);
+            } else if (window.location.pathname === '/posts/' && postsContainerPage) {
+                initInfiniteScroll(postsContainerPage, allPosts, false);
             }
         })
         .catch(err => console.error('Error loading posts:', err));
