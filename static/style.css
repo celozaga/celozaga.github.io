@@ -815,21 +815,31 @@ details[open] summary svg {
 
 .menu-nav li a {
   display: flex;
+  flex-direction: row;
+  /* Explicitly enforce row */
   align-items: center;
+  /* Vertically center icon and text */
+  justify-content: flex-start;
   gap: 16px;
-  padding: 16px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  /* Increased side padding */
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-main);
   border-radius: 0;
-  /* Minimalist: square edges */
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
   text-decoration: none;
+  line-height: 1;
+  /* Fix vertical height issues */
 }
 
+/* Ensure SVG doesn't shrink or behave weirdly */
 .menu-nav li a svg {
-  width: 22px;
-  height: 22px;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
   stroke: var(--text-main);
   transition: stroke var(--transition-fast);
 }
