@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Shop & Apps - Celo Zaga
-description: Recommended products and apps curated by Celo Zaga.
-permalink: /shop/
+title: Shop
+description: Recommended products and apps.
+permalink: /store
 ---
 
 <div class="container">
