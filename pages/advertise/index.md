@@ -93,6 +93,38 @@ permalink: /advertise/
     </div>
 </section>
 
+<!-- Rates Card -->
+<section class="section">
+    <div class="rates-container">
+        <div class="rates-header">Rates Card</div>
+        
+        <div class="rate-item">
+            <span class="rate-name">Discord Announcement Post</span>
+            <span class="rate-price">$25</span>
+        </div>
+        <div class="rate-item">
+            <span class="rate-name">YouTube Video</span>
+            <span class="rate-price">$50</span>
+        </div>
+        <div class="rate-item">
+            <span class="rate-name">YouTube Short</span>
+            <span class="rate-price">$25</span>
+        </div>
+        <div class="rate-item">
+            <span class="rate-name">TikTok Video</span>
+            <span class="rate-price">$25</span>
+        </div>
+        <div class="rate-item">
+            <span class="rate-name">Thread Post</span>
+            <span class="rate-price">$10</span>
+        </div>
+        <div class="rate-item">
+            <span class="rate-name">X/Twitter Post</span>
+            <span class="rate-price">$15</span>
+        </div>
+    </div>
+</section>
+
 <!-- CTA Section -->
 <section class="cta-box">
     <h2>Ready to start?</h2>
