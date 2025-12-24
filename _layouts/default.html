@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {% include head.html %}
   <link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}">
 </head>
+
 <body>
   {% if page.url == "/" or page.url == "/index.html" %}
-    {% include header.html %}
+  {% include header.html %}
   {% else %}
-    {% include header-page.html %} 
+  {% include header-page.html %}
   {% endif %}
-  <main class="main content" id="main">
+  <main class="container main content" id="main">
     {{ content }}
   </main>
   {% include footer.html %}
-<script src="{{ '/static/scripts.js' | relative_url }}"></script>
-<script src="{{ '/static/pagination.js' | relative_url }}"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SNQMD0WR9"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0SNQMD0WR9'); </script>
-<script id="dsq-count-scr" src="//celozaga.disqus.com/count.js" async></script>  
-<script> function share() { if (navigator.share) { navigator.share({ url: window.location.href }).catch(() => {}); } else { alert('Sharing is not supported in this browser.'); } } </script>
+  <script src="{{ '/static/scripts.js' | relative_url }}"></script>
+  <script src="{{ '/static/pagination.js' | relative_url }}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SNQMD0WR9"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-0SNQMD0WR9'); </script>
+  <script id="dsq-count-scr" src="//celozaga.disqus.com/count.js" async></script>
+  <script> function share() { if (navigator.share) { navigator.share({ url: window.location.href }).catch(() => { }); } else { alert('Sharing is not supported in this browser.'); } } </script>
 </body>
+
 </html>
