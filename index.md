@@ -20,10 +20,6 @@ permalink: /
 <section class="section apps" id="apps">
 <h2>Apps</h2>
 <ul>
-    <li><a href="store/apps/totopia"><img src="" alt="Totopia"></a><li>
-    <li><a href="store/apps/totopia"><img src="" alt="Totopia"></a><li>
-    <li><a href="store/apps/totopia"><img src="" alt="Totopia"></a><li>
-    <li><a href="store/apps/totopia"><img src="" alt="Totopia"></a><li>
 </ul>
 </section>
 

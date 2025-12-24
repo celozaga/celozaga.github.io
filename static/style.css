@@ -40,7 +40,7 @@
   --font-size-sm: 14px;
   --font-size-lg: 20px;
   --font-size-xl: 25px;
-  --line-height-base: 1.5;
+  --line-height-base: 2.0;
 
   /* Borders & Radius */
   --radius-sm: 10px;
@@ -536,10 +536,6 @@ details[open] summary svg {
 }
 
 /* Common Social Media List (Footer) */
-.social-media {
-  margin-top: var(--spacing-md);
-}
-
 .social-media li {
   display: inline-block;
   margin: 0 5px;
@@ -547,7 +543,7 @@ details[open] summary svg {
 
 .social-media a {
   display: block;
-  padding: 10px;
+  padding: var(--spacing-md);
   border-radius: var(--radius-full);
 }
 
@@ -556,12 +552,8 @@ details[open] summary svg {
 }
 
 .social-media svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--text-muted);
-}
-
-.social-media a:hover svg {
+  width: 24px;
+  height: 24px;
   fill: var(--text-main);
 }
 
