@@ -1,15 +1,11 @@
 ---
 layout: default
-title: Portfolio - Celo Zaga
+title: Portfolio
 description: ArtStation portfolio and latest works by Celo Zaga.
 permalink: /portfolio/
 ---
-
-<div class="container">
     <section class="section">
-        <h1>Portfolio</h1>
-        <p>Latest works from my <a href="https://www.artstation.com/celozaga" target="_blank" rel="noopener noreferrer">ArtStation</a>.</p>
-        
+        <h1 style="display:none;">Portfolio</h1>
         <div id="loading-portfolio" class="loading-spinner">
             <div class="spinner"></div>
         </div>
@@ -28,6 +24,5 @@ permalink: /portfolio/
             </a>
         </div>
     </section>
-</div>
 
 <script src="{{ '/static/portfolio.js' | absolute_url }}"></script>
