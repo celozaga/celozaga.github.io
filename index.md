@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Celo Zaga - Official Website
+title: Celo Zaga
 description: Connect with Celo Zaga on Discord, YouTube, Bluesky, and other platforms. Explore gaming content and more.
 permalink: /
 ---
@@ -17,15 +17,5 @@ permalink: /
         <li><a title="Facebook" href="https://www.facebook.com/{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/facebook.svg" alt="Facebook"><p>Facebook</p></a></li>
         <li style="display:none;"><a title="Reddit" href="https://reddit.com/r/{{ site.social.reddit }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/reddit.svg" alt="Reddit"><p>Reddit</p></a></li>  
     </ul>
-</section>
-
-<section class="section posts blog-posts-homepage" id="posts">
-    <h2>Latest Posts</h2>
-    <div id="posts-container-home" class="post-list"></div>
-    <div class="pagination-controls" id="pagination-controls-home" style="display: none;">
-      <button id="prev-page-home" class="btn" disabled>&laquo; Prev</button>
-      <span id="page-info-home">Page 1 de 1</span>
-      <button id="next-page-home" class="btn" disabled>Next &raquo;</button>
-    </div>
 </section>
 
