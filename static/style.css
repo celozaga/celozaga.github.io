@@ -219,6 +219,7 @@ header {
 }
 
 header h3 {
+  max-width: 70%;
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: 700;
@@ -272,11 +273,10 @@ header button,
   box-shadow: none;
   margin: 0;
   padding: 10px 15px;
-  /* Touch target */
   width: auto;
   border-radius: var(--radius-sm);
   display: inline-block;
-  color: var(--text-muted);
+  color: var(--text-main);
   font-size: var(--font-size-sm);
 }
 
