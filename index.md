@@ -11,6 +11,8 @@ permalink: /
 </ul>
 </section>
 
+{% include carousel.html id="portfolio-carousel" title="Portfolio" %}
+
 <section class="section bluesky" id="bluesky">
 <h2>Bluesky</h2>
 <ul>
@@ -22,6 +24,15 @@ permalink: /
 <ul>
 </ul>
 </section>
+
+<script src="{{ '/static/carousel.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Portfolio Carousel
+    // ArtStation Feed: https://www.artstation.com/celozaga.rss
+    new CarouselManager('portfolio-carousel', 'https://www.artstation.com/celozaga.rss', 'portfolio').init();
+  });
+</script>
 
 <section class="section videos" id="videos">
 <h2>Videos</h2>
