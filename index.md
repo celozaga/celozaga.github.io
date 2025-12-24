@@ -11,11 +11,9 @@ permalink: /
 </ul>
 </section>
 
-{% include carousel.html id="bluesky-carousel" title="Bluesky" %}
-
-<section class="section apps" id="apps">
-<h2>Apps</h2>
-<ul>
+<section class="section posts" id="posts">
+<h2>Posts</h2>
+<ul id="bluesky-list" class="posts-list">
 </ul>
 </section>
 
@@ -33,13 +31,13 @@ permalink: /
 
 {% include carousel.html id="portfolio-carousel" title="Portfolio" %}
 <script src="{{ '/static/carousel.js' | relative_url }}"></script>
+<script src="{{ '/static/bluesky-list.js' | relative_url }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Initialize Portfolio Carousel
-    // ArtStation Feed: https://www.artstation.com/celozaga.rss
     new CarouselManager('portfolio-carousel', 'https://www.artstation.com/celozaga.rss', 'portfolio').init();
-
-    // Initialize Bluesky Carousel
-    new CarouselManager('bluesky-carousel', 'celozaga.bsky.social', 'bluesky').init();
+    
+    // Initialize Bluesky List (Last 5 posts)
+    loadBlueskyList('bluesky-list', 'celozaga.bsky.social');
   });
 </script>

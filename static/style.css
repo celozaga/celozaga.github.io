@@ -143,7 +143,6 @@ textarea {
   background: transparent;
   padding: 0;
   margin: var(--spacing-lg) 0;
-  border: none;
 }
 
 /* Buttons */
@@ -836,7 +835,6 @@ details[open] summary svg {
 
 .carousel-container {
   width: 100%;
-  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
 }
 
 .carousel-track {
@@ -939,4 +937,57 @@ details[open] summary svg {
     flex: 0 0 85%;
     /* Wider on mobile for better view */
   }
-}
+
+  /* =========================================
+   POSTS LIST COMPONENT (Bluesky)
+   ========================================= */
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+  }
+
+  .post-list-item {
+    display: block;
+  }
+
+  .post-list-item a {
+    display: flex;
+    align-items: center;
+    /* Center icon vertically */
+    justify-content: space-between;
+    padding: var(--spacing-sm);
+    border: none;
+    background: transparent;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    /* Just vertical spacing */
+  }
+
+  .post-list-item a:hover {
+    opacity: 0.7;
+  }
+
+  .post-title {
+    flex: 1;
+    font-size: var(--font-size-base);
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: var(--spacing-sm);
+  }
+
+  .icon-external {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+  }
+
+  .icon-external svg {
+    width: 16px;
+    height: 16px;
+  }
