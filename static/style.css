@@ -656,87 +656,11 @@ details[open] summary svg {
   margin-bottom: var(--spacing-md);
 }
 
-/* BOTTOM APP BAR (Material 3) */
-.app-bar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--surface-color);
-  /* Elevation 2 default */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 12px 16px 16px 16px;
-  /* Extra padding for bottom safe area */
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  height: 80px;
-}
-
-/* Adjust main content so it doesn't get covered by the bar */
-body:has(.app-bar) {
-  padding-bottom: 90px;
-}
-
-.app-bar-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  cursor: pointer;
-  color: var(--text-muted);
-  width: 64px;
-  /* Touch target width */
-  transition: color var(--transition-fast);
-}
-
-.app-bar-item span {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.app-bar-item .icon-container {
-  width: 64px !important;
-  height: 32px !important;
-  border-radius: 16px;
-  /* Pill shape */
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--transition-fast);
-}
-
-.app-bar-item svg {
-  width: 24px !important;
-  height: 24px !important;
-  fill: currentColor;
-  max-width: 24px !important;
-  /* Force override global max-width */
-}
-
-/* Active State Logic using sibling selector */
-#tab-links:checked~.app-bar .app-bar-item[for="tab-links"],
-#tab-posts:checked~.app-bar .app-bar-item[for="tab-posts"],
-#tab-shop:checked~.app-bar .app-bar-item[for="tab-shop"] {
-  color: var(--text-main);
-}
-
-#tab-links:checked~.app-bar .app-bar-item[for="tab-links"] .icon-container,
-#tab-posts:checked~.app-bar .app-bar-item[for="tab-posts"] .icon-container,
-#tab-shop:checked~.app-bar .app-bar-item[for="tab-shop"] .icon-container {
-  background-color: rgba(168, 199, 250, 0.2);
-  /* Primary + opacity */
-}
-
 /* PORTFOLIO GRID */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
 }
 
 .portfolio-item {
