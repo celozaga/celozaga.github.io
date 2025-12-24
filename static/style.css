@@ -1005,6 +1005,167 @@ details[open] summary svg {
     margin-right: var(--spacing-sm);
   }
 
+  /* =========================================
+   ADVERTISE PAGE STYLES
+   ========================================= */
+
+  .advertise-hero {
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .advertise-hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .advertise-hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Stats Grid (Bento Style) */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .stat-item {
+    background: var(--surface-color);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+
+  .stat-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -2px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* Platform Showcase */
+  .platform-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  @media (min-width: 768px) {
+    .platform-section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .platform-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .platform-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .platform-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+
+  .platform-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+  }
+
+  .p-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p-stat strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .p-stat span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    background: var(--text-main);
+    /* White bg */
+    color: var(--bg-color);
+    /* Black text */
+    text-align: center;
+    padding: var(--spacing-xxl);
+    margin-top: var(--spacing-xxl);
+  }
+
+  .cta-box h2 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cta-box p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cta-button-inv {
+    display: inline-block;
+    background: var(--bg-color);
+    /* Black Button */
+    color: var(--text-main);
+    /* White Text */
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+  }
+
+  .cta-button-inv:hover {
+    background: transparent;
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+  }
+
   .icon-external {
     display: flex;
     align-items: center;
