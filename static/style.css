@@ -151,7 +151,8 @@ textarea {
 /* Buttons */
 .btn,
 .form-btn,
-.search-btn {
+.search-btn,
+.button {
   display: inline-block;
   padding: 15px 40px;
   border-radius: var(--radius-xl);
@@ -476,6 +477,39 @@ header button,
 
 .game-detail p {
   color: var(--text-muted);
+}
+
+.button-rectangle {
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 10px 20px;
+}
+
+.button-rectangle p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-rectangle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.game-download ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  padding: 0;
+}
+
+.game-download li {
+  display: block;
 }
 
 /* Details/Summary (Accordion) */
