@@ -11,11 +11,7 @@ permalink: /
 </ul>
 </section>
 
-<section class="section bluesky" id="bluesky">
-<h2>Bluesky</h2>
-<ul>
-</ul>
-</section>
+{% include carousel.html id="bluesky-carousel" title="Bluesky" %}
 
 <section class="section apps" id="apps">
 <h2>Apps</h2>
@@ -42,5 +38,8 @@ permalink: /
     // Initialize Portfolio Carousel
     // ArtStation Feed: https://www.artstation.com/celozaga.rss
     new CarouselManager('portfolio-carousel', 'https://www.artstation.com/celozaga.rss', 'portfolio').init();
+
+    // Initialize Bluesky Carousel
+    new CarouselManager('bluesky-carousel', 'celozaga.bsky.social', 'bluesky').init();
   });
 </script>
