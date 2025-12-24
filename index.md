@@ -15,7 +15,7 @@ permalink: /
         <li><a title="X/.githubTwitter" href="https://x.com/{{ site.social.x }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/x.svg" alt="X"><p>X</p></a></li>
         <li><a title="Threads" href="https://threads.com/@{{ site.social.tiktok }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/threads.svg" alt="Threads"><p>Threads</p></a></li>
         <li><a title="Facebook" href="https://www.facebook.com/{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/facebook.svg" alt="Facebook"><p>Facebook</p></a></li>
-        <li><a title="Reddit" href="https://reddit.com/r/{{ site.social.reddit }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/reddit.svg" alt="Reddit"><p>Reddit</p></a></li>  
+        <li style="display:none;"><a title="Reddit" href="https://reddit.com/r/{{ site.social.reddit }}" target="_blank" rel="noopener noreferrer"><img src="static/media/icons/reddit.svg" alt="Reddit"><p>Reddit</p></a></li>  
     </ul>
 </section>
 
