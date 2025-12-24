@@ -346,71 +346,6 @@ header button,
   pointer-events: none;
 }
 
-/* Social Media Tab (Horizontal Scroll) */
-.social-media-tab ul {
-  display: flex;
-  gap: var(--spacing-md);
-  overflow-x: auto;
-  padding-bottom: var(--spacing-sm);
-}
-
-.social-media-tab li {
-  text-align: center;
-}
-
-.social-media-tab a {
-  display: block;
-  background: var(--surface-color);
-  padding: var(--spacing-md) 40px;
-  border-radius: var(--radius-md);
-  min-width: 120px;
-}
-
-.social-media-tab img {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto var(--spacing-sm) auto;
-}
-
-.social-media-tab p {
-  font-weight: 500;
-  font-size: var(--font-size-sm);
-}
-
-/* Brand Colors for Text */
-.social-media-tab a[title="Discord"] p {
-  color: var(--discord-color);
-}
-
-.social-media-tab a[title="YouTube"] p {
-  color: var(--youtube-color);
-}
-
-.social-media-tab a[title="Bluesky"] p {
-  color: var(--bluesky-color);
-}
-
-.social-media-tab a[title="Instagram"] p {
-  color: var(--instagram-color);
-}
-
-.social-media-tab a[title="Facebook"] p {
-  color: var(--facebook-color);
-}
-
-.social-media-tab a[title="TikTok"] p {
-  color: var(--tiktok-color);
-}
-
-.social-media-tab a[title="Reddit"] p {
-  color: var(--reddit-color);
-}
-
-.social-media-tab a[title="Threads"] p,
-.social-media-tab a[title="X"] p {
-  color: var(--text-main);
-}
-
 /* Link List */
 .link-list a {
   background: var(--surface-color);
@@ -581,7 +516,6 @@ details[open] summary svg {
 .social-media a {
   display: block;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-full);
 }
 
