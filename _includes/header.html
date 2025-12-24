@@ -30,7 +30,7 @@
     <li><a href="{{ site.url }}/">Home</a></li>
     <li><label for="tab-links" onclick="toggleMenu(); document.getElementById('tab-links').click();">Links</label></li>
     <li><label for="tab-posts" onclick="toggleMenu(); document.getElementById('tab-posts').click();">Posts</label></li>
-    <li><label for="tab-shop" onclick="toggleMenu(); document.getElementById('tab-shop').click();">Shop</label></li>
+    <li><a href="/shop">Shop</a></li>
     <li><a href="{{ site.url }}/portfolio">Portfolio</a></li>
     <li><a href="{{ site.url }}/advertise">Advertise</a></li>
     <li><a href="{{ site.url }}/contact">Contact</a></li>
@@ -47,7 +47,6 @@
 <!-- Inputs invisíveis para controlar as tabs -->
 <input type="radio" name="tab" id="tab-links" checked>
 <input type="radio" name="tab" id="tab-posts">
-<input type="radio" name="tab" id="tab-shop">
 
 <nav class="app-bar" aria-label="Bottom navigation" role="navigation">
   <label for="tab-links" class="app-bar-item">
@@ -68,7 +67,7 @@
     </div>
     <span>Posts</span>
   </label>
-  <label for="tab-shop" class="app-bar-item">
+  <a href="/shop" class="app-bar-item">
     <div class="icon-container">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
         <path
@@ -76,5 +75,5 @@
       </svg>
     </div>
     <span>Shop</span>
-  </label>
+  </a>
 </nav>
