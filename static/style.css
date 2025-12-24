@@ -233,15 +233,14 @@ header h3 {
 }
 
 header svg {
-  fill: var(--text-muted);
+  fill: var(--text-main);
   width: 24px;
   height: 24px;
   cursor: pointer;
-  transition: fill var(--transition-fast);
 }
 
 header svg:hover {
-  fill: var(--text-main);
+  fill: var(--accent-color);
 }
 
 header button,
