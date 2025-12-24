@@ -88,11 +88,22 @@ for entry in feed.entries:
     date_str = date_obj.strftime('%Y-%m-%d')
 
     # Nome final do arquivo
-    filename = f"{date_str}-{filename_title}-{post_record_id[:8]}.md"
+    # Usamos o ID hash único do Bluesky no final para garantir unicidade
+    unique_suffix = f"-{post_record_id[:8]}.md"
+    filename = f"{date_str}-{filename_title}{unique_suffix}"
     path = os.path.join(POSTS_DIR, filename)
 
-    if os.path.exists(path):
-        print(f"Post já existe: {filename}")
+    # VERIFICAÇÃO DE DUPLICIDADE ROBUSTA
+    # Checa se JÁ EXISTE algum arquivo com este mesmo ID (unique_suffix)
+    # Isso previne duplicatas se o título do post for editado no Bluesky
+    already_exists = False
+    for existing_file in os.listdir(POSTS_DIR):
+        if existing_file.endswith(unique_suffix):
+            already_exists = True
+            # print(f"Post ignorado (ID já existe): {existing_file}")
+            break
+            
+    if already_exists:
         continue
 
     # Conteúdo limpo
