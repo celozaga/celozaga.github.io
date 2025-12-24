@@ -757,7 +757,7 @@ details[open] summary svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
+  width: 300px;
   height: 100%;
   background: var(--bg-color);
   transform: translateX(-100%);
@@ -776,9 +776,8 @@ details[open] summary svg {
 .menu-header {
   display: flex;
   justify-content: flex-end;
-  /* Close button on the right */
   padding: var(--spacing-md);
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom removed for cleaner look */
 }
 
 .close-btn {
@@ -804,29 +803,44 @@ details[open] summary svg {
 
 /* Menu Navigation */
 .menu-nav {
-  padding: var(--spacing-md);
+  padding: 0 var(--spacing-md);
   overflow-y: auto;
 }
 
 .menu-nav ul {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
 }
 
 .menu-nav li a {
-  display: block;
-  padding: 15px;
-  font-size: var(--font-size-lg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 12px;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-main);
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-fast), padding-left var(--transition-fast);
+  border-radius: 0;
+  /* Minimalist: square edges */
+  transition: background var(--transition-fast);
+  text-decoration: none;
+}
+
+.menu-nav li a svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--text-main);
+  transition: stroke var(--transition-fast);
 }
 
 .menu-nav li a:hover {
   background: var(--surface-color);
-  padding-left: 20px;
+  /* padding-left removed for cleaner hover */
+}
+
+.menu-nav li a:hover svg {
+  stroke: var(--accent-color);
 }
 
 /* =========================================
