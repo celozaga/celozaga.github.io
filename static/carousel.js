@@ -6,11 +6,6 @@
 class CarouselManager {
   /**
    * @param {string} containerId - DOM ID of the carousel track container
-   * @param {string} feedUrl - RSS Feed URL
-   * @param {string} type - 'portfolio' (ArtStation) or 'youtube'
-   */
-  /**
-   * @param {string} containerId - DOM ID of the carousel track container
    * @param {string} feedUrl - RSS Feed URL or Bluesky Handle
    * @param {string} type - 'portfolio', 'youtube', or 'bluesky'
    */
@@ -37,11 +32,11 @@ class CarouselManager {
       const data = await response.json();
 
       if (this.type === 'bluesky') {
-        if (data.feed) {
+        if (data.feed && Array.isArray(data.feed)) {
           this.clearContainer();
           this.renderItems(data.feed); // Bluesky items are in data.feed
         } else {
-          throw new Error('Bluesky feed not found');
+          throw new Error('Bluesky feed format invalid');
         }
       } else {
         // RSS to JSON
@@ -54,19 +49,42 @@ class CarouselManager {
       }
     } catch (error) {
       console.error(`Carousel Error (${this.type}):`, error);
-      this.renderError();
+      this.renderError(error.message);
     }
   }
 
-  // ... renderLoading, renderError, clearContainer ...
+  renderLoading() {
+    this.container.innerHTML = `
+      <div class="carousel-loading">
+        <div class="spinner" style="width:30px;height:30px;border:3px solid rgba(255,255,255,0.1);border-top-color:var(--primary-color);border-radius:50%;animation:spin 1s linear infinite;"></div>
+      </div>`;
+  }
+
+  renderError(msg = 'Failed to load content.') {
+    this.container.innerHTML = `
+      <div class="carousel-error">
+        <p>${msg}</p>
+        <button onclick="location.reload()" style="margin-top:10px; background:transparent; border:1px solid var(--text-muted); color:var(--text-muted); padding:5px 10px; cursor:pointer;">Retry</button>
+      </div>`;
+  }
+
+  clearContainer() {
+    this.container.innerHTML = '';
+  }
 
   renderItems(items) {
+    let hasItems = false;
     items.forEach(item => {
       const card = this.createCard(item);
       if (card) {
         this.container.appendChild(card);
+        hasItems = true;
       }
     });
+
+    if (!hasItems) {
+      this.container.innerHTML = '<p style="padding:20px; color:var(--text-muted); text-align:center;">No images found in recent posts.</p>';
+    }
   }
 
   createCard(item) {
@@ -152,7 +170,6 @@ class CarouselManager {
       </div>
       `;
   }
-
 }
 
 // Auto-initialize carousels defined in global config if needed, 
