@@ -4,27 +4,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="icon" href="{{ '/static/media/icons/favicon.ico' | relative_url }}" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/static/media/icons/favicon-16x16.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="96x96" href="{{ '/static/media/icons/favicon-96x96.png' | relative_url }}"/>
+<link rel="icon" type="image/png" sizes="96x96" href="{{ '/static/media/icons/favicon-96x96.png' | relative_url }}" />
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/static/media/icons/favicon-32x32.png' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/static/media/icons/apple-touch-icon.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="192x192" href="{{ '/static/media/icons/android-chrome-192x192.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192"
+  href="{{ '/static/media/icons/android-chrome-192x192.png' | relative_url }}">
 
 {% if page.url == "/" or page.url == "/index.html" %}
-  <title>{{ site.title | escape }}</title>
+<title>{{ site.title | escape }}</title>
 {% else %}
-  <title>{{ page.title | default: site.title | escape }} | {{ site.title | escape }}</title>
+<title>{{ page.title | default: site.title | escape }} | {{ site.title | escape }}</title>
 {% endif %}
 
 {% if page.description %}
-  <meta name="description" content="{{ page.description | escape }}">
+<meta name="description" content="{{ page.description | escape }}">
 {% else %}
-  <meta name="description" content="{{ site.description | escape }}">
+<meta name="description" content="{{ site.description | escape }}">
 {% endif %}
 
 {% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords | escape }}">
+<meta name="keywords" content="{{ page.keywords | escape }}">
 {% else %}
-  <meta name="keywords" content="Celo Zaga, mobile games, Android games, iOS games, game releases, betas, leaks, gameplay, game reviews, game tips">
+<meta name="keywords"
+  content="Celo Zaga, mobile games, Android games, iOS games, game releases, betas, leaks, gameplay, game reviews, game tips">
 {% endif %}
 
 <meta name="author" content="Celo Zaga">
@@ -36,22 +38,22 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
 <meta property="og:site_name" content="{{ site.title | escape }}" />
 {% if page.layout == 'post' %}
-  <meta property="og:type" content="article" />
+<meta property="og:type" content="article" />
 {% else %}
-  <meta property="og:type" content="website" />
+<meta property="og:type" content="website" />
 {% endif %}
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
 {% if page.image %}
-  <meta property="og:image" content="{{ page.image | absolute_url }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="{{ page.title | escape }} image">
+<meta property="og:image" content="{{ page.image | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.title | escape }} image">
 {% else %}
-  <meta property="og:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Celo Zaga profile image">
+<meta property="og:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Celo Zaga profile image">
 {% endif %}
 <meta property="og:locale" content="en_US">
 
@@ -59,17 +61,18 @@
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
 {% if page.image %}
-  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
-  <meta name="twitter:image:alt" content="{{ page.title | escape }} image">
+<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ page.title | escape }} image">
 {% else %}
-  <meta name="twitter:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
-  <meta name="twitter:image:alt" content="CeloZaga profile image">
+<meta name="twitter:image" content="{{ '/static/media/og/celozaga.jpg' | absolute_url }}">
+<meta name="twitter:image:alt" content="CeloZaga profile image">
 {% endif %}
 <meta name="twitter:site" content="@CeloZaga">
 <meta name="twitter:creator" content="@CeloZaga">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
-<meta name="p:domain_verify" content="68b6c9f6afbded6881f949a04a1c48cb"/>
+<meta name="p:domain_verify" content="68b6c9f6afbded6881f949a04a1c48cb" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}">
 <script>
   if (location.pathname.endsWith('/index.html')) {
     location.replace(location.origin + '/');
@@ -77,7 +80,7 @@
 </script>
 
 <!-- Dados estruturados -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -93,13 +96,12 @@
       "https://x.com/{{ site.social.x }}",
       "https://threads.com/@{{ site.social.threads }}",
       "https://facebook.com/{{ site.social.facebook }}",
-      "https://t.me/{{ site.social.telegram }}",
       "https://reddit.com/r/{{ site.social.reddit }}"
     ]
   }
   </script>
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
