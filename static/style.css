@@ -264,14 +264,12 @@ header button,
 }
 
 .footer .link-list a {
-  background: none;
-  box-shadow: none;
   margin: 0;
   padding: 10px 15px;
   width: auto;
   border-radius: var(--radius-sm);
   display: inline-block;
-  color: var(--text-main);
+  color: var(--text-muted);
   font-size: var(--font-size-sm);
 }
 
