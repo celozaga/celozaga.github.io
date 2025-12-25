@@ -12,14 +12,14 @@ permalink: /
 </section>
 
 <section class="section posts" id="posts">
-<h2>Bluesky</h2>
+<a href="/posts"><h2><span>Posts</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
 <ul class="posts-list">
   {% for post in site.posts limit:5 %}
   <li class="post-list-item">
     <a href="{{ post.url | absolute_url }}" target="_blank">
       <span class="post-title">{{ post.title }}</span>
       <span class="icon-external">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
       </span>
     </a>
   </li>
@@ -28,13 +28,13 @@ permalink: /
 </section>
 
 <section class="section videos" id="videos">
-<h2>Videos</h2>
+<a href="/videos"><h2><span>Videos</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
 <ul>
 </ul>
 </section>
 
 <section class="section store" id="store">
-<h2>Store</h2>
+<a href="/store"><h2><span>Store</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
 <ul>
 </ul>
 </section>
