@@ -772,7 +772,6 @@ details[open] summary svg {
   transform: translateX(-100%);
   transition: transform var(--transition-fast);
   z-index: 1000;
-  border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
 }

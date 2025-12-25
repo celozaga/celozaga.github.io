@@ -3,9 +3,6 @@ layout: default
 title: Search
 permalink: /search/
 ---
-
-<h1>{{ page.title }}</h1>
-
 <section class="search-results-section">
   <input type="text" id="search-input-page" class="input" placeholder="Pesquisar novamente...">
   <p id="search-results-info">Exibindo resultados para: "<span id="search-query"></span>"</p>
