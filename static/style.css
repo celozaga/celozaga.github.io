@@ -542,13 +542,11 @@ details[open] summary svg {
 /* Common Social Media List (Footer) */
 .social-media li {
   display: inline-block;
-  margin: 0 5px;
 }
 
 .social-media a {
   display: block;
-  padding: var(--spacing-md);
-  border-radius: var(--radius-full);
+  padding: var(--spacing-sm);
 }
 
 .social-media span {
@@ -559,6 +557,10 @@ details[open] summary svg {
   width: 24px;
   height: 24px;
   fill: var(--text-main);
+}
+
+.social-media svg:hover {
+  fill: var(--primary-color);
 }
 
 /* =========================================
