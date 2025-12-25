@@ -290,6 +290,12 @@ header button,
   margin: var(--spacing-md) 0;
 }
 
+.section h2 svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-main);
+}
+
 /* =========================================
    6. MODULES
    ========================================= */
