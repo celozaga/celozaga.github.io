@@ -4,7 +4,7 @@ title: Search
 permalink: /search/
 ---
 <section class="search-results-section">
-  <input type="text" id="search-input-page" class="input" placeholder="Pesquisar novamente...">
+  <input type="text" id="search-input-page" class="input" placeholder="Search">
   <p id="search-results-info">Exibindo resultados para: "<span id="search-query"></span>"</p>
   <div id="posts-container" class="post-list">
     </div>
