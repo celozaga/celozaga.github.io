@@ -143,6 +143,11 @@ textarea {
   width: 100%;
 }
 
+.store .carousel li img {
+  width: 200px;
+  height: 200px;
+}
+
 .carousel ul {
   display: flex;
   flex-wrap: nowrap;
@@ -167,7 +172,7 @@ textarea {
 
 .carousel li .image-wrapper {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   background: #111;
   position: relative;
   overflow: hidden;
@@ -182,10 +187,7 @@ textarea {
   transition: opacity var(--transition-normal);
 }
 
-.carousel li .item-info {
-  padding-top: var(--spacing-xs);
-}
-
+.carousel li p,
 .carousel li h3 {
   font-size: var(--font-size-base);
   font-weight: 500;
