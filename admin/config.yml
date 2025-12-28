@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: celozaga/celozaga.github.io
+  branch: main
+
+media_folder: "static/media"
+public_folder: "/static/media"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "OG Type", name: "og_type", widget: "string", default: "video.other"}
+      - {label: "Body", name: "body", widget: "markdown"}
