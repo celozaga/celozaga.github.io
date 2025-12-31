@@ -1007,6 +1007,7 @@ details[open] summary svg {
   height: 24px;
   stroke: var(--text-main);
   transition: stroke var(--transition-fast);
+  fill: transparent;
 }
 
 .menu-nav li a:hover {
