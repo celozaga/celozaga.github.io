@@ -1355,11 +1355,6 @@ padding: var(--spacing-sm) 0;
   color: var(--text-muted);
 }
 
-.icon-external svg {
-  width: 16px;
-  height: 16px;
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
   .slide {
