@@ -1012,7 +1012,10 @@ details[open] summary svg {
 
 .menu-nav li a:hover {
   background: var(--surface-color);
-  /* padding-left removed for cleaner hover */
+}
+
+.menu-nav li a:hover {
+  color: var(--accent-color);
 }
 
 .menu-nav li a:hover svg {
