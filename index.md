@@ -7,6 +7,28 @@ permalink: /
 
 <section class="section featured" id="featured">
 <h2 style="display:none;">Featured</h2>
+
+<div class="slideshow" id="slideshow">
+  <div class="slides">
+    <div class="slide"><span class="slide-content"><p>Sample 1 Description</p><a href="">Button</a></span></div>
+    <div class="slide"><span class="slide-content"><p>Sample 2 Description</p><a href="">Button</a></span></div>
+    <div class="slide"><span class="slide-content"><p>Sample 3 Description</p><a href="">Button</a></span></div>
+  </div>
+
+  <button class="slideshow-button slideshow-button-prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+
+  <button class="slideshow-button slideshow-button-next">
+    <svg viewBox="0 0 24 24">
+      <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+    </svg>
+  </button>
+
+  <div class="slideshow-dots"></div>
+</div>
 <ul>
 </ul>
 </section>
