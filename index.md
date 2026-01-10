@@ -10,9 +10,15 @@ permalink: /
 
 <div class="slideshow" id="slideshow">
   <div class="slides">
-    <div class="slide"><span class="slide-content"><p>Sample 1 Description</p><a href="">Button</a></span></div>
-    <div class="slide"><span class="slide-content"><p>Sample 2 Description</p><a href="">Button</a></span></div>
-    <div class="slide"><span class="slide-content"><p>Sample 3 Description</p><a href="">Button</a></span></div>
+    {% assign sorted_slides = site.slides | sort: "order" %}
+    {% for slide in sorted_slides %}
+    <div class="slide" style="background-image: url('{{ slide.image }}');">
+      <span class="slide-content">
+        <p>{{ slide.description }}</p>
+        <a href="{{ slide.link }}" class="btn">{{ slide.button_text }}</a>
+      </span>
+    </div>
+    {% endfor %}
   </div>
 
   <button class="slideshow-button slideshow-button-prev">
@@ -51,45 +57,32 @@ permalink: /
 
 <section class="section videos" id="videos">
 <a href="/videos"><h2><span>Videos</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
-<ul>
-</ul>
+<div id="video-grid" class="portfolio-grid"></div>
+<div id="loading-videos" class="loading-spinner">
+  <div class="spinner"></div>
+</div>
+<div id="video-error" class="hidden" style="text-align:center; padding:20px; color:var(--text-muted);">
+  <p>Failed to load videos.</p>
+</div>
 </section>
 
 <section class="section store" id="store">
-<a href="/store"><h2><span>Store</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a>
+<a href="/shop"><h2><span>Shop</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a>
 
 <div class="carousel"> 
 <ul>
-<li>
-<a title="Sample" href="https://aliexpress.com/item/1005009651257943.html" target="_blank">
-<img src="https://i.imgur.com/wj8tIdw.png">
-<p>Eggy Party Unisex Cotton T-Shirt</p>
-</a>
-</li>
-<li>
-<a title="Eggy Party Stainless Steel Thermal Mug" href="https://aliexpress.com/item/1005010381425933.html" target="_blank">
-<img src="https://i.imgur.com/wj8tIdw.png">
-<p>Eggy Party Stainless Steel Thermal Mug</p>
-</a>
-</li>
-<li>
-<a title="Sample" href="" target="_blank">
-<img src="https://i.imgur.com/wj8tIdw.png">
-<p>Sample</p>
-</a>
-</li>
-<li>
-<a title="Sample" href="" target="_blank">
-<img src="https://i.imgur.com/wj8tIdw.png">
-<p>Sample</p>
-</a>
-</li>
-<li>
-<a title="Sample" href="" target="_blank">
-<img src="https://i.imgur.com/wj8tIdw.png">
-<p>Sample</p>
-</a>
-</li>
+  {% assign sorted_store = site.store | sort: "order" %}
+  {% for item in sorted_store %}
+  <li>
+  <a title="{{ item.title }}" href="{{ item.url }}" target="_blank">
+  <img src="{{ item.image }}" alt="{{ item.title }}">
+  <p>{{ item.title }}</p>
+  {% if item.price %}
+  <p class="price">{{ item.price }}</p>
+  {% endif %}
+  </a>
+  </li>
+  {% endfor %}
 </ul>
 </div>
 
@@ -98,6 +91,7 @@ permalink: /
 {% include carousel.html id="portfolio-carousel" title="Portfolio" %}
 <script src="{{ '/static/carousel.js' | relative_url }}"></script>
 <script src="{{ '/static/slideshow.js' | relative_url }}"></script>
+<script src="{{ '/static/videos.js' | relative_url }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Initialize Portfolio Carousel
