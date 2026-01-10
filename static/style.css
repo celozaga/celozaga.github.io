@@ -233,6 +233,8 @@ textarea {
   font-weight: bold;
   color: var(--text-main);
   user-select: none;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .slide:nth-child(1) {
@@ -1110,6 +1112,11 @@ details[open] summary svg {
   overflow: hidden;
 }
 
+.carousel-item .price {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
 /* Loading/Error */
 .carousel-loading,
 .carousel-error {
@@ -1159,19 +1166,6 @@ details[open] summary svg {
   text-decoration: none;
   padding: var(--spacing-sm) 0;
   /* Just vertical spacing */
-}
-
-display: flex;
-align-items: center;
-/* Center icon vertically */
-justify-content: space-between;
-padding: var(--spacing-sm);
-border: none;
-background: transparent;
-transition: all var(--transition-fast);
-text-decoration: none;
-padding: var(--spacing-sm) 0;
-/* Just vertical spacing */
 }
 
 .post-list-item a:hover {
