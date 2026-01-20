@@ -18,3 +18,9 @@ social:
   facebook: "celozaga"
   instagram: "celozaga"
   reddit: "celozaga"
+
+collections:
+  slides:
+    output: false
+  store:
+    output: false
