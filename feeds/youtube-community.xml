@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title><![CDATA[Celo Zaga’s Community - Community Posts]]></title>
+        <description><![CDATA[This Community is a space for you to share what you love and connect with the creator and other viewers. Your posts can appear both here and across YouTube, like the Home feed.]]></description>
+        <link>https://www.youtube.com/@celozaga</link>
+        <image>
+            <url></url>
+            <title>Celo Zaga’s Community</title>
+            <link>https://www.youtube.com/@celozaga</link>
+        </image>
+        <generator>Custom Python Script</generator>
+        <lastBuildDate>Tue, 20 Jan 2026 21:19:26 -0000</lastBuildDate>
+        <atom:link href="https://celozaga.github.io/feeds/youtube-community.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title><![CDATA[NETEASE: NetEase terminates its publishing deal with Fantastic Pixel Castle, lea...]]></title>
+            <description><![CDATA[NETEASE: NetEase terminates its publishing deal with Fantastic Pixel Castle, leaving the future of the ambitious MMORPG 'Project Ghost' uncertain.<br /><img src="https://yt3.ggpht.com/F2I0ubV468ZwLZS_iL4HfvXtJ8zE6muidLLehPVH_vZiLZsSxsu0HzYIGSYmMymjYOOJaD8nWeIZYwQ=s1110-c-fcrop64=1,00000000ffffffff-rw-nd-v1" style="max-width: 100%; height: auto;" /><br/><img src="https://yt3.ggpht.com/AYt3hVRVzqKGCufQevxtRCu3LB5eDVYTzhwTo838ebdOoD7_-aQgby6yvjZkPo6dJ0s8S8oR6UL2Bys=s1080-c-fcrop64=1,001e0000ffe1ffff-rw-nd-v1" style="max-width: 100%; height: auto;" /><br/>]]></description>
+            <link>https://www.youtube.com/post/UgkxH8VSJDVdKAnwhtrKtCZljK-dBkvD7MVB</link>
+            <guid isPermaLink="true">https://www.youtube.com/post/UgkxH8VSJDVdKAnwhtrKtCZljK-dBkvD7MVB</guid>
+            <author>Celo Zaga</author>
+            <pubDate>Fri, 21 Nov 2025 21:19:26 -0000</pubDate>
+        </item>
+    </channel>
+</rss>
