@@ -9,6 +9,13 @@ module.exports = async (req, res) => {
     }
 
     try {
+        // Verify environment variables are present (do not log secret)
+        console.log('OAUTH_CLIENT_ID exists:', !!process.env.OAUTH_CLIENT_ID);
+        console.log('OAUTH_CLIENT_SECRET exists:', !!process.env.OAUTH_CLIENT_SECRET);
+        if (process.env.OAUTH_CLIENT_ID) {
+            console.log('OAUTH_CLIENT_ID starts with:', process.env.OAUTH_CLIENT_ID.substring(0, 4));
+        }
+
         const response = await fetch('https://github.com/login/oauth/access_token', {
             method: 'POST',
             headers: {
@@ -23,9 +30,11 @@ module.exports = async (req, res) => {
         });
 
         const data = await response.json();
+        console.log('GitHub response status:', response.status);
 
         if (data.error) {
-            return res.status(401).send(`OAuth Error: ${data.error}`);
+            console.error('GitHub OAuth Error:', data);
+            return res.status(401).send(`OAuth Error: ${data.error} - ${data.error_description}`);
         }
 
         const token = data.access_token;
