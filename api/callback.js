@@ -1,4 +1,4 @@
-// No dependency required for Node 18+
+// No dependency required for Node 18+ (Trigger Deploy 1)
 
 module.exports = async (req, res) => {
     const { code } = req.query;
