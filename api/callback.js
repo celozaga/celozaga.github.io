@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// No dependency required for Node 18+
 
 module.exports = async (req, res) => {
     const { code } = req.query;
