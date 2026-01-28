@@ -31,10 +31,26 @@ module.exports = async (req, res) => {
 
         const data = await response.json();
         console.log('GitHub response status:', response.status);
+        console.log('Token response keys:', Object.keys(data));
 
         if (data.error) {
             console.error('GitHub OAuth Error:', data);
             return res.status(401).send(`OAuth Error: ${data.error} - ${data.error_description}`);
+        }
+
+        // VERIFY TOKEN IMMEDIATELY
+        const token = data.access_token;
+        console.log('Token prefix:', token ? token.substring(0, 5) : 'NO_TOKEN');
+
+        const verifyResponse = await fetch('https://api.github.com/user', {
+            headers: {
+                'Authorization': `token ${token}`,
+                'User-Agent': 'Vercel-Auth-Function'
+            }
+        });
+        console.log('Token Verification Status:', verifyResponse.status);
+        if (verifyResponse.status !== 200) {
+            console.error('Token Verification Failed Body:', await verifyResponse.text());
         }
 
         const token = data.access_token;
