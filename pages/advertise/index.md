@@ -115,7 +115,7 @@ permalink: /advertise/
             <span class="rate-price">$25</span>
         </div>
         <div class="rate-item">
-            <span class="rate-name">Thread Post</span>
+            <span class="rate-name">Threads Post</span>
             <span class="rate-price">$10</span>
         </div>
         <div class="rate-item">
@@ -128,6 +128,6 @@ permalink: /advertise/
 <!-- CTA Section -->
 <section class="cta-box">
     <h2>Ready to start?</h2>
-    <p>Let's build a campaign that resonates with our audience. Contact us for our media kit and rates.</p>
-    <a href="mailto:contact@celozaga.com" class="cta-button-inv">Contact Us</a>
+    <p>Let's build a campaign that resonates with our audience. Check our full media kit or send a proposal directly.</p>
+    <a href="mailto:contact@celozaga.com" class="cta-button-inv">Send Proposal</a>
 </section>

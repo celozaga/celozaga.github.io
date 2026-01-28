@@ -1360,3 +1360,57 @@ details[open] summary svg {
     display: none;
   }
 }
+
+/* =========================================
+   ADVERTISE RATES CARD
+   ========================================= */
+.rates-container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+}
+
+.rates-header {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  transition: background var(--transition-fast);
+}
+
+.rate-item:last-child {
+  border-bottom: none;
+}
+
+.rate-item:hover {
+  background: var(--surface-hover);
+}
+
+.rate-name {
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: var(--font-size-base);
+}
+
+.rate-price {
+  font-weight: 700;
+  color: var(--text-main);
+  background: var(--border-color);
+  /* Badge-like look */
+  padding: 4px 8px;
+  font-size: var(--font-size-sm);
+  min-width: 60px;
+  text-align: center;
+}
