@@ -340,23 +340,26 @@ textarea {
 .form-input,
 .form-textarea,
 .search-box input {
-  background: transparent;
-  border: 1px solid var(--border-color);
+  background: var(--surface-hover);
+  /* Using surface-hover for better visibility on black bg */
+  border: none;
+  border-radius: 12px;
+  /* Rounded as requested */
   padding: 15px;
   color: var(--text-main);
   font-size: var(--font-size-base);
   width: 100%;
   outline: none;
-  transition: border-color var(--transition-fast);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .input:focus,
 .form-input:focus,
 .form-textarea:focus,
 .search-box input:focus {
-  border-color: var(--primary-color);
-  background: transparent;
-  box-shadow: none;
+  background: var(--surface-hover);
+  box-shadow: 0 0 0 2px var(--primary-color);
+  /* Focus ring since no border */
 }
 
 /* =========================================
