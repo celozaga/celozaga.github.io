@@ -53,7 +53,7 @@ module.exports = async (req, res) => {
             console.error('Token Verification Failed Body:', await verifyResponse.text());
         }
 
-        const token = data.access_token;
+
         const provider = 'github'; // Decap CMS expects this
 
         // Return HTML that posts the token back to the window opener (Decap CMS)
