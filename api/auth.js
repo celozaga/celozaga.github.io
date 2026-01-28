@@ -10,4 +10,4 @@ module.exports = (req, res) => {
     const authorizationUri = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}&state=${state}`;
 
     res.redirect(authorizationUri);
-};
+}; 
