@@ -2,6 +2,8 @@ backend:
   name: github
   repo: celozaga/celozaga.github.io
   branch: main
+  base_url: https://celozaga.vercel.app
+  auth_endpoint: api/auth
   local_backend: true
 
 # NOTE: If hosting on GitHub Pages, you need to set up Netlify or an OAuth server 
