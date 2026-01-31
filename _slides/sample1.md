@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Celo Zaga"
+title: "Welcome my Website"
 description: "Stay updated with the latest gaming news."
 image: "https://i.imgur.com/evGxbHH.jpeg"
 link: "/posts"
