@@ -3,29 +3,15 @@
    ========================================= */
 :root {
   /* Colors - Minimalist Palette */
-  --bg-color: #000000;
-  --surface-color: #000000;
-  /* Transparent/Black - No distinct surface */
-  --surface-hover: #1a1a1a;
+  --bg-color: #0A0A0A;
+  --surface-color: #222222;
+  --surface-hover: #333333;
   --text-main: #FFFFFF;
   --text-muted: #999999;
   --border-color: #333333;
-
-  /* Accent Colors */
-  --primary-color: #005df1;
-  /* Deep Blue ascendant */
+  --primary-color: #0F73FF;
   --secondary-color: #FFF;
-  /* Minimalist secondary is just white */
-  --accent-color: #005df1;
-
-  /* Brand Colors (Muted or Monochrome preferred, but keeping for identity) */
-  --discord-color: #5865f2;
-  --youtube-color: #ff0000;
-  --bluesky-color: #0085ff;
-  --instagram-color: #e1306c;
-  --facebook-color: #1877f2;
-  --tiktok-color: #ff0050;
-  --reddit-color: #ff4500;
+  --accent-color: #0F73FF;
 
   /* Spacing - Generous for clarity */
   --spacing-xs: 8px;
