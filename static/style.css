@@ -919,9 +919,8 @@ details[open] summary svg {
 /* Menu Header */
 .menu-header {
   display: flex;
-  justify-content: flex-end;
-  padding: var(--spacing-md);
-  /* border-bottom removed for cleaner look */
+  justify-content: flex-start;
+  padding: var(--spacing-sm);
 }
 
 .close-btn {
@@ -935,8 +934,8 @@ details[open] summary svg {
 }
 
 .close-btn svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   fill: var(--text-main);
   transition: fill var(--transition-fast);
 }
@@ -947,7 +946,7 @@ details[open] summary svg {
 
 /* Menu Navigation */
 .menu-nav {
-  padding: 0 var(--spacing-md);
+  padding: 0 var(--spacing-sm);
   overflow-y: auto;
 }
 
