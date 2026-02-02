@@ -2,7 +2,7 @@
 layout: default
 title: Videos
 description: Latest videos from Celo Zaga on YouTube.
-permalink: /video/
+permalink: /videos/
 ---
 <section class="section">
     <h1 style="display:none;">Videos</h1>

@@ -40,7 +40,7 @@ permalink: /
 </section>
 
 <section class="section posts" id="posts">
-<a href="/posts"><h2><span>Posts</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
+<a href="/posts"><h2><span>Posts</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z"/></svg></h2></a> 
 <ul class="posts-list">
   {% for post in site.posts limit:5 %}
   <li class="post-list-item">
@@ -56,18 +56,14 @@ permalink: /
 </section>
 
 <section class="section videos" id="videos">
-<a href="/videos"><h2><span>Videos</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a> 
-<div id="video-grid" class="portfolio-grid"></div>
-<div id="loading-videos" class="loading-spinner">
-  <div class="spinner"></div>
-</div>
-<div id="video-error" class="hidden" style="text-align:center; padding:20px; color:var(--text-muted);">
-  <p>Failed to load videos.</p>
+<a href="/videos"><h2><span>Videos</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z"/></svg></h2></a> 
+<div class="carousel-container">
+  <div id="youtube-carousel" class="carousel-track"></div>
 </div>
 </section>
 
 <section class="section store" id="store">
-<a href="/shop"><h2><span>Shop</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></h2></a>
+<a href="/shop"><h2><span>Shop</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z"/></svg></h2></a>
 
 <div class="carousel"> 
 <ul>
@@ -91,10 +87,12 @@ permalink: /
 {% include carousel.html id="portfolio-carousel" title="Portfolio" %}
 <script src="{{ '/static/carousel.js' | relative_url }}"></script>
 <script src="{{ '/static/slideshow.js' | relative_url }}"></script>
-<script src="{{ '/static/videos.js' | relative_url }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Initialize Portfolio Carousel
     new CarouselManager('portfolio-carousel', 'https://www.artstation.com/celozaga.rss', 'portfolio').init();
+    
+    // Initialize YouTube Carousel
+    new CarouselManager('youtube-carousel', 'https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q', 'youtube').init();
   });
 </script>

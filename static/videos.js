@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', loadVideos);
 
 async function loadVideos() {
-    const rssUrl = 'https://www.youtube.com/feeds/videos.xml?user=celozaga';
+    const rssUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCvOnTTQp_7ZXtWUZYEUZO7Q';
     const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
     const grid = document.getElementById('video-grid');
     const spinner = document.getElementById('loading-videos');
@@ -36,8 +36,8 @@ async function loadVideos() {
                 card.innerHTML = `
                     <div class="image-wrapper">
                         <img src="${imgSrc}" alt="${item.title}" loading="lazy">
-                        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background:rgba(0,0,0,0.7); border-radius:50%; display:flex; align-items:center; justify-content:center;">
-                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M8 5v14l11-7z"/></svg>
+                        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; display:flex; align-items:center; justify-content:center;">
+                             <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 5.274c0-1.707 1.826-2.792 3.325-1.977l12.362 6.726c1.566.853 1.566 3.101 0 3.953L8.325 20.702C6.826 21.518 5 20.432 5 18.726V5.274Z" fill="#fff"/></svg>
                         </div>
                     </div>
                     <div class="item-info">
