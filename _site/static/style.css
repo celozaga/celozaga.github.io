@@ -21,7 +21,7 @@
   --spacing-xl: 96px;
 
   /* Typography */
-  --font-family-base: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-base: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
   /* Larger for readability */
   --font-size-sm: 14px;
@@ -105,6 +105,7 @@ textarea {
 
 .container {
   padding: var(--spacing-md);
+  padding-top: 72px;
 }
 
 /* =========================================
@@ -354,6 +355,7 @@ header {
   right: 0;
   top: 0;
   background: var(--bg-color);
+  z-index: 999;
 }
 
 header svg {
@@ -474,34 +476,6 @@ header button,
 .link-list img {
   width: 20px;
   height: 20px;
-}
-
-/* Videos Grid */
-.videos ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
-}
-
-.videos li a {
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.videos li a:hover img {
-  transform: scale(1.05);
-}
-
-.videos h3 {
-  font-size: var(--font-size-base);
-  font-weight: 400;
-  margin: var(--spacing-sm) 0 var(--spacing-md) 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 /* Posts */
@@ -1021,7 +995,7 @@ details[open] summary svg {
   display: block;
   object-fit: cover;
   transition: opacity var(--transition-normal);
-  border-radius: var(--radius-md);
+  border-radius: 10px;
 }
 
 .carousel-item .item-info {
