@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: celozaga/celozaga.github.io
+  branch: main
+  base_url: https://celozaga.vercel.app
+  auth_endpoint: api/auth
+  local_backend: true
+
+# NOTE: If hosting on GitHub Pages, you need to set up Netlify or an OAuth server 
+# for the 'github' backend to work. See walkthrough.md for instructions.
+
+media_folder: "static/media"
+public_folder: "/static/media"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "OG Type", name: "og_type", widget: "string", default: "video.other"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "slides"
+    label: "Slides"
+    folder: "_slides"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link URL", name: "link", widget: "string", required: false}
+      - {label: "Button Text", name: "button_text", widget: "string", default: "View More"}
+      - {label: "Order", name: "order", widget: "number", default: 0}
+
+  - name: "store"
+    label: "Store Items"
+    folder: "_store"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Price", name: "price", widget: "string", required: false}
+      - {label: "Product URL", name: "url", widget: "string"}
+      - {label: "Order", name: "order", widget: "number", default: 0}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "pages/store/index.md"
+        label: "Shop Page"
+        name: "shop"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
