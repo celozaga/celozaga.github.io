@@ -348,17 +348,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-header h3 {
-  max-width: 70%;
-  margin: 0;
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-height: 72px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: var(--bg-color);
 }
 
 header svg {
@@ -437,33 +432,6 @@ header button,
 /* =========================================
    6. MODULES
    ========================================= */
-
-/* Profile */
-.profile {
-  text-align: center;
-  margin: var(--spacing-md) auto;
-}
-
-.profile .avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: var(--radius-full);
-  margin-bottom: var(--spacing-md);
-  object-fit: cover;
-  display: inline-flex;
-}
-
-.profile .username {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-main);
-}
-
-.profile .description {
-  max-width: 80%;
-  margin: 0 auto;
-  color: var(--text-muted);
-}
 
 /* Search Box */
 .search-box {
