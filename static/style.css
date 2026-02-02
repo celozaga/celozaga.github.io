@@ -489,26 +489,9 @@ header button,
   overflow: hidden;
 }
 
-.videos img {
-  width: 100%;
-  border-radius: var(--radius-md);
-  transition: transform var(--transition-fast);
-}
 
 .videos li a:hover img {
   transform: scale(1.05);
-}
-
-.videos svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: var(--text-main);
-  opacity: 0.8;
-  width: 50px;
-  height: 50px;
-  z-index: 2;
 }
 
 .videos h3 {
