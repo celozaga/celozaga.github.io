@@ -1,4 +1,5 @@
 ---
+layout: store_item
 title: "Eggy Party Stainless Steel Thermal Mug"
 image: "https://i.imgur.com/wj8tIdw.png"
 price: "$24.99"

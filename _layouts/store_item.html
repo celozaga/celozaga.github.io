@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="store-item" id="store-item">
+    <div class="post-content">
+        {% if page.image %}
+        <div class="store-item-image" style="text-align: center; margin-bottom: 20px;">
+            <img src="{{ page.image }}" alt="{{ page.title }}"
+                style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        {% endif %}
+
+        <div class="store-item-details" style="text-align: center; margin-bottom: 30px;">
+            {% if page.price %}
+            <p class="store-item-price" style="font-size: 1.5em; font-weight: bold; color: #2ecc71;">{{ page.price }}
+            </p>
+            {% endif %}
+
+            {% if page.url %}
+            <a href="{{ page.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Buy
+                Now</a>
+            {% endif %}
+        </div>
+
+        <div class="store-item-description">
+            {{ content }}
+        </div>
+    </div>
+</article>

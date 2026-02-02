@@ -21,4 +21,4 @@ collections:
   slides:
     output: false
   store:
-    output: false
+    output: true
