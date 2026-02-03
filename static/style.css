@@ -908,9 +908,7 @@ details[open] summary svg {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  stroke: var(--text-main);
-  transition: stroke var(--transition-fast);
-  fill: transparent;
+  fill: var(--text-main);
 }
 
 .menu-nav li a:hover {
@@ -922,7 +920,7 @@ details[open] summary svg {
 }
 
 .menu-nav li a:hover svg {
-  stroke: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* =========================================
