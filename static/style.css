@@ -871,7 +871,6 @@ details[open] summary svg {
 
 /* Menu Navigation */
 .menu-nav {
-  padding: 0 var(--spacing-sm);
   overflow-y: auto;
 }
 
