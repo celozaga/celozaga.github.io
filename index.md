@@ -97,8 +97,8 @@ permalink: /
         <ul id="portfolio-carousel" class="carousel" role="list"></ul>
     </div>
 </section>
-<script src="{{ '/static/carousel.js' | relative_url }}"></script>
-<script src="{{ '/static/slideshow.js' | relative_url }}"></script>
+<script src="{{ '/static/carousel.js?v1' | relative_url }}"></script>
+<script src="{{ '/static/slideshow.js?v1' | relative_url }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Initialize Portfolio Carousel
