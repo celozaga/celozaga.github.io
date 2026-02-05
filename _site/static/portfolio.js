@@ -26,6 +26,11 @@ async function loadPortfolio() {
                     if (match) imgSrc = match[1];
                 }
 
+                // Optimize ArtStation images: use 'small' instead of 'large'
+                if (imgSrc && imgSrc.includes('/large/')) {
+                    imgSrc = imgSrc.replace('/large/', '/small/');
+                }
+
                 if (imgSrc) {
                     const card = document.createElement('a');
                     card.href = item.link;

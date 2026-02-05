@@ -58,39 +58,43 @@ permalink: /
 <section class="section videos" id="videos">
 <a href="/videos"><h2><span>Videos</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z"/></svg></h2></a> 
 <div class="carousel-container">
-  <div id="youtube-carousel" class="carousel-track"></div>
+  <ul id="youtube-carousel" class="carousel" role="list"></ul>
 </div>
 </section>
 
 <section class="section store" id="store">
 <a href="/shop"><h2><span>Shop</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z"/></svg></h2></a>
 
-<div class="carousel"> 
-<ul>
-  {% assign sorted_store = site.store | sort: "order" %}
-  {% for item in sorted_store %}
-  <li>
-  <a title="{{ item.title }}" href="{{ item.url }}" target="_blank">
-  <img src="{{ item.image }}" alt="{{ item.title }}">
-  <p>{{ item.title }}</p>
-  {% if item.price %}
-  <p class="price">{{ item.price }}</p>
-  {% endif %}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="carousel-container shop">
+  <ul class="carousel" role="list"> 
+    {% assign sorted_store = site.store | sort: "order" %}
+    {% for item in sorted_store %}
+    <li class="carousel-item">
+    <a title="{{ item.title }}" href="{{ item.url }}" target="_blank">
+      <div class="image-wrapper">
+        <img src="{{ item.image }}" alt="{{ item.title }}">
+      </div>
+      <div class="item-info">
+        <h3>{{ item.title }}</h3>
+        {% if item.price %}
+        <p class="price">{{ item.price }}</p>
+        {% endif %}
+      </div>
+    </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 
 </section>
 
-<section class="section carousel-section" id="portfolio-carousel-section">
+<section class="section portfolio" id="portfolio">
     <a href="/portfolio"><h2><span>Portfolio</span><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z" />
         </svg></h2></a>
     <div class="carousel-container">
-        <div id="portfolio-carousel" class="carousel-track"></div>
+        <ul id="portfolio-carousel" class="carousel" role="list"></ul>
     </div>
 </section>
 <script src="{{ '/static/carousel.js' | relative_url }}"></script>

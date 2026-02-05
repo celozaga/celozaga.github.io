@@ -121,6 +121,11 @@ class CarouselManager {
         const match = item.content.match(/src="([^"]+)"/);
         if (match) imgSrc = match[1];
       }
+
+      // Optimize ArtStation images: use 'small' instead of 'large'
+      if (imgSrc && imgSrc.includes('/large/')) {
+        imgSrc = imgSrc.replace('/large/', '/small/');
+      }
     } else if (this.type === 'youtube') {
       // YouTube RSS logic
       link = item.link;
@@ -136,11 +141,15 @@ class CarouselManager {
 
     if (!imgSrc) return null; // We only show items with images in this carousel
 
+    // Create LI wrapper
+    const li = document.createElement('li');
+    li.className = 'carousel-item';
+
     const card = document.createElement('a');
     card.href = link;
     card.target = '_blank';
     card.rel = 'noopener noreferrer';
-    card.className = 'carousel-item';
+    // card.className = 'carousel-item'; // REMOVED: Class is now on the LI
 
     card.innerHTML = `
       <div class="image-wrapper">
@@ -153,7 +162,8 @@ class CarouselManager {
       </div>
     `;
 
-    return card;
+    li.appendChild(card);
+    return li;
   }
 
   playIcon() {
