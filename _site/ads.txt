@@ -1,3 +1,4 @@
+google.com, pub-9546011851605931, DIRECT, f08c47fec0942fa0
 disqus.com, 5044142, DIRECT
 zetaglobal.net, 100, DIRECT
 aps.amazon.com, 31d3a4c9-a8a6-4ae0-a5ae-d3b0de43284c, RESELLER

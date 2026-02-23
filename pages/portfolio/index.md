@@ -12,7 +12,7 @@ permalink: /portfolio/
 <div id="portfolio-grid" class="portfolio-grid">
 <!-- Items loaded via JS -->
 </div>
-<div id="portfolio-error" class="hidden" style="text-align: center; color: var(--text-muted); margin-top: 2rem;">
+<div id="portfolio-error" class="hidden" style="text-align: center; color: var(--textSecondary); margin-top: 2rem;">
 <p>Failed to load portfolio. <a href="https://www.artstation.com/celozaga" target="_blank">Visit ArtStation</a></p>
 </div>
 <div class="portfolio-actions" style="text-align: center; margin-top: var(--spacing-lg);">

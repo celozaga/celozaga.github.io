@@ -1279,3 +1279,61 @@ details[open] summary svg {
   min-width: 60px;
   text-align: center;
 }
+
+/* Store Buttons */
+.store-buttons {
+  margin-top: 20px;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+  border: none;
+  margin: 5px;
+}
+
+.store-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(110%);
+  color: #fff;
+}
+
+.store-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.store-btn.google-play {
+  background-color: #3BCCFF;
+  color: #000;
+}
+
+.store-btn.app-store {
+  background-color: #007aff;
+}
+
+.store-btn.steam {
+  background-color: #171a21;
+}
+
+.store-btn.epic-games {
+  background-color: #313131;
+}
+
+.store-btn.apk {
+  background-color: #3DDC84;
+  color: #000;
+}
+
+.store-btn.exe {
+  background-color: #0078d7;
+}

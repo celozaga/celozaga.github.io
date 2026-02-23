@@ -3,6 +3,8 @@ layout: store_item
 title: "Eggy Party Stainless Steel Thermal Mug"
 image: "https://i.imgur.com/wj8tIdw.png"
 price: "$24.99"
+description: "Keep your drinks hot or cold with this stylish Eggy Party thermal mug."
+category: "Product"
 url: "https://aliexpress.com/item/1005010381425933.html"
 order: 3
 ---
