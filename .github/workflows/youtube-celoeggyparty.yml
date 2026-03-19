@@ -24,7 +24,7 @@ jobs:
       - name: Rodar script Python para atualizar posts
         run: python scripts/update_youtube_posts.py
         env:
-          CHANNEL_ID: 'UCvOnTTQp_7ZXtWUZYEUZO7Q'
+          CHANNEL_ID: 'UCO6axYvGFekWJjmSdbHo-8Q'
 
       - name: Commit e push dos posts novos
         run: |

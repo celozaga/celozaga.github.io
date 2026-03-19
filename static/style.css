@@ -4,11 +4,11 @@
 :root {
   /* Colors */
   --primary: #0F73FF;
-  --background: #151D28;
-  --surface: #222E3F;
-  --border: #222E3F;
+  --background: #0F0F0F;
+  --surface: #282828;
+  --border: #282828;
   --textPrimary: #FFFFFF;
-  --textSecondary: #8D9DB4;
+  --textSecondary: #999999;
 
   /* Semantic colors */
   --error: #E74C3C;
