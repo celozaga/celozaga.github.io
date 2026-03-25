@@ -1,0 +1,330 @@
+
+
+/* Wrapper to isolate styles */
+.ccu-app {
+    background-color: var(--background);
+    color: var(--textPrimary);
+    font-family: var(--font-family-base);
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.ccu-app * {
+    box-sizing: border-box;
+}
+
+.ccu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.ccu-logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.ccu-logo span {
+    color: var(--primary);
+}
+
+.ccu-header-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.pulse-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px rgba(0, 170, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+/* Cards */
+.ccu-dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ccu-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.ccu-card .card-title {
+    color: var(--textSecondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.ccu-card .card-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--textPrimary);
+}
+
+.ccu-card .card-subtext {
+    color: var(--textSecondary);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.ccu-card .emphasize {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Chart Control Header */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.chart-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.chart-badge {
+    font-size: 0.75rem;
+    color: var(--textSecondary);
+}
+.time-filters {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--background);
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+.time-filters button {
+    background: transparent;
+    border: none;
+    color: var(--textSecondary);
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+.time-filters button.active, .time-filters button:hover {
+    background: var(--primary);
+    color: #fff;
+}
+.chart-body {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Second Row */
+.ccu-secondary-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.accent-purple {
+    color: #A52BFF !important;
+}
+
+.brainrot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.br-stat {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--background);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+.br-stat span {
+    color: var(--textSecondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.br-stat strong {
+    font-size: 1.25rem;
+    color: white;
+}
+.pie-container {
+    height: 200px;
+    position: relative;
+}
+
+/* Table */
+.table-section {
+    padding: 2rem;
+}
+.table-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.table-header-flex h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.table-filters {
+    display: flex;
+    gap: 1rem;
+}
+.table-filters input, .table-filters select {
+    background: var(--background);
+    border: 1px solid var(--border);
+    color: var(--textPrimary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+.ccu-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.ccu-table th {
+    color: var(--textSecondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+.ccu-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+.ccu-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+.game-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.game-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--background);
+}
+.game-info div:first-child {
+    font-weight: 600;
+    color: var(--textPrimary);
+    margin-bottom: 0.25rem;
+}
+.game-info div:last-child {
+    font-size: 0.75rem;
+    color: var(--textSecondary);
+}
+.badge {
+    background: rgba(15, 115, 255, 0.1);
+    color: var(--primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+.badge-green { color: var(--success); background: rgba(0, 170, 0, 0.1); }
+.badge-purple { color: #A52BFF; background: rgba(165, 43, 255, 0.1); }
+
+@media (max-width: 900px) {
+    .ccu-dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    .ccu-secondary-row {
+        grid-template-columns: 1fr;
+    }
+    .table-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .table-filters {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .ccu-app {
+        padding: 1rem;
+    }
+    .ccu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .ccu-logo h2 {
+        font-size: 1.25rem;
+    }
+    .ccu-card, .table-section {
+        padding: 1rem;
+    }
+    .ccu-card .card-value {
+        font-size: 1.5rem;
+    }
+    .chart-body {
+        height: 200px;
+    }
+    .chart-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .ccu-table th, .ccu-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    .game-cell {
+        gap: 0.5rem;
+    }
+    .game-icon {
+        width: 32px;
+        height: 32px;
+    }
+}

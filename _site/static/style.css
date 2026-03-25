@@ -2,16 +2,18 @@
    1. VARIABLES & THEME SETTINGS
    ========================================= */
 :root {
-  /* Colors - Minimalist Palette */
-  --bg-color: #0F0F0F;
-  --surface-color: #222222;
-  --surface-hover: #333333;
-  --text-main: #FFFFFF;
-  --text-muted: #999999;
-  --border-color: #333333;
-  --primary-color: #0F73FF;
-  --secondary-color: #FFF;
-  --accent-color: #0F73FF;
+  /* Colors */
+  --primary: #0F73FF;
+  --background: #0F0F0F;
+  --surface: #282828;
+  --border: #282828;
+  --textPrimary: #FFFFFF;
+  --textSecondary: #999999;
+
+  /* Semantic colors */
+  --error: #E74C3C;
+  --success: #00AA00;
+  --warning: #FFAA00;
 
   /* Spacing - Generous for clarity */
   --spacing-xs: 8px;
@@ -43,8 +45,8 @@
 
 body {
   font-family: var(--font-family-base);
-  background: var(--bg-color);
-  color: var(--text-main);
+  background: var(--background);
+  color: var(--textPrimary);
   line-height: var(--line-height-base);
   font-size: var(--font-size-base);
   margin: 0 auto;
@@ -61,7 +63,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 ul,
@@ -76,7 +78,7 @@ img {
 svg {
   width: 24px;
   height: 24px;
-  fill: var(--text-main);
+  fill: var(--textPrimary);
   display: block;
 }
 
@@ -151,7 +153,7 @@ textarea {
   justify-content: center;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--text-main);
+  color: var(--textPrimary);
   user-select: none;
   background-size: cover;
   background-position: 50% 50%;
@@ -234,9 +236,9 @@ textarea {
 .button {
   display: inline-block;
   padding: 12px 30px;
-  background: var(--text-main);
-  color: var(--bg-color);
-  border: 1px solid var(--text-main);
+  background: var(--textPrimary);
+  color: var(--background);
+  border: 1px solid var(--textPrimary);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -248,9 +250,9 @@ textarea {
 
 .btn:hover,
 .form-btn:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: var(--text-main);
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--textPrimary);
   transform: none;
   /* No movement */
 }
@@ -260,13 +262,13 @@ textarea {
 .form-input,
 .form-textarea,
 .search-box input {
-  background: var(--surface-hover);
+  background: var(--surface);
   /* Using surface-hover for better visibility on black bg */
   border: none;
   border-radius: 12px;
   /* Rounded as requested */
   padding: 15px;
-  color: var(--text-main);
+  color: var(--textPrimary);
   font-size: var(--font-size-base);
   width: 100%;
   outline: none;
@@ -277,8 +279,8 @@ textarea {
 .form-input:focus,
 .form-textarea:focus,
 .search-box input:focus {
-  background: var(--surface-hover);
-  box-shadow: 0 0 0 2px var(--primary-color);
+  background: var(--surface);
+  box-shadow: 0 0 0 2px var(--primary);
   /* Focus ring since no border */
 }
 
@@ -288,7 +290,7 @@ textarea {
 
 /* Header */
 header {
-  color: var(--text-main);
+  color: var(--textPrimary);
   padding: var(--spacing-md);
   text-align: center;
   display: flex;
@@ -299,19 +301,19 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  background: var(--bg-color);
+  background: var(--background);
   z-index: 999;
 }
 
 header svg {
-  fill: var(--text-main);
+  fill: var(--textPrimary);
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
 header svg:hover {
-  fill: var(--accent-color);
+  fill: var(--primary);
 }
 
 header button,
@@ -328,7 +330,7 @@ header button,
 /* Footer */
 .footer {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--textSecondary);
   padding: var(--spacing-md);
   font-size: var(--font-size-sm);
 }
@@ -347,12 +349,12 @@ header button,
   width: auto;
   border-radius: var(--radius-sm);
   display: inline-block;
-  color: var(--text-muted);
+  color: var(--textSecondary);
   font-size: var(--font-size-sm);
 }
 
 .footer .link-list a:hover {
-  color: var(--text-main);
+  color: var(--textPrimary);
   transform: none;
 }
 
@@ -368,12 +370,12 @@ header button,
 .section h2 svg {
   width: 24px;
   height: 24px;
-  fill: var(--text-main);
+  fill: var(--textPrimary);
 }
 
 .section h1:hover svg,
 .section h2:hover svg {
-  fill: var(--accent-color);
+  fill: var(--primary);
 }
 
 /* =========================================
@@ -398,7 +400,7 @@ header button,
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  fill: var(--text-muted);
+  fill: var(--textSecondary);
   pointer-events: none;
 }
 
@@ -411,11 +413,11 @@ header button,
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
-  color: var(--text-muted);
+  color: var(--textSecondary);
 }
 
 .link-list a:hover {
-  color: var(--text-main);
+  color: var(--textPrimary);
 }
 
 .link-list img {
@@ -431,7 +433,7 @@ header button,
 }
 
 .post p {
-  color: var(--text-main);
+  color: var(--textPrimary);
   line-height: 1.6;
 }
 
@@ -446,11 +448,11 @@ header button,
 .post-list a,
 .news li a {
   display: block;
-  background: var(--surface-color);
+  background: var(--surface);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-md);
   border-radius: var(--radius-xl);
-  color: var(--text-main);
+  color: var(--textPrimary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -482,7 +484,7 @@ header button,
 }
 
 .game-detail p {
-  color: var(--text-muted);
+  color: var(--textSecondary);
 }
 
 .button-rectangle {
@@ -520,7 +522,7 @@ header button,
 
 /* Details/Summary (Accordion) */
 details {
-  background: var(--surface-color);
+  background: var(--surface);
   margin-top: var(--spacing-md);
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
@@ -559,11 +561,11 @@ details[open] summary svg {
 .social-media svg {
   width: 24px;
   height: 24px;
-  fill: var(--text-main);
+  fill: var(--textPrimary);
 }
 
 .social-media svg:hover {
-  fill: var(--primary-color);
+  fill: var(--primary);
 }
 
 /* =========================================
@@ -591,7 +593,7 @@ details[open] summary svg {
 .contact-form label {
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--textPrimary);
   font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -608,13 +610,13 @@ details[open] summary svg {
 }
 
 .contact-form .note {
-  color: var(--text-muted);
+  color: var(--textSecondary);
   font-size: var(--font-size-sm);
   margin-top: var(--spacing-sm);
 }
 
 .contact-form .note strong {
-  color: var(--text-main);
+  color: var(--textPrimary);
 }
 
 /* Feedback Messages */
@@ -628,13 +630,13 @@ details[open] summary svg {
 }
 
 #feedback.error {
-  border-left: 4px solid var(--secondary-color);
-  color: #ffcccc;
+  border-left: 4px solid var(--error);
+  color: var(--error);
 }
 
 #feedback.success {
-  border-left: 4px solid #4caf50;
-  color: #e8f5e9;
+  border-left: 4px solid var(--success);
+  color: var(--success);
 }
 
 /* Responsive Overrides */
@@ -664,7 +666,7 @@ details[open] summary svg {
   width: 40px;
   height: 40px;
   border: 4px solid rgba(255, 255, 255, 0.1);
-  border-top-color: var(--primary-color);
+  border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -686,7 +688,7 @@ details[open] summary svg {
 }
 
 .search-results-section #search-results-info {
-  color: var(--text-muted);
+  color: var(--textSecondary);
   margin-bottom: var(--spacing-md);
 }
 
@@ -699,7 +701,7 @@ details[open] summary svg {
 
 .portfolio-item {
   display: block;
-  background: var(--surface-color);
+  background: var(--surface);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -736,7 +738,7 @@ details[open] summary svg {
 .portfolio-item h3 {
   font-size: var(--font-size-base);
   margin: 0;
-  color: var(--text-main);
+  color: var(--textPrimary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -774,7 +776,7 @@ details[open] summary svg {
   left: 0;
   width: 300px;
   height: 100%;
-  background: var(--bg-color);
+  background: var(--background);
   transform: translateX(-100%);
   transition: transform var(--transition-fast);
   z-index: 1000;
@@ -806,12 +808,12 @@ details[open] summary svg {
 .close-btn svg {
   width: 24px;
   height: 24px;
-  fill: var(--text-main);
+  fill: var(--textPrimary);
   transition: fill var(--transition-fast);
 }
 
 .close-btn:hover svg {
-  fill: var(--secondary-color);
+  fill: var(--textPrimary);
 }
 
 /* Menu Navigation */
@@ -839,7 +841,7 @@ details[open] summary svg {
   /* Increased side padding */
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--textPrimary);
   border-radius: 0;
   transition: background var(--transition-fast), color var(--transition-fast);
   text-decoration: none;
@@ -852,15 +854,15 @@ details[open] summary svg {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  fill: var(--text-main);
+  fill: var(--textPrimary);
 }
 
 .menu-nav li a:hover {
-  color: var(--accent-color);
+  color: var(--primary);
 }
 
 .menu-nav li a:hover svg {
-  fill: var(--accent-color);
+  fill: var(--primary);
 }
 
 /* =========================================
@@ -889,7 +891,7 @@ details[open] summary svg {
 
   /* Minimal Scrollbar */
   scrollbar-width: thin;
-  scrollbar-color: var(--border-color) transparent;
+  scrollbar-color: var(--border) transparent;
 }
 
 .carousel::-webkit-scrollbar {
@@ -902,11 +904,11 @@ details[open] summary svg {
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  background-color: var(--border-color);
+  background-color: var(--border);
 }
 
 .carousel::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-muted);
+  background-color: var(--textSecondary);
 }
 
 /* Shop Section Overrides */
@@ -969,7 +971,7 @@ details[open] summary svg {
   font-size: var(--font-size-base);
   font-weight: 500;
   margin: 0;
-  color: var(--text-main);
+  color: var(--textPrimary);
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -978,7 +980,7 @@ details[open] summary svg {
 }
 
 .carousel-item .price {
-  color: var(--accent-color);
+  color: var(--primary);
   font-weight: bold;
 }
 
@@ -987,7 +989,7 @@ details[open] summary svg {
 .carousel-error {
   padding: var(--spacing-lg);
   text-align: center;
-  color: var(--text-muted);
+  color: var(--textSecondary);
 }
 
 /* Responsive */
@@ -1040,7 +1042,7 @@ details[open] summary svg {
 .post-title {
   flex: 1;
   font-size: var(--font-size-base);
-  color: var(--text-main);
+  color: var(--textPrimary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1067,7 +1069,7 @@ details[open] summary svg {
 
 .advertise-hero p {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: var(--textSecondary);
   line-height: 1.6;
 }
 
@@ -1080,10 +1082,10 @@ details[open] summary svg {
 }
 
 .stat-item {
-  background: var(--surface-color);
+  background: var(--surface);
   padding: var(--spacing-xl);
   text-align: center;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1094,7 +1096,7 @@ details[open] summary svg {
 .stat-number {
   font-size: 4rem;
   font-weight: 800;
-  color: var(--text-main);
+  color: var(--textPrimary);
   line-height: 1;
   margin-bottom: var(--spacing-xs);
   letter-spacing: -2px;
@@ -1104,7 +1106,7 @@ details[open] summary svg {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--text-muted);
+  color: var(--textSecondary);
   font-weight: 500;
 }
 
@@ -1123,8 +1125,8 @@ details[open] summary svg {
 }
 
 .platform-card {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
+  background: var(--surface);
+  border: 1px solid var(--border);
   padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
@@ -1137,7 +1139,7 @@ details[open] summary svg {
 }
 
 .platform-card p {
-  color: var(--text-muted);
+  color: var(--textSecondary);
   font-size: 1.1rem;
 }
 
@@ -1145,7 +1147,7 @@ details[open] summary svg {
   display: flex;
   gap: var(--spacing-lg);
   margin-top: auto;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border);
   padding-top: var(--spacing-md);
 }
 
@@ -1161,15 +1163,15 @@ details[open] summary svg {
 
 .p-stat span {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--textSecondary);
   text-transform: uppercase;
 }
 
 /* CTA Box */
 .cta-box {
-  background: var(--text-main);
+  background: var(--textPrimary);
   /* White bg */
-  color: var(--bg-color);
+  color: var(--background);
   /* Black text */
   text-align: center;
   padding: var(--spacing-xxl);
@@ -1177,7 +1179,7 @@ details[open] summary svg {
 }
 
 .cta-box h2 {
-  color: var(--bg-color);
+  color: var(--background);
   font-size: 2.5rem;
   margin-bottom: var(--spacing-md);
 }
@@ -1190,9 +1192,9 @@ details[open] summary svg {
 
 .cta-button-inv {
   display: inline-block;
-  background: var(--bg-color);
+  background: var(--background);
   /* Black Button */
-  color: var(--text-main);
+  color: var(--textPrimary);
   /* White Text */
   padding: 16px 32px;
   font-size: 1.1rem;
@@ -1204,14 +1206,14 @@ details[open] summary svg {
 
 .cta-button-inv:hover {
   background: transparent;
-  color: var(--bg-color);
-  border-color: var(--bg-color);
+  color: var(--background);
+  border-color: var(--background);
 }
 
 .icon-external {
   display: flex;
   align-items: center;
-  color: var(--text-muted);
+  color: var(--textSecondary);
 }
 
 /* MOBILE */
@@ -1232,8 +1234,8 @@ details[open] summary svg {
 .rates-container {
   max-width: 600px;
   margin: 0 auto;
-  border: 1px solid var(--border-color);
-  background: var(--surface-color);
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .rates-header {
@@ -1242,7 +1244,7 @@ details[open] summary svg {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: var(--spacing-md);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border);
   text-align: center;
 }
 
@@ -1251,7 +1253,7 @@ details[open] summary svg {
   justify-content: space-between;
   align-items: center;
   padding: 15px var(--spacing-md);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border);
   transition: background var(--transition-fast);
 }
 
@@ -1260,19 +1262,19 @@ details[open] summary svg {
 }
 
 .rate-item:hover {
-  background: var(--surface-hover);
+  background: var(--surface);
 }
 
 .rate-name {
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--textPrimary);
   font-size: var(--font-size-base);
 }
 
 .rate-price {
   font-weight: 700;
-  color: var(--text-main);
-  background: var(--border-color);
+  color: var(--textPrimary);
+  background: var(--border);
   /* Badge-like look */
   padding: 4px 8px;
   font-size: var(--font-size-sm);

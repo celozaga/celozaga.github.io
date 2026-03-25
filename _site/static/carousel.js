@@ -56,7 +56,7 @@ class CarouselManager {
   renderLoading() {
     this.container.innerHTML = `
       <div class="carousel-loading">
-        <div class="spinner" style="width:30px;height:30px;border:3px solid rgba(255,255,255,0.1);border-top-color:var(--primary-color);border-radius:50%;animation:spin 1s linear infinite;"></div>
+        <div class="spinner" style="width:30px;height:30px;border:3px solid rgba(255,255,255,0.1);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite;"></div>
       </div>`;
   }
 
@@ -64,7 +64,7 @@ class CarouselManager {
     this.container.innerHTML = `
       <div class="carousel-error">
         <p>${msg}</p>
-        <button onclick="location.reload()" style="margin-top:10px; background:transparent; border:1px solid var(--text-muted); color:var(--text-muted); padding:5px 10px; cursor:pointer;">Retry</button>
+        <button onclick="location.reload()" style="margin-top:10px; background:transparent; border:1px solid var(--textSecondary); color:var(--textSecondary); padding:5px 10px; cursor:pointer;">Retry</button>
       </div>`;
   }
 
@@ -83,7 +83,7 @@ class CarouselManager {
     });
 
     if (!hasItems) {
-      this.container.innerHTML = '<p style="padding:20px; color:var(--text-muted); text-align:center;">No images found in recent posts.</p>';
+      this.container.innerHTML = '<p style="padding:20px; color:var(--textSecondary); text-align:center;">No images found in recent posts.</p>';
     }
   }
 

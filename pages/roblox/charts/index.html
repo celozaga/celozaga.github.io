@@ -1,0 +1,114 @@
+---
+title: CCUCheck - Roblox Real-Time Charts
+description: Verify real-time charts of Roblox games according to CCU.
+permalink: /roblox/charts/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ '/static/roblox-charts.css' | absolute_url }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: var(--background); margin: 0; padding: 0;">
+  {% include header.html %}
+
+  <main style="padding-top: 72px;">
+    <div class="ccu-app" style="min-height: calc(100vh - 72px);">
+        <div class="ccu-header">
+            <div class="ccu-logo">
+                <h2>CCUCheck <span>Clone</span></h2>
+            </div>
+        <div class="ccu-header-stats">
+            <span class="pulse-indicator"></span> ANALYSING OVER <b>168 THOUSAND</b> GAMES
+        </div>
+    </div>
+
+    <div class="ccu-main-content">
+        <!-- Dashboard Top Cards -->
+        <div class="ccu-dashboard-cards">
+            <div class="ccu-card">
+                <div class="card-title">Total Games</div>
+                <div class="card-value" id="val-total-games">--</div>
+            </div>
+            <div class="ccu-card">
+                <div class="card-title">Total Players</div>
+                <div class="card-value" id="val-total-players">--</div>
+                <div class="card-subtext">Active right now</div>
+            </div>
+            <div class="ccu-card">
+                <div class="card-title">Most Popular</div>
+                <div class="card-value emphasize" id="val-most-popular">--</div>
+                <div class="card-subtext" id="val-most-popular-ccu">-- players</div>
+            </div>
+        </div>
+
+        <!-- Main Chart -->
+        <div class="ccu-card ccu-chart-card">
+            <div class="chart-header">
+                <div>
+                    <div class="card-title">Total Platform CCU</div>
+                    <div class="card-value emphasize" id="val-platform-ccu">--</div>
+                    <div class="card-subtext">Peak: -- &nbsp;|&nbsp; Low: -- &nbsp;|&nbsp; Avg: --</div>
+                </div>
+                <div class="chart-controls">
+                    <span class="chart-badge">Data from RoProxy</span>
+                    <div class="time-filters">
+                        <button class="active">24h</button>
+                        <button>7d</button>
+                        <button>30d</button>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-body">
+                <canvas id="mainCcuChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Secondary row -->
+        <div class="ccu-secondary-row">
+            <!-- Top 10 Bar Chart -->
+            <div class="ccu-card">
+                <div class="card-title">TOP 10 BY CURRENT PLAYERS</div>
+                <canvas id="top10Chart" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Games Table Table -->
+        <div class="ccu-card table-section">
+            <div class="table-header-flex">
+                <h3>All Games</h3>
+                <div class="table-filters">
+                    <input type="text" placeholder="Search games..." id="search-input">
+                    <select><option>All Genres</option></select>
+                    <select><option>All Tags</option></select>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="ccu-table" id="games-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>GAME</th>
+                            <th>PLAYERS ▼</th>
+                            <th>LIKES %</th>
+                            <th>VISITS</th>
+                            <th>FAVORITES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows rendered via JS -->
+                        <tr><td colspan="6" style="text-align:center; padding: 2rem;">Loading data from Roblox...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </main>
+  
+  {% include footer.html %}
+  <script src="{{ '/static/roblox-charts.js' | absolute_url }}"></script>
+  <script src="{{ '/static/scripts.js' | relative_url }}"></script>
+</body>
+</html>
