@@ -1,5 +1,5 @@
 ---
-layout: store_item
+layout: store
 title: "Eggy Party Unisex Cotton T-Shirt"
 image: "https://i.imgur.com/wj8tIdw.png"
 price: "$19.99"

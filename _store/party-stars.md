@@ -1,5 +1,5 @@
 ---
-layout: store_item
+layout: store
 title: "Party Stars"
 description: "Welcome to this next-gen party game that's full of fun energy and possibilities!"
 price: "FREE"
